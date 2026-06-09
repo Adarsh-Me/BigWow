@@ -16,7 +16,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/timezone-converter">BrowseryTools Timezone Converter</a> — free, no sign-up,
+        <a href="/tools/timezone-converter">BigWow Timezone Converter</a> — free, no sign-up,
         everything stays in your browser.
       </p>
 
@@ -116,7 +116,7 @@ export default function Content() {
           <strong>Use tools that display multiple time zones simultaneously.</strong> A world clock
           showing UTC, each team member's current local time, and the offset makes it easy to
           check at a glance without mental arithmetic. The{" "}
-          <a href="/tools/timezone-converter">BrowseryTools Timezone Converter</a> lets you compare
+          <a href="/tools/timezone-converter">BigWow Timezone Converter</a> lets you compare
           multiple cities instantly.
         </li>
         <li>

@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can encode and decode URLs instantly with the{" "}
-        <a href="/tools/url-encoder">BrowseryTools URL Encoder/Decoder</a> — free, no sign-up, everything
+        <a href="/tools/url-encoder">BigWow URL Encoder/Decoder</a> — free, no sign-up, everything
         stays in your browser.
       </p>
 
@@ -167,7 +167,7 @@ new URLSearchParams({ q: "rock & roll" }).toString()
         Whether you are debugging an OAuth redirect, constructing a query string by hand, inspecting a
         malformed API request, or just trying to understand what a percent-encoded URL actually contains —
         the{" "}
-        <a href="/tools/url-encoder">BrowseryTools URL Encoder/Decoder</a> handles it instantly. Paste your
+        <a href="/tools/url-encoder">BigWow URL Encoder/Decoder</a> handles it instantly. Paste your
         string, choose encode or decode, and see the result immediately. No server calls, no sign-up.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>

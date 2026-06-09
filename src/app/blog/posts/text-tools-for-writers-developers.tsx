@@ -5,7 +5,7 @@ export default function Content() {
         Text is the raw material of almost everything created on a computer — code, content, documentation,
         email, design specs, marketing copy, technical writing, and everything in between. Yet most people
         cobble together their text workflow from a mix of heavyweight desktop editors, slow web apps, and
-        manual processes that could easily be automated. BrowseryTools offers a complete set of free,
+        manual processes that could easily be automated. BigWow offers a complete set of free,
         browser-based text tools covering every common text task that writers, developers, and content
         creators face daily.
       </p>
@@ -19,7 +19,7 @@ export default function Content() {
       <p>
         Case formatting is one of those small tasks that appears constantly in development and writing
         contexts but has no satisfying keyboard shortcut in most editors. The{" "}
-        <a href="/tools/text-case">BrowseryTools Text Case Converter</a> handles every common case
+        <a href="/tools/text-case">BigWow Text Case Converter</a> handles every common case
         transformation in a single place:
       </p>
       <ul>
@@ -49,7 +49,7 @@ export default function Content() {
       <p>
         Markdown has become the lingua franca of technical documentation, README files, blog posts, notes,
         and anywhere that text needs lightweight formatting without the overhead of a full word processor.
-        The <a href="/tools/markdown-editor">BrowseryTools Markdown Editor</a> provides a split-pane
+        The <a href="/tools/markdown-editor">BigWow Markdown Editor</a> provides a split-pane
         interface: write raw Markdown on the left, see the formatted HTML preview on the right, in real time.
       </p>
       <p>
@@ -74,7 +74,7 @@ export default function Content() {
         by the content instead of evaluating the layout.
       </p>
       <p>
-        The <a href="/tools/lorem-ipsum">BrowseryTools Lorem Ipsum Generator</a> lets you specify exactly
+        The <a href="/tools/lorem-ipsum">BigWow Lorem Ipsum Generator</a> lets you specify exactly
         how much placeholder text you need — by paragraphs, sentences, or words — and generates it
         instantly. Copy it directly into your design tool, mockup, or development template.
       </p>
@@ -92,7 +92,7 @@ export default function Content() {
         character limit. Book chapters are evaluated by word and page estimates.
       </p>
       <p>
-        The <a href="/tools/text-counter">BrowseryTools Text Counter</a> gives you live counts across
+        The <a href="/tools/text-counter">BigWow Text Counter</a> gives you live counts across
         every dimension simultaneously: characters (with and without spaces), words, sentences, and
         paragraphs. Paste your text and all counts update instantly — no submission, no reload, no waiting.
       </p>
@@ -106,7 +106,7 @@ export default function Content() {
       <p>
         Comparing two versions of a document, a configuration file, a legal clause, or any block of text
         is a task that comes up constantly in editing, code review, and content management. The{" "}
-        <a href="/tools/text-diff">BrowseryTools Text Diff Viewer</a> takes two text inputs, compares
+        <a href="/tools/text-diff">BigWow Text Diff Viewer</a> takes two text inputs, compares
         them line by line, and highlights additions, deletions, and changes with clear color coding.
       </p>
       <p>
@@ -123,7 +123,7 @@ export default function Content() {
       </ul>
 
       <div style={{background: "var(--muted)", borderLeft: "4px solid var(--primary)", padding: "1rem 1.25rem", borderRadius: "0.5rem", margin: "1.5rem 0"}}>
-        <strong>Privacy reminder:</strong> The Text Diff tool, like all BrowseryTools tools, processes
+        <strong>Privacy reminder:</strong> The Text Diff tool, like all BigWow tools, processes
         everything locally in your browser. Confidential legal text, proprietary configuration files, and
         sensitive business documents can be diffed without any data leaving your machine. This is a
         meaningful advantage over cloud-based diff tools that process your text on their servers.
@@ -136,7 +136,7 @@ export default function Content() {
         HTML written by hand or exported from a tool can be inconsistently indented and hard to parse.
       </p>
       <p>
-        The <a href="/tools/html-formatter">BrowseryTools HTML Formatter</a> works in both directions:
+        The <a href="/tools/html-formatter">BigWow HTML Formatter</a> works in both directions:
       </p>
       <ul>
         <li><strong>Format/Prettify:</strong> Takes minified or messy HTML and outputs it with consistent indentation and line breaks, making the structure immediately readable</li>
@@ -151,7 +151,7 @@ export default function Content() {
       <h2>Notepad — The Always-Ready Scratchpad</h2>
       <p>
         Sometimes you do not need a formatted document or a structured tool — you just need somewhere to
-        put text right now. The <a href="/tools/notepad">BrowseryTools Notepad</a> is a plain text area
+        put text right now. The <a href="/tools/notepad">BigWow Notepad</a> is a plain text area
         that auto-saves everything you type to localStorage. Close the browser, reopen it, and your text
         is still there.
       </p>
@@ -169,7 +169,7 @@ export default function Content() {
         writers, analysts, support staff, and anyone else who spends significant time at a keyboard.
       </p>
       <p>
-        The <a href="/tools/typing-test">BrowseryTools Typing Test</a> measures your words per minute
+        The <a href="/tools/typing-test">BigWow Typing Test</a> measures your words per minute
         and accuracy against a standard passage. It gives you an honest benchmark of where you stand and,
         if you test regularly, a clear view of whether practice is improving your speed and accuracy.
       </p>
@@ -182,7 +182,7 @@ export default function Content() {
       <h2>Rich Text Editor — WYSIWYG Editing in the Browser</h2>
       <p>
         Not everyone is comfortable with Markdown or HTML, and not every context requires technical
-        formatting. The <a href="/tools/rich-editor">BrowseryTools Rich Text Editor</a> provides a
+        formatting. The <a href="/tools/rich-editor">BigWow Rich Text Editor</a> provides a
         familiar word-processor-style interface — bold, italic, underline, headings, lists, links — where
         you see the formatted result as you type, without needing to know any markup syntax.
       </p>
@@ -195,7 +195,7 @@ export default function Content() {
 
       <h2>Why One Suite Instead of Nine Different Websites</h2>
       <p>
-        The common alternative to BrowseryTools is searching for each tool individually when you need it —
+        The common alternative to BigWow is searching for each tool individually when you need it —
         "text diff tool online", "lorem ipsum generator", "HTML formatter" — and landing on a different
         website each time. Those websites typically carry ads, may impose word count limits, often require
         account creation for certain features, and vary widely in quality and reliability.
@@ -206,7 +206,7 @@ export default function Content() {
         everything processes locally, there is no privacy risk regardless of what text you paste in.
       </p>
       <p>
-        Bookmark BrowseryTools, or pin a few tabs, and these tools will be ready the moment you need
+        Bookmark BigWow, or pin a few tabs, and these tools will be ready the moment you need
         them — which, if you write code or content for a living, is probably several times today.
       </p>
     </div>

@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         A <code>CLAUDE.md</code> file solves this. You can use the{" "}
-        <a href="/tools/claude-md-generator">BrowseryTools CLAUDE.md Generator</a> — free, no sign-up,
+        <a href="/tools/claude-md-generator">BigWow CLAUDE.md Generator</a> — free, no sign-up,
         everything stays in your browser — to build a well-structured context file for your project in
         minutes.
       </p>
@@ -166,7 +166,7 @@ which wrap supabase-js queries. Never call supabase directly in components.
       <p>
         Writing a <code>CLAUDE.md</code> from scratch means remembering to cover every important section
         and filling them in consistently. The{" "}
-        <a href="/tools/claude-md-generator">BrowseryTools CLAUDE.md Generator</a> provides a structured
+        <a href="/tools/claude-md-generator">BigWow CLAUDE.md Generator</a> provides a structured
         form that walks you through each section — tech stack, commands, architecture, conventions, key
         files — and produces a clean, well-formatted Markdown file you can drop into your project root
         immediately. It takes about five minutes and the payoff in AI suggestion quality is immediate.

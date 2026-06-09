@@ -3,6 +3,7 @@ import StructuredData from "@/components/StructuredData";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { findFirstTool } from "@/lib/search-utils";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Browser Tools - Free Online Tools for Productivity",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://browserytools.com",
+    url: siteConfig.baseUrl,
     title: "Browser Tools - Free Online Tools for Productivity",
     description:
       "Discover 30+ free browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more.",
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://browserytools.com",
+    canonical: siteConfig.baseUrl,
   },
   category: "technology",
 };

@@ -1,19 +1,23 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { Hammer, Github, Coffee, Menu } from "lucide-react";
-import { XLogo } from "@phosphor-icons/react";
+import { Hammer, Menu, Sparkles, Search, X } from "lucide-react";
 import { useToolStore } from "@/store/tool-store";
 import { useLanguageStore } from "@/store/language-store";
 import Logo from "./logo";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import Sidebar from "./sidebar";
+import MobileNavDrawer from "./mobile-nav-drawer";
+import MegaMenu from "./mega-menu";
 import { ThemeSwitcher } from "./theme-switcher";
-import { LanguageSwitcher } from "./language-switcher";
+
 import { useTranslations } from "next-intl";
+import { motion, AnimatePresence } from "framer-motion";
+import { searchAllTools } from "@/lib/search-utils";
+import { cn } from "@/lib/utils";
+import { RequestToolDialog } from "./RequestToolDialog";
 
 export default function Header() {
   const pathname = usePathname();
@@ -23,168 +27,239 @@ export default function Header() {
   const tc = useTranslations("ToolsConfig");
   const tCommon = useTranslations("Common");
 
-  // Reset tool context when not on tools routes
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
-    if (!pathname.startsWith("/tools")) {
+    if (!pathname.startsWith("/tools") && pathname !== "/") {
       setCurrentTool(null);
     }
   }, [pathname, setCurrentTool]);
 
-  const handleRequestTool = () => {
-    const issueTitle = encodeURIComponent("Tool Request: [Tool Name]");
-    const issueBody = encodeURIComponent(
-      `
-## Tool Request
+  // Focus search input when opened
+  useEffect(() => {
+    if (searchOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [searchOpen]);
 
-**Tool Name:**
-**Description:**
-**Use Case:**
-**Priority:** Low/Medium/High
+  // Close search on Escape
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSearchOpen(false);
+        setSearchQuery("");
+      }
+      // Cmd/Ctrl+K to open search
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
+      }
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
 
-**Additional Details:**
-Please describe what this tool should do and how it would help users.
-    `.trim(),
-    );
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    return searchAllTools(searchQuery).slice(0, 8);
+  }, [searchQuery]);
 
-    const githubUrl = `https://github.com/aghyad97/browserytools/issues/new?title=${issueTitle}&body=${issueBody}&labels=tool-request`;
 
-    window.open(githubUrl, "_blank");
-  };
 
   return (
-    <header className="border-b bg-white/40 dark:bg-black/40 backdrop-blur-lg">
-      <div className="flex items-center justify-between h-16 px-4">
-        {/* Mobile menu button and Tool Title */}
-        <div className="flex items-center gap-3">
-          {/* Mobile menu button - only visible on mobile */}
+    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/85 backdrop-blur-md transition-all duration-200">
+      <div className="flex h-16 items-center justify-between px-4 md:px-6 max-w-[1600px] mx-auto gap-2">
+
+        {/* Left Side: Brand Logo */}
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Mobile menu trigger */}
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
+                  className="hover:bg-secondary/60 rounded-xl"
                   aria-label={t("openMenu")}
                 >
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-5 w-5 text-foreground" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side={dir === "rtl" ? "right" : "left"} className="w-80 p-0">
-                <Sidebar />
+              <SheetContent side={dir === "rtl" ? "right" : "left"} className="w-80 p-0 border-r border-border bg-card">
+                <MobileNavDrawer />
               </SheetContent>
             </Sheet>
           </div>
 
           <Link
             href="/"
-            className="flex items-center"
+            className="flex items-center gap-2.5 transition-transform duration-150 active:scale-98"
             aria-label="Go to homepage"
           >
             {currentTool ? (
-              <div>
-                <h1 className="text-sm md:text-md font-semibold">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <Logo />
+                </div>
+                <h1 className="text-sm font-semibold tracking-tight text-foreground font-display hidden sm:block">
                   {tc(`tools.${currentTool.href.replace("/tools/", "")}.name` as any)}
                 </h1>
               </div>
             ) : (
-              <div className="flex flex-row gap-2">
-                <Logo />
-                <h1 className="text-sm md:text-xl font-semibold">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-accent-foreground">
+                  <Sparkles className="h-4 w-4" />
+                </div>
+                <span className="font-display text-md font-bold tracking-tight text-foreground hidden sm:block">
                   {tCommon("siteName")}
-                </h1>
+                </span>
               </div>
             )}
           </Link>
         </div>
 
-        {/* Social links on the right */}
-        <div className="flex items-center gap-2 sm:gap-4">
-          {/* Desktop social links */}
-          <div className="hidden sm:flex items-center gap-2">
-            <Link
-              href="/gh"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("github")}
+        {/* Center: Mega Menu (desktop) */}
+        <div className="hidden lg:flex flex-1 justify-center min-w-0">
+          <MegaMenu />
+        </div>
+
+        {/* Right Side: Search + Actions */}
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+
+          {/* Search button + overlay */}
+          <div className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setSearchOpen(true)}
+              className="h-9 w-9 hover:bg-secondary/60 rounded-xl text-muted-foreground hover:text-foreground"
+              aria-label="Search tools"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label={t("github")}
-              >
-                <Github className="h-4 w-4" />
-              </Button>
-            </Link>
-            <Link
-              href="/x"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("twitter")}
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label={t("twitter")}
-              >
-                <XLogo className="h-4 w-4" />
-              </Button>
-            </Link>
-            <ThemeSwitcher />
-            <LanguageSwitcher />
+              <Search className="h-4 w-4" />
+            </Button>
           </div>
 
-          {/* Request tool button - smaller on mobile */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleRequestTool}
-            className="hidden sm:flex"
-          >
-            <Hammer className="h-4 w-4 me-2" />
-            {t("requestTool")}
-          </Button>
+          {/* Desktop Social Links & Switchers */}
+          <div className="hidden md:flex items-center gap-1.5">
+            <ThemeSwitcher className="h-9 w-9 hover:bg-secondary/60 rounded-xl" />
+          </div>
 
-          <Link
-            href="/x"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sm:hidden"
-            aria-label={t("twitter")}
-          >
-            <Button
-              className="sm:hidden"
-              variant="outline"
-              size="icon"
-              aria-label={t("twitter")}
-            >
-              <XLogo className="h-4 w-4" />
-            </Button>
-          </Link>
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeSwitcher variant="outline" className="h-8 w-8 rounded-lg" />
+          </div>
 
-          {/* Mobile request tool button */}
-          <ThemeSwitcher className="sm:hidden" variant="outline" />
-          <LanguageSwitcher className="sm:hidden" variant="outline" />
-
-          {/* Coffee button - smaller on mobile */}
-          <Link
-            href="/coffee"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t("coffee")}
-          >
-            <Button size="sm" className="hidden sm:flex">
-              <Coffee className="h-4 w-4 me-2" />
-              {t("coffee")}
-            </Button>
-            <Button
-              size="icon"
-              className="sm:hidden"
-              aria-label={t("coffee")}
-            >
-              <Coffee className="h-4 w-4" />
-            </Button>
-          </Link>
+          {/* CTAs */}
+          <RequestToolDialog
+            triggerClassName="hidden sm:inline-flex"
+            trigger={
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden sm:flex h-9 px-4 rounded-xl border-border hover:border-foreground/10 hover:bg-secondary/60 text-xs font-semibold tracking-tight transition-all active:scale-98"
+              >
+                <Hammer className="h-3.5 w-3.5 me-2 text-muted-foreground" />
+                {t("requestTool")}
+              </Button>
+            }
+          />
         </div>
       </div>
+
+      {/* Search Overlay */}
+      <AnimatePresence>
+        {searchOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+              className="fixed inset-0 z-50 bg-background/60 backdrop-blur-sm"
+              onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+            />
+
+            {/* Search modal */}
+            <motion.div
+              initial={{ opacity: 0, y: -8, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.98 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-full max-w-lg px-4"
+            >
+              <div className="rounded-2xl border border-border/60 bg-popover shadow-2xl shadow-black/20 overflow-hidden">
+                {/* Search input */}
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-border/40">
+                  <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    placeholder="Search tools…"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
+                  />
+                  <div className="flex items-center gap-1.5">
+                    <kbd className="hidden sm:inline-flex h-5 items-center rounded border border-border/50 bg-muted px-1.5 text-[10px] font-medium text-muted-foreground">
+                      ESC
+                    </kbd>
+                    <button
+                      onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Results */}
+                {searchQuery.trim() ? (
+                  <div className="max-h-80 overflow-y-auto py-1.5">
+                    {searchResults.length > 0 ? (
+                      searchResults.map((tool) => (
+                        <Link
+                          key={tool.href}
+                          href={tool.available === false ? "#" : tool.href}
+                          onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+                          className={cn(
+                            "flex items-center gap-3 px-4 py-2.5 transition-colors",
+                            tool.available === false
+                              ? "opacity-40 cursor-not-allowed pointer-events-none"
+                              : "hover:bg-secondary/60 cursor-pointer"
+                          )}
+                        >
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                            <tool.icon className="h-4 w-4" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-foreground truncate">{tool.name}</p>
+                            <p className="text-xs text-muted-foreground truncate">{tool.category}</p>
+                          </div>
+                          {tool.available === false && (
+                            <span className="ml-auto text-[9px] font-bold bg-muted text-muted-foreground rounded-full px-1.5 py-0.5 uppercase tracking-wider shrink-0">
+                              Soon
+                            </span>
+                          )}
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="px-4 py-8 text-center text-sm text-muted-foreground">
+                        No tools found for &ldquo;{searchQuery}&rdquo;
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="px-4 py-6 text-center text-sm text-muted-foreground">
+                    Type to search across all tools…
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

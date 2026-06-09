@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can generate any amount of Lorem Ipsum text instantly using the{" "}
-        <a href="/tools/lorem-ipsum">BrowseryTools Lorem Ipsum Generator</a> — free, no sign-up, everything
+        <a href="/tools/lorem-ipsum">BigWow Lorem Ipsum Generator</a> — free, no sign-up, everything
         stays in your browser.
       </p>
 
@@ -147,7 +147,7 @@ export default function Content() {
         Ipsum but not identical on every generation — which is fine for layout purposes.
       </p>
       <p>
-        The <a href="/tools/lorem-ipsum">BrowseryTools Lorem Ipsum Generator</a> lets you control the
+        The <a href="/tools/lorem-ipsum">BigWow Lorem Ipsum Generator</a> lets you control the
         output by specifying the number of words, sentences, or paragraphs you need. Generate a single
         sentence for a headline placeholder, a few sentences for a card description, or multiple
         paragraphs for a full article layout — entirely in your browser without sending any data to a

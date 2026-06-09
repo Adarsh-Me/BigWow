@@ -11,7 +11,7 @@ export default function Content() {
       <p>
         This guide covers everything from JSON syntax fundamentals to debugging common parse errors,
         formatting strategies, and working with deeply nested structures. Paste any JSON into the{" "}
-        <a href="/tools/json-formatter">BrowseryTools JSON Formatter</a> to validate and pretty-print
+        <a href="/tools/json-formatter">BigWow JSON Formatter</a> to validate and pretty-print
         it instantly — free, no sign-up, everything stays in your browser.
       </p>
 
@@ -108,7 +108,7 @@ export default function Content() {
       <p>
         In JavaScript: <code>JSON.stringify(data, null, 2)</code> pretty-prints with 2-space
         indentation. <code>JSON.stringify(data)</code> minifies. The{" "}
-        <a href="/tools/json-formatter">BrowseryTools JSON Formatter</a> does both — paste your
+        <a href="/tools/json-formatter">BigWow JSON Formatter</a> does both — paste your
         JSON and toggle between pretty and minified views instantly.
       </p>
 
@@ -195,7 +195,7 @@ curl https://api.example.com/users | jq '.[] | select(.active == true) | .name'`
         comments, no trailing commas — the constraints are small and the format is unambiguous.
         When something goes wrong, it is almost always one of a handful of predictable syntax
         errors. Paste your broken JSON into the{" "}
-        <a href="/tools/json-formatter">BrowseryTools JSON Formatter</a> and the error will be
+        <a href="/tools/json-formatter">BigWow JSON Formatter</a> and the error will be
         immediately visible with the exact position highlighted.
       </p>
     </div>

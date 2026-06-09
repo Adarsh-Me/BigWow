@@ -12,7 +12,7 @@ export default function Content() {
         This guide cuts through the noise. Instead of cataloguing every regex feature, it focuses
         on the 20% of syntax that handles 80% of real-world use cases: character classes,
         quantifiers, anchors, groups, and flags. Along the way, you can test every example in the{" "}
-        <a href="/tools/regex-tester">BrowseryTools Regex Tester</a> — free, no sign-up,
+        <a href="/tools/regex-tester">BigWow Regex Tester</a> — free, no sign-up,
         everything stays in your browser.
       </p>
 
@@ -191,7 +191,7 @@ export default function Content() {
       </p>
       <p>
         The{" "}
-        <a href="/tools/regex-tester">BrowseryTools Regex Tester</a> lets you write a pattern,
+        <a href="/tools/regex-tester">BigWow Regex Tester</a> lets you write a pattern,
         paste in test strings, and see all matches highlighted instantly. It runs entirely in
         your browser, so you can test against real data — logs, user input, production strings —
         without sending anything to a server.

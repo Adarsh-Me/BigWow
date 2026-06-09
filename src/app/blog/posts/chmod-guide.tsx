@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can calculate permission values and convert between octal and symbolic notation instantly with the{" "}
-        <a href="/tools/chmod">BrowseryTools chmod Calculator</a> — free, no sign-up, everything runs in
+        <a href="/tools/chmod">BigWow chmod Calculator</a> — free, no sign-up, everything runs in
         your browser.
       </p>
 
@@ -79,7 +79,7 @@ chmod 600 → owner: 6 (rw-), group: 0 (---), other: 0 (---)`}
       </pre>
       <p>
         You never need to memorize every combination — use the{" "}
-        <a href="/tools/chmod">BrowseryTools chmod Calculator</a> to check what any octal value means or to
+        <a href="/tools/chmod">BigWow chmod Calculator</a> to check what any octal value means or to
         build the right value for your situation.
       </p>
 
@@ -153,7 +153,7 @@ chmod +x deploy.sh`}
       </pre>
       <p>
         When you are unsure what octal value to use, the{" "}
-        <a href="/tools/chmod">BrowseryTools chmod Calculator</a> lets you click checkboxes for owner, group,
+        <a href="/tools/chmod">BigWow chmod Calculator</a> lets you click checkboxes for owner, group,
         and other permissions and immediately see the resulting octal value and symbolic notation.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>

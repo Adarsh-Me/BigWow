@@ -1,0 +1,87 @@
+# BigWow — Free Browser-Based Productivity Tools
+
+> 100% free, privacy-first, client-side productivity tools. No servers. No tracking. No data collection. Every file stays on your device.
+
+BigWow is a curated collection of 100+ browser-based utilities covering image editing, file conversion, PDF tools, code formatting, password generation, AI tooling, productivity, design, and developer workflows. All tools run entirely in the user's browser using Web APIs — nothing is ever uploaded to a server.
+
+## Quick facts
+
+- Website: https://bigwow.space
+- Brand: BigWow
+- Founded: 2024
+- Open source: Closed source, offline-first execution
+- Contact: studio365@zohomail.in
+- Languages: English (default)
+- Cost: 100% free forever — no ads, no registration, no premium tier
+- Privacy: zero data collection, no cookies, no analytics, no server-side processing
+- Hosting: Edge-rendered Next.js 16 app on Vercel
+
+## Main pages
+
+- [Home](https://bigwow.space): Quick tool discovery with search and category filtering.
+- [All Tools](https://bigwow.space/browser-tools): Full catalog of 100+ tools, filterable by category.
+- [Blog](https://bigwow.space/blog): Privacy, security, and productivity guides.
+
+## Tool categories
+
+Each category lists the parent route. All tools are accessible without login or signup.
+
+- Image Tools: https://bigwow.space/tools/bg-removal
+- PDF Tools: https://bigwow.space/tools/pdf
+- Video Tools: https://bigwow.space/tools/video
+- Audio Tools: https://bigwow.space/tools/audio
+- Text & Writing: https://bigwow.space/tools/text-case
+- Developer Tools: https://bigwow.space/tools/code-format
+- Data & Conversion: https://bigwow.space/tools/json-formatter
+- AI Tools: https://bigwow.space/tools/token-counter
+- Math & Finance: https://bigwow.space/tools/calculator
+- Productivity: https://bigwow.space/tools/todo
+- Security & Dev: https://bigwow.space/tools/password-generator
+- Design & Visual: https://bigwow.space/tools/css-gradient
+
+## Notable tools
+
+- Compress PDF, Merge PDF, Split PDF, Rotate PDF, Watermark PDF
+- Remove Background, Image Compression, Image Converter, Image Resizer
+- QR Code Generator, Barcode Generator, QR Scanner, Barcode Scanner
+- Password Generator, Password Strength Checker, Hash Generator, JWT Decoder
+- JSON Formatter, YAML↔JSON, SQL Formatter, CSS Minifier, HTML Formatter
+- Base64 Encoder, URL Encoder, UUID Generator, Unix Timestamp
+- Token Counter, AI Cost Calculator, Model Comparison, Prompt Library
+- Currency Converter, Unit Converter, Timezone Converter, BMI Calculator
+- Color Picker, Color Palette, Gradient Generator, Shadow Generator
+- Invoice Generator, Expense Tracker, Habit Tracker, Pomodoro Timer
+- Markdown Editor, Rich Text Editor, Lorem Ipsum, Text Diff
+
+## Programmatic SEO landing pages (AI-citation optimized)
+
+These pages include ISO/RFC citations, performance statistics, and FAQPage structured data:
+
+- [PDF Merger — No Upload](https://bigwow.space/tools/pdf-merger-no-upload)
+- [Offline PDF Tools Free](https://bigwow.space/tools/offline-pdf-tools-free)
+- [Secure PDF Editor in Browser](https://bigwow.space/tools/secure-pdf-editor-in-browser)
+- [Private PDF Converter](https://bigwow.space/tools/private-pdf-converter)
+- [Image Compressor Offline No Signup](https://bigwow.space/tools/image-compressor-offline-no-signup)
+- [Browser Image Optimizer Free](https://bigwow.space/tools/browser-image-optimizer-free)
+- [Photo Background Remover Without Login](https://bigwow.space/tools/photo-background-remove-without-login)
+- [Private JPG Compression](https://bigwow.space/tools/private-jpg-compression)
+- [PNG Shrink Offline Free](https://bigwow.space/tools/png-shrink-offline-free)
+- [JSON Formatter Browser Tool](https://bigwow.space/tools/json-formatter-browser-tool)
+- [Client-Side Regex Tester](https://bigwow.space/tools/client-side-regex-tester)
+- [Online JWT Decoder Without Server](https://bigwow.space/tools/online-jwt-decoder-without-server)
+- [Client-Side Base64 Encoder](https://bigwow.space/tools/client-side-base64-encoder)
+- [Local Currency Converter Tool](https://bigwow.space/tools/local-currency-converter-tool)
+
+## Privacy commitment
+
+BigWow makes a written promise to its users: **we never see your data**. Every tool runs client-side. Files never leave your device. There is no analytics, no telemetry, no fingerprinting, no third-party trackers. The site is fully usable offline once loaded.
+
+## Optional
+
+- Sitemap: https://bigwow.space/sitemap.xml
+- Robots: https://bigwow.space/robots.txt
+- Full LLM context: https://bigwow.space/llms-full.txt
+- Manifest: https://bigwow.space/manifest.json
+- Security disclosure: https://bigwow.space/.well-known/security.txt
+- Humans: https://bigwow.space/humans.txt
+- OpenSearch: https://bigwow.space/opensearch.xml

@@ -199,12 +199,12 @@ export default function Content() {
       <h2>Check Your Current Password Strength Instantly</h2>
       <p>
         Before you change anything, it is worth understanding exactly how strong your current passwords are.
-        BrowseryTools offers a free, private password strength checker that analyzes your password locally — the
+        BigWow offers a free, private password strength checker that analyzes your password locally — the
         characters you type never leave your browser.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
         <strong>Try it now:</strong> Head to the{" "}
-        <a href="/tools/password-strength">BrowseryTools Password Strength Checker</a> to see exactly how your
+        <a href="/tools/password-strength">BigWow Password Strength Checker</a> to see exactly how your
         passwords score. The tool checks length, character diversity, common patterns, and dictionary matches — and
         tells you how long it would realistically take to crack.
       </div>
@@ -220,7 +220,7 @@ export default function Content() {
         predictable structures. The solution is to let a machine generate the randomness for you.
       </p>
       <p>
-        The <a href="/tools/password-generator">BrowseryTools Password Generator</a> creates cryptographically
+        The <a href="/tools/password-generator">BigWow Password Generator</a> creates cryptographically
         random passwords using your browser's built-in secure random number generator. You can customize:
       </p>
       <ul>
@@ -230,7 +230,7 @@ export default function Content() {
         <li>Number of passwords to generate at once</li>
       </ul>
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Privacy guarantee:</strong> The BrowseryTools password generator runs entirely in your browser using
+        <strong>Privacy guarantee:</strong> The BigWow password generator runs entirely in your browser using
         the Web Crypto API. No password is ever transmitted to any server. The generation happens on your device,
         for your eyes only.
       </div>
@@ -297,7 +297,7 @@ export default function Content() {
       <h2>Start Right Now — It Takes 2 Minutes</h2>
       <p>
         You do not need to overhaul everything at once. Start with your most critical accounts: email, banking,
-        and your primary social media. Replace those passwords first using the BrowseryTools Password Generator,
+        and your primary social media. Replace those passwords first using the BigWow Password Generator,
         then check the strength of what you already have using the Password Strength Checker.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>
@@ -321,7 +321,7 @@ export default function Content() {
       </div>
       <p>
         Both tools run entirely in your browser. Your passwords are never transmitted, logged, or stored anywhere
-        outside your own device. That is the BrowseryTools promise — powerful tools that genuinely respect your
+        outside your own device. That is the BigWow promise — powerful tools that genuinely respect your
         privacy.
       </p>
     </div>

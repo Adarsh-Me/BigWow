@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can write and preview Markdown instantly using the{" "}
-        <a href="/tools/markdown-editor">BrowseryTools Markdown Editor</a> — free, no sign-up, everything stays
+        <a href="/tools/markdown-editor">BigWow Markdown Editor</a> — free, no sign-up, everything stays
         in your browser.
       </p>
 
@@ -204,7 +204,7 @@ function greet(name) {
         <li><strong>Assuming extended syntax is universal</strong> — tables and task lists are GFM features not supported by all processors; check your target environment</li>
       </ul>
       <p>
-        The <a href="/tools/markdown-editor">BrowseryTools Markdown Editor</a> provides a live preview so you
+        The <a href="/tools/markdown-editor">BigWow Markdown Editor</a> provides a live preview so you
         can catch rendering issues immediately as you write, without copying text into another tool. Paste your
         Markdown and see the rendered HTML output side by side.
       </p>

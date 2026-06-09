@@ -1,0 +1,29 @@
+/* TEAM */
+Founder & Lead Developer: BrowseryTools Studio
+Site: BrowseryTools — https://browserytools.com
+Contact: studio365@zohomail.in
+Location: Remote / Global
+
+/* SITE */
+Last update: 2026/06/06
+Standards: HTML5, CSS3, JavaScript (ES2024), TypeScript
+Components: Next.js 16.2.1, React 19, Tailwind CSS, Radix UI, shadcn/ui
+Components: framer-motion, lucide-react, next-themes, next-intl
+Backend: None (100% client-side, static + edge rendering)
+Hosting: Vercel (recommended) / any static or Node host
+Analytics: None (privacy-first)
+Cookies: None used for tracking
+Doctype: HTML5
+IDE: opencode (https://opencode.ai)
+Language: English (en), Arabic (ar, full RTL parity)
+
+/* THANKS */
+- The Next.js team for a world-class framework
+- The Tailwind CSS team for utility-first CSS
+- The Radix UI team for accessible primitives
+- The lucide-react team for the open icon set
+- The Vercel team for edge rendering
+- All open source contributors whose libraries make this possible
+
+/* MISSION */
+Build the world's most complete suite of free, private, client-side productivity tools — so users can do real work in their browser without ever sending a file to a server.

@@ -17,7 +17,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/expense-tracker">BrowseryTools Expense Tracker</a> — free, no sign-up,
+        <a href="/tools/expense-tracker">BigWow Expense Tracker</a> — free, no sign-up,
         everything stays in your browser.
       </p>
 

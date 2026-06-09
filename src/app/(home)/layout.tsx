@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export default function HomeLayout({
@@ -8,10 +7,8 @@ export default function HomeLayout({
 }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="sticky top-0 z-50">
-        <Header />
-      </div>
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }

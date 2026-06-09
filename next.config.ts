@@ -1,8 +1,26 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd(),
+  },
   async headers() {
     return [
+      {
+        // Global: allow all crawlers at HTTP level + advertise llms.txt to AI agents
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+          },
+          {
+            // AI discovery: advertise llms.txt location in HTTP headers
+            key: "Link",
+            value: "<https://bigwow.space/llms.txt>; rel=\"ai-context\", <https://bigwow.space/llms-full.txt>; rel=\"ai-context-full\"",
+          },
+        ],
+      },
       {
         source: "/tools/bg-removal",
         headers: [{ key: "Cross-Origin-Opener-Policy", value: "same-origin" }],
@@ -40,6 +58,7 @@ const nextConfig: NextConfig = {
   },
   productionBrowserSourceMaps: false,
   compress: true,
+  devIndicators: false,
   // Optimize images
   images: {
     formats: ["image/webp", "image/avif"],

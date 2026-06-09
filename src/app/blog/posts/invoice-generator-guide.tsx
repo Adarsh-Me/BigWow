@@ -17,7 +17,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/invoice">BrowseryTools Invoice Generator</a> — free, no sign-up, everything
+        <a href="/tools/invoice">BigWow Invoice Generator</a> — free, no sign-up, everything
         stays in your browser.
       </p>
 
@@ -191,7 +191,7 @@ export default function Content() {
       </p>
       <p>
         The{" "}
-        <a href="/tools/invoice">BrowseryTools Invoice Generator</a> does exactly that — no account,
+        <a href="/tools/invoice">BigWow Invoice Generator</a> does exactly that — no account,
         no subscription, and nothing stored on any server. Fill in your details, add line items,
         set your payment terms, and download a clean PDF. Your invoice data stays in your browser.
       </p>

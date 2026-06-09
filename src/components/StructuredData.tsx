@@ -1,4 +1,5 @@
 import { getAllTools } from "@/lib/tools-config";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 interface StructuredDataProps {
   type: "website" | "tool" | "organization";
@@ -15,56 +16,32 @@ export default function StructuredData({
   toolCategory,
   toolUrl,
 }: StructuredDataProps) {
-  const baseUrl = "https://browserytools.com";
+  const baseUrl = siteConfig.baseUrl;
   const allTools = getAllTools().filter((tool) => tool.available);
 
   const getWebsiteStructuredData = () => ({
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Browser Tools",
-    description:
-      "Free online browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more.",
-    url: baseUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${baseUrl}?search={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Browser Tools",
-      url: baseUrl,
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/icon.svg`,
-      },
-    },
-    mainEntity: {
-      "@type": "ItemList",
-      name: "Browser Tools Collection",
-      description: "Collection of free online tools",
-      numberOfItems: allTools.length,
-      itemListElement: allTools.map((tool, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "SoftwareApplication",
-          name: tool.name,
-          description: tool.description,
-          url: `${baseUrl}${tool.href}`,
-          applicationCategory: tool.category,
-          operatingSystem: "Web Browser",
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-          },
+    "@type": "ItemList",
+    name: "Browser Tools Collection",
+    description: "Collection of free online tools",
+    numberOfItems: allTools.length,
+    itemListElement: allTools.map((tool, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: tool.name,
+        description: tool.description,
+        url: absoluteUrl(tool.href),
+        applicationCategory: tool.category,
+        operatingSystem: "Web Browser",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
         },
-      })),
-    },
+      },
+    })),
   });
 
   const getToolStructuredData = () => ({
@@ -90,7 +67,7 @@ export default function StructuredData({
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/icon.svg`,
+        url: absoluteUrl("/icon.svg"),
       },
     },
     offers: {
@@ -98,13 +75,6 @@ export default function StructuredData({
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "150",
-      bestRating: "5",
-      worstRating: "1",
     },
   });
 
@@ -116,18 +86,14 @@ export default function StructuredData({
     url: baseUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${baseUrl}/icon.svg`,
+      url: absoluteUrl("/icon.svg"),
       width: 512,
       height: 512,
     },
-    sameAs: [
-      "https://github.com/aghyad97/browserytools",
-      "https://x.com/aghyadev",
-    ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      url: `${baseUrl}/coffee`,
+      url: baseUrl,
     },
   });
 

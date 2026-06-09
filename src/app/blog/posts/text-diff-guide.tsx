@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can compare any two blocks of text instantly using the{" "}
-        <a href="/tools/text-diff">BrowseryTools Text Diff tool</a> — free, no sign-up, everything stays
+        <a href="/tools/text-diff">BigWow Text Diff tool</a> — free, no sign-up, everything stays
         in your browser.
       </p>
 
@@ -109,7 +109,7 @@ export default function Content() {
         </li>
       </ul>
       <p>
-        The <a href="/tools/text-diff">BrowseryTools Text Diff tool</a> highlights differences inline,
+        The <a href="/tools/text-diff">BigWow Text Diff tool</a> highlights differences inline,
         making it easy to spot changes at a glance without reading the unified diff format manually.
       </p>
 
@@ -165,7 +165,7 @@ git diff --stat               # summary: files changed, insertions, deletions`}
         <li><strong>vimdiff</strong> — terminal-based side-by-side diff inside Vim. Powerful for quick comparisons without leaving the terminal; steep learning curve.</li>
         <li><strong>Beyond Compare</strong> — commercial desktop tool with folder sync, binary diff, and three-way merge. The gold standard for non-developer document comparison.</li>
         <li><strong>Meld</strong> — free, cross-platform GUI diff tool with three-way merge support. The best free alternative to Beyond Compare.</li>
-        <li><strong>BrowseryTools Text Diff</strong> — instant, browser-based, no installation. Best for quick one-off comparisons, especially for text you would not want to paste into an online service.</li>
+        <li><strong>BigWow Text Diff</strong> — instant, browser-based, no installation. Best for quick one-off comparisons, especially for text you would not want to paste into an online service.</li>
       </ul>
     </div>
   );

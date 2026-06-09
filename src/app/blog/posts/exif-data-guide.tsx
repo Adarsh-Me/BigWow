@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can inspect the EXIF metadata in any photo using the{" "}
-        <a href="/tools/exif-viewer">BrowseryTools EXIF Viewer</a> — free, no sign-up, and the image
+        <a href="/tools/exif-viewer">BigWow EXIF Viewer</a> — free, no sign-up, and the image
         never leaves your browser.
       </p>
 
@@ -161,7 +161,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>In your browser</strong> — The{" "}
-          <a href="/tools/exif-viewer">BrowseryTools EXIF Viewer</a> displays all EXIF tags in a
+          <a href="/tools/exif-viewer">BigWow EXIF Viewer</a> displays all EXIF tags in a
           readable format. Drop your photo in, and you immediately see every field including GPS
           coordinates. Nothing is uploaded.
         </li>
@@ -185,7 +185,7 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>BrowseryTools EXIF Viewer</strong> — The{" "}
+          <strong>BigWow EXIF Viewer</strong> — The{" "}
           <a href="/tools/exif-viewer">EXIF Viewer</a> allows you to view and strip EXIF data from
           photos entirely in your browser. No upload, no account required.
         </li>

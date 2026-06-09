@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/ai-cost-calculator">BrowseryTools AI Cost Calculator</a> — free, no sign-up,
+        <a href="/tools/ai-cost-calculator">BigWow AI Cost Calculator</a> — free, no sign-up,
         everything stays in your browser — to model your costs across GPT-4, Claude, Gemini, and other
         major models before you write a single line of code.
       </p>
@@ -155,7 +155,7 @@ daily_cost = (800 × $0.003 + 300 × $0.015) per 1K tokens × 5000
       <p>
         Before you commit to a model, an architecture, or a pricing tier, model your costs with real
         numbers. The{" "}
-        <a href="/tools/ai-cost-calculator">BrowseryTools AI Cost Calculator</a> lets you plug in
+        <a href="/tools/ai-cost-calculator">BigWow AI Cost Calculator</a> lets you plug in
         token counts, request volumes, and model choices to see projected monthly spend side by side
         across providers. It takes two minutes and can save months of painful invoice surprises.
       </p>

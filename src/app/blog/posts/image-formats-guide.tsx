@@ -11,7 +11,7 @@ export default function Content() {
       </p>
       <p>
         You can convert between any of these formats using the{" "}
-        <a href="/tools/image-converter">BrowseryTools Image Converter</a> — free, no sign-up, and
+        <a href="/tools/image-converter">BigWow Image Converter</a> — free, no sign-up, and
         everything runs locally in your browser.
       </p>
 
@@ -191,7 +191,7 @@ export default function Content() {
       </p>
       <p>
         To convert your existing images to WebP or AVIF for this kind of multi-format setup, the{" "}
-        <a href="/tools/image-converter">BrowseryTools Image Converter</a> handles batch conversions
+        <a href="/tools/image-converter">BigWow Image Converter</a> handles batch conversions
         without uploading anything to a server — your source files stay on your device.
       </p>
 

@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can analyze the word frequency of any text instantly using the{" "}
-        <a href="/tools/word-frequency">BrowseryTools Word Frequency Analyzer</a> — free, no sign-up,
+        <a href="/tools/word-frequency">BigWow Word Frequency Analyzer</a> — free, no sign-up,
         everything stays in your browser.
       </p>
 
@@ -105,7 +105,7 @@ IDF = log(total documents / documents containing term)`}
       </ul>
       <p>
         Try pasting a draft of your own writing into the{" "}
-        <a href="/tools/word-frequency">BrowseryTools Word Frequency Analyzer</a>. The top 20 content
+        <a href="/tools/word-frequency">BigWow Word Frequency Analyzer</a>. The top 20 content
         words, after stop word filtering, should closely reflect the core concepts of the piece. If
         they do not, the draft probably needs structural work.
       </p>

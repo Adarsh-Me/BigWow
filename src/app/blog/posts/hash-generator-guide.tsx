@@ -10,7 +10,7 @@ export default function Content() {
       <p>
         This guide explains what hash functions are, how each major algorithm works, when each is appropriate
         (and when it is dangerously inappropriate), and how to use the{" "}
-        <a href="/tools/hash-generator">BrowseryTools Hash Generator</a> to compute hashes instantly in your
+        <a href="/tools/hash-generator">BigWow Hash Generator</a> to compute hashes instantly in your
         browser with full privacy.
       </p>
 
@@ -202,7 +202,7 @@ export default function Content() {
         <li>Compare your computed hash to the published hash character by character. Any difference means the file is not what the publisher distributed.</li>
       </ul>
       <p>
-        The <a href="/tools/hash-generator">BrowseryTools Hash Generator</a> supports file hashing — drag in
+        The <a href="/tools/hash-generator">BigWow Hash Generator</a> supports file hashing — drag in
         a file and it will compute the hash locally in your browser without uploading anything. Compare the
         result directly to the published checksum.
       </p>
@@ -270,7 +270,7 @@ export default function Content() {
         <li><strong>Cookie integrity:</strong> Many web frameworks use HMAC to sign session cookies, preventing users from tampering with their own session data.</li>
       </ul>
 
-      <h2>How to Use the BrowseryTools Hash Generator</h2>
+      <h2>How to Use the BigWow Hash Generator</h2>
       <p>
         The <a href="/tools/hash-generator">Hash Generator</a> supports hashing both text input and file
         uploads entirely in your browser. Here is how it works:
@@ -298,11 +298,11 @@ export default function Content() {
 
       <h2>Privacy: The Web Crypto API</h2>
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Everything stays on your device.</strong> The BrowseryTools Hash Generator uses the browser's
+        <strong>Everything stays on your device.</strong> The BigWow Hash Generator uses the browser's
         built-in <code>window.crypto.subtle</code> API (the Web Crypto API) to compute SHA-family hashes.
         This is native cryptography implemented by your browser's C++ engine — not JavaScript math. For MD5,
         a pure JavaScript implementation runs locally. In both cases, no data — not a single byte of your
-        text or file content — is ever transmitted to BrowseryTools servers or any third-party service.
+        text or file content — is ever transmitted to BigWow servers or any third-party service.
         Hash computation happens entirely within your browser process.
       </div>
 

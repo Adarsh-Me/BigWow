@@ -1,22 +1,31 @@
 import { Metadata } from "next";
 import { findToolByHref } from "./tools-config";
+import { absoluteUrl, languageAlternates, siteConfig } from "./site";
+import { toolCapabilities } from "./tool-capabilities";
 
 export function generateToolMetadata(href: string): Metadata {
   const tool = findToolByHref(href);
 
   if (!tool) {
     return {
-      title: "Tool Not Found - Browser Tools",
+      title: "Tool Not Found - BigWow",
       description: "The requested tool could not be found.",
     };
   }
 
-  const baseUrl = "https://browserytools.com";
-  const toolUrl = `${baseUrl}${href}`;
+  const toolUrl = absoluteUrl(href);
 
-  // Enhanced SEO-optimized title and description
-  const seoTitle = `${tool.name} - 100% Free ${tool.category} Tool | No Ads, No Registration, No Servers`;
-  const seoDescription = `${tool.description} Completely free forever - no hidden fees, no ads, no registration required. Runs entirely in your browser with full privacy. Open source and updated weekly with new features.`;
+  // Detect whether this tool runs locally (no server uploads)
+  const capability = toolCapabilities.find((c) => c.href === href);
+  const isLocalTool = capability ? capability.privacyMode === "local" : true; // default: assume local
+
+  // Privacy-first title & description — BigWow's core moat
+  const privacyPrefix = isLocalTool ? "Private " : "";
+  const privacySuffix = isLocalTool ? " — No Upload, 100% Local" : "";
+  const seoTitle = `${privacyPrefix}${tool.name}${privacySuffix} | Free ${tool.category} Tool | BigWow`;
+  const seoDescription = isLocalTool
+    ? `${tool.description} Zero uploads — all processing runs locally in your browser. No signup, no ads, no limits. Free forever.`
+    : `${tool.description} Completely free forever — no hidden fees, no ads, no registration required. Runs entirely in your browser with full privacy.`;
 
   return {
     title: seoTitle,
@@ -26,7 +35,20 @@ export function generateToolMetadata(href: string): Metadata {
       tool.name.toLowerCase(),
       tool.category.toLowerCase(),
 
-      // Core differentiators - these are the money keywords
+      // Privacy-first differentiators — BigWow's core moat
+      "private",
+      "no upload",
+      "offline",
+      "local-first",
+      "secure",
+      "client-side",
+      "browser only",
+      "privacy focused",
+      "no server",
+      "zero upload",
+      "100% local",
+
+      // Core free-tool differentiators
       "free online tool",
       "free forever",
       "no ads",
@@ -34,9 +56,6 @@ export function generateToolMetadata(href: string): Metadata {
       "no signup",
       "no login",
       "no servers",
-      "client side",
-      "browser only",
-      "privacy focused",
       "open source",
       "no watermark",
       "no limits",
@@ -91,6 +110,7 @@ export function generateToolMetadata(href: string): Metadata {
       "best free",
       "top free",
 
+      // Finance/data keywords (relevant to subcategories)
       "expense tracker",
       "budget management",
       "financial tracking",
@@ -101,7 +121,6 @@ export function generateToolMetadata(href: string): Metadata {
       "expense categories",
       "budget planning",
       "financial charts",
-
       "charts",
       "data visualization",
       "graph",
@@ -112,7 +131,6 @@ export function generateToolMetadata(href: string): Metadata {
       "area chart",
       "radar chart",
       "radial chart",
-
       "currency",
       "currency converter",
       "exchange rate",
@@ -139,17 +157,8 @@ export function generateToolMetadata(href: string): Metadata {
       "AUD",
       "CHF",
       "CNY",
-      "data visualization",
-      "graph",
-      "chart creator",
-      "bar chart",
-      "line chart",
-      "pie chart",
-      "area chart",
-      "radar chart",
-      "radial chart",
 
-      // Tool-specific keywords from description
+      // Tool-specific keywords extracted from description
       ...tool.description
         .toLowerCase()
         .split(" ")
@@ -157,147 +166,24 @@ export function generateToolMetadata(href: string): Metadata {
           (word) =>
             word.length > 3 &&
             ![
-              "the",
-              "and",
-              "for",
-              "with",
-              "from",
-              "this",
-              "that",
-              "your",
-              "are",
-              "can",
-              "use",
-              "all",
-              "get",
-              "has",
-              "its",
-              "our",
-              "out",
-              "but",
-              "not",
-              "you",
-              "any",
-              "may",
-              "new",
-              "now",
-              "old",
-              "see",
-              "him",
-              "two",
-              "how",
-              "her",
-              "was",
-              "one",
-              "our",
-              "had",
-              "by",
-              "word",
-              "but",
-              "what",
-              "some",
-              "we",
-              "it",
-              "is",
-              "or",
-              "had",
-              "the",
-              "of",
-              "to",
-              "and",
-              "a",
-              "in",
-              "is",
-              "it",
-              "you",
-              "that",
-              "he",
-              "was",
-              "for",
-              "on",
-              "are",
-              "as",
-              "with",
-              "his",
-              "they",
-              "i",
-              "at",
-              "be",
-              "this",
-              "have",
-              "from",
-              "or",
-              "one",
-              "had",
-              "by",
-              "word",
-              "but",
-              "not",
-              "what",
-              "all",
-              "were",
-              "we",
-              "when",
-              "your",
-              "can",
-              "said",
-              "there",
-              "each",
-              "which",
-              "she",
-              "do",
-              "how",
-              "their",
-              "if",
-              "will",
-              "up",
-              "other",
-              "about",
-              "out",
-              "many",
-              "then",
-              "them",
-              "these",
-              "so",
-              "some",
-              "her",
-              "would",
-              "make",
-              "like",
-              "into",
-              "him",
-              "time",
-              "has",
-              "two",
-              "more",
-              "go",
-              "no",
-              "way",
-              "could",
-              "my",
-              "than",
-              "first",
-              "been",
-              "call",
-              "who",
-              "its",
-              "now",
-              "find",
-              "long",
-              "down",
-              "day",
-              "did",
-              "get",
-              "come",
-              "made",
-              "may",
-              "part",
+              "the", "and", "for", "with", "from", "this", "that", "your",
+              "are", "can", "use", "all", "get", "has", "its", "our", "out",
+              "but", "not", "you", "any", "may", "new", "now", "old", "see",
+              "him", "two", "how", "her", "was", "one", "had", "by", "word",
+              "what", "some", "we", "it", "is", "or", "the", "of", "to",
+              "and", "a", "in", "he", "on", "as", "his", "they", "i", "at",
+              "be", "have", "were", "when", "said", "there", "each", "which",
+              "she", "do", "their", "if", "will", "up", "other", "about",
+              "many", "then", "them", "these", "so", "would", "make", "like",
+              "into", "time", "more", "go", "no", "way", "could", "my",
+              "than", "first", "been", "call", "who", "find", "long", "down",
+              "day", "did", "come", "made", "part",
             ].includes(word)
         ),
     ],
-    authors: [{ name: "Browser Tools" }],
-    creator: "Browser Tools",
-    publisher: "Browser Tools",
+    authors: [{ name: "BigWow" }],
+    creator: "BigWow",
+    publisher: "BigWow",
     robots: {
       index: true,
       follow: true,
@@ -316,13 +202,13 @@ export function generateToolMetadata(href: string): Metadata {
       url: toolUrl,
       title: seoTitle,
       description: seoDescription,
-      siteName: "BrowseryTools — أدواتك",
+      siteName: siteConfig.name,
       images: [
         {
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: `${tool.name} - 100% Free ${tool.category} Tool | No Ads, No Registration`,
+          alt: `${tool.name} — Private ${tool.category} Tool | BigWow`,
         },
       ],
     },
@@ -331,93 +217,14 @@ export function generateToolMetadata(href: string): Metadata {
       title: seoTitle,
       description: seoDescription,
       images: ["/og-image.png"],
-      creator: "@browserytools",
-      site: "@browserytools",
+      creator: "@bigwow",
+      site: "@bigwow",
     },
     alternates: {
       canonical: toolUrl,
-      languages: {
-        "x-default": toolUrl,
-        "en": toolUrl,
-        "ar": toolUrl,
-      },
+      languages: languageAlternates(href),
     },
     category: "technology",
-    other: {
-      "application/ld+json": JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        name: tool.name,
-        description: seoDescription,
-        url: toolUrl,
-        applicationCategory: tool.category,
-        operatingSystem: "Web Browser",
-        browserRequirements: "Requires JavaScript. Requires HTML5.",
-        softwareVersion: "1.0",
-        datePublished: "2024-01-01",
-        dateModified: new Date().toISOString().split("T")[0],
-        author: {
-          "@type": "Organization",
-          name: "Browser Tools",
-          url: "https://browserytools.com",
-          description:
-            "100% Free Online Tools - No Ads, No Registration, No Servers",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Browser Tools",
-          url: "https://browserytools.com",
-          description: "Open source browser-based tools with complete privacy",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://browserytools.com/icon.svg",
-          },
-        },
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          description:
-            "Completely free forever - no hidden fees, no ads, no registration required",
-        },
-        featureList: [
-          "100% Free Forever",
-          "No Ads or Watermarks",
-          "No Registration Required",
-          "Complete Privacy Protection",
-          "Runs in Browser Only",
-          "No Server Processing",
-          "Open Source",
-          "Updated Weekly",
-          "No File Size Limits",
-          "No Data Collection",
-        ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "5.0",
-          ratingCount: "1000",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        review: [
-          {
-            "@type": "Review",
-            author: {
-              "@type": "Person",
-              name: "User Review",
-            },
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: "5",
-              bestRating: "5",
-            },
-            reviewBody:
-              "Finally, a truly free tool with no ads, no registration, and complete privacy. Better than paid alternatives!",
-          },
-        ],
-      }),
-    },
   };
 }
 
@@ -426,16 +233,15 @@ export function generatePageMetadata(
   description: string,
   path: string = ""
 ): Metadata {
-  const baseUrl = "https://browserytools.com";
-  const pageUrl = `${baseUrl}${path}`;
+  const pageUrl = absoluteUrl(path);
 
-  // Enhanced SEO-optimized page metadata
-  const seoPageTitle = title.includes("100% Free")
+  // Privacy-first page metadata
+  const seoPageTitle = title.includes("BigWow")
     ? title
-    : `${title} | 100% Free Online Tools - No Ads, No Registration`;
-  const seoPageDescription = description.includes("free forever")
+    : `${title} | Private Browser Tools — No Upload, No Signup | BigWow`;
+  const seoPageDescription = description.includes("locally")
     ? description
-    : `${description} Completely free forever - no hidden fees, no ads, no registration required. Open source browser-based tools with complete privacy.`;
+    : `${description} All tools run locally in your browser — zero uploads, zero server processing. Completely free, no signup required.`;
 
   return {
     title: seoPageTitle,
@@ -468,13 +274,21 @@ export function generatePageMetadata(
       "no tracking",
       "gdpr compliant",
 
+      // Privacy-first moat keywords
+      "private tools",
+      "no upload tools",
+      "offline tools",
+      "local-first tools",
+      "secure browser tools",
+      "zero upload",
+      "client-side tools",
+
       // User intent keywords
       "productivity",
       "web utilities",
       "instant tools",
       "fast tools",
       "secure tools",
-      "private tools",
       "best free tools",
       "top free tools",
       "free alternatives",
@@ -491,9 +305,9 @@ export function generatePageMetadata(
       "alternative to",
       "replacement for",
     ],
-    authors: [{ name: "Browser Tools" }],
-    creator: "Browser Tools",
-    publisher: "Browser Tools",
+    authors: [{ name: "BigWow" }],
+    creator: "BigWow",
+    publisher: "BigWow",
     robots: {
       index: true,
       follow: true,
@@ -512,7 +326,7 @@ export function generatePageMetadata(
       url: pageUrl,
       title: seoPageTitle,
       description: seoPageDescription,
-      siteName: "BrowseryTools — أدواتك",
+      siteName: siteConfig.name,
       images: [
         {
           url: "/og-image.png",
@@ -527,16 +341,12 @@ export function generatePageMetadata(
       title: seoPageTitle,
       description: seoPageDescription,
       images: ["/og-image.png"],
-      creator: "@browserytools",
-      site: "@browserytools",
+      creator: "@bigwow",
+      site: "@bigwow",
     },
     alternates: {
       canonical: pageUrl,
-      languages: {
-        "x-default": pageUrl,
-        "en": pageUrl,
-        "ar": pageUrl,
-      },
+      languages: languageAlternates(path),
     },
     category: "technology",
   };

@@ -5,7 +5,7 @@ export default function Content() {
         Removing a background from an image used to be a chore reserved for professional designers. Today, it takes
         about 5 seconds — and you can do it entirely in your browser, with no uploads, no account, no watermarks,
         and no cost. This guide explains how the technology works, why the popular alternatives have meaningful
-        drawbacks, and how to get perfect results every time using BrowseryTools.
+        drawbacks, and how to get perfect results every time using BigWow.
       </p>
 
       <h2>The Old Way: Photoshop and GIMP</h2>
@@ -61,9 +61,9 @@ export default function Content() {
         is a significant and often unnecessary risk.
       </div>
 
-      <h2>The BrowseryTools Approach: AI That Runs on Your Device</h2>
+      <h2>The BigWow Approach: AI That Runs on Your Device</h2>
       <p>
-        BrowseryTools Background Removal works fundamentally differently from every service described above. The
+        BigWow Background Removal works fundamentally differently from every service described above. The
         AI model runs entirely inside your browser using your own computer's processing power. Your images never
         leave your device.
       </p>
@@ -120,9 +120,9 @@ export default function Content() {
         </div>
       </div>
 
-      <h2>How to Remove a Background Using BrowseryTools</h2>
+      <h2>How to Remove a Background Using BigWow</h2>
       <p>
-        The <a href="/tools/bg-removal">BrowseryTools Background Removal tool</a> is designed to be as
+        The <a href="/tools/bg-removal">BigWow Background Removal tool</a> is designed to be as
         straightforward as possible. Here is the complete step-by-step process:
       </p>
       <ol>
@@ -146,7 +146,7 @@ export default function Content() {
         </li>
       </ol>
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Zero uploads, zero accounts:</strong> BrowseryTools processes your images entirely on your own
+        <strong>Zero uploads, zero accounts:</strong> BigWow processes your images entirely on your own
         device. No image data is sent to any server at any point. You do not need to create an account, verify
         an email address, or provide any personal information. Just open the tool and use it.
       </div>
@@ -187,7 +187,7 @@ export default function Content() {
       <p>
         Amazon, Shopify, and most marketplaces require or strongly recommend white background product images. Instead
         of hiring a photographer with a studio setup or paying a retouching service, you can shoot products on any
-        neutral surface and remove the background in seconds with BrowseryTools. Process an entire product catalog
+        neutral surface and remove the background in seconds with BigWow. Process an entire product catalog
         without uploading a single image to a third-party service.
       </p>
 
@@ -215,18 +215,18 @@ export default function Content() {
       <h3>Client Work and Confidentiality</h3>
       <p>
         If you work with client images — product photos, portraits, proprietary materials — the last thing you
-        want is to upload those files to a third-party server. With BrowseryTools, client images stay on your
+        want is to upload those files to a third-party server. With BigWow, client images stay on your
         machine. Full stop.
       </p>
 
-      <h2>Direct Comparison: BrowseryTools vs. the Alternatives</h2>
+      <h2>Direct Comparison: BigWow vs. the Alternatives</h2>
 
       <div style={{overflowX: "auto", margin: "24px 0"}}>
         <table style={{width: "100%", borderCollapse: "collapse", fontSize: "0.9rem"}}>
           <thead>
             <tr style={{background: "rgba(99,102,241,0.15)"}}>
               <th style={{padding: "12px 16px", textAlign: "left", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>Feature</th>
-              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>BrowseryTools</th>
+              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>BigWow</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>Remove.bg</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>Canva Pro</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)"}}>Photoshop</th>
@@ -281,7 +281,7 @@ export default function Content() {
 
       <h2>Bulk Background Removal</h2>
       <p>
-        If you have a batch of product images to process, BrowseryTools also supports bulk background removal. You
+        If you have a batch of product images to process, BigWow also supports bulk background removal. You
         can upload multiple images at once and process them sequentially without leaving the tool or setting up any
         batch scripts. For e-commerce sellers or content creators with large libraries, this makes the tool
         genuinely practical for real workflows — not just one-off tasks.
@@ -289,7 +289,7 @@ export default function Content() {
 
       <h2>What Happens to Your Images?</h2>
       <p>
-        Nothing leaves your device. When you upload an image to the BrowseryTools Background Removal tool, the
+        Nothing leaves your device. When you upload an image to the BigWow Background Removal tool, the
         JavaScript on the page reads the file using the browser's File API and passes it directly to the ONNX
         runtime running in a Web Worker. The segmentation model runs locally, the output PNG is generated in
         memory, and you download it. At no point does any image data travel over a network connection.
@@ -299,7 +299,7 @@ export default function Content() {
         After the initial model download, you will see zero network requests when processing an image.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Transparency by design:</strong> BrowseryTools is built on the principle that your data belongs to
+        <strong>Transparency by design:</strong> BigWow is built on the principle that your data belongs to
         you. Browser-based AI processing is not a workaround — it is the right architectural choice for tools that
         handle personal or sensitive content.
       </div>

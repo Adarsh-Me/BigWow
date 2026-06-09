@@ -1,4 +1,15 @@
 import JsonFormatter from "@/components/JsonFormatter";
 import { generateToolMetadata } from "@/lib/metadata";
+import RelatedPrivacyGuides from "@/components/RelatedPrivacyGuides";
+
 export const metadata = generateToolMetadata("/tools/json-formatter");
-export default function Page() { return <JsonFormatter />; }
+
+export default function Page() {
+  return (
+    <>
+      <JsonFormatter />
+      <RelatedPrivacyGuides toolPath="/tools/json-formatter" />
+    </>
+  );
+}
+

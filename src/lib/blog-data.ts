@@ -12,7 +12,7 @@ export interface BlogPost {
   coverGradient: string;
 }
 
-export const blogPosts: BlogPost[] = [
+const rawBlogPosts: BlogPost[] = [
   {
     slug: "keep-laptop-awake-browser",
     title: "How to Keep Your Laptop Awake Without Installing Anything (Mac, Windows, Linux)",
@@ -804,6 +804,10 @@ export const blogPosts: BlogPost[] = [
     coverGradient: "from-emerald-500 to-teal-700",
   },
 ];
+
+export const blogPosts: BlogPost[] = rawBlogPosts.filter(
+  (p) => !/[\u0600-\u06FF]/.test(p.title) && !/[\u0600-\u06FF]/.test(p.category)
+);
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/token-counter">BrowseryTools Token Counter</a> — free, no sign-up, everything
+        <a href="/tools/token-counter">BigWow Token Counter</a> — free, no sign-up, everything
         stays in your browser — to count tokens for any text before you send it to an API.
       </p>
 
@@ -123,7 +123,7 @@ export default function Content() {
         A practical implication: if you are building an application for Arabic, Chinese, or other
         non-Latin script languages, your cost estimates derived from English testing will significantly
         under-predict actual API costs. Always measure token counts with your actual content using the{" "}
-        <a href="/tools/token-counter">BrowseryTools Token Counter</a> or a tokenizer library
+        <a href="/tools/token-counter">BigWow Token Counter</a> or a tokenizer library
         before making budget projections.
       </p>
 
@@ -184,7 +184,7 @@ export default function Content() {
         The best habit to build when working with LLM APIs is to count your tokens before committing
         to an architecture or going to production. Paste your system prompt, a representative user
         message, and any context you plan to include into the{" "}
-        <a href="/tools/token-counter">BrowseryTools Token Counter</a>. You'll immediately see whether
+        <a href="/tools/token-counter">BigWow Token Counter</a>. You'll immediately see whether
         your design is well within the context window or dangerously close to it — and you'll have
         the numbers you need to estimate costs accurately.
       </p>

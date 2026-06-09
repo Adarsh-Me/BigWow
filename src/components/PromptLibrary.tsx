@@ -24,7 +24,7 @@ interface Prompt {
   createdAt: number;
 }
 
-const STORAGE_KEY = "browsery-prompt-library";
+const STORAGE_KEY = "bigwow-prompt-library";
 
 function loadPrompts(): Prompt[] {
   if (typeof window === "undefined") return [];

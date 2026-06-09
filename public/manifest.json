@@ -1,6 +1,6 @@
 {
-  "name": "BrowseryTools",
-  "short_name": "BrowseryTools",
+  "name": "BigWow",
+  "short_name": "BigWow",
   "description": "Essential browser-based tools for productivity. No servers. Full privacy.",
   "start_url": "/",
   "scope": "/",

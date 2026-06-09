@@ -11,7 +11,7 @@ export default function Content() {
       <p>
         Model Context Protocol (MCP) is Anthropic's answer to this problem: an open standard that gives
         AI models a single, consistent interface to tools, files, databases, and services. You can use the{" "}
-        <a href="/tools/mcp-config">BrowseryTools MCP Config Generator</a> — free, no sign-up, everything
+        <a href="/tools/mcp-config">BigWow MCP Config Generator</a> — free, no sign-up, everything
         stays in your browser — to build and validate MCP configuration files without writing JSON by hand.
       </p>
 
@@ -184,11 +184,11 @@ claude mcp list`}
         <code>npx -y @modelcontextprotocol/server-name@latest</code>.</li>
       </ul>
 
-      <h2>Generate Your Config with BrowseryTools</h2>
+      <h2>Generate Your Config with BigWow</h2>
       <p>
         Writing MCP JSON by hand is tedious and easy to get wrong — a missing comma or a misquoted path
         makes the whole config fail silently. The{" "}
-        <a href="/tools/mcp-config">BrowseryTools MCP Config Generator</a> lets you select your servers,
+        <a href="/tools/mcp-config">BigWow MCP Config Generator</a> lets you select your servers,
         fill in the required parameters, and get a valid, formatted JSON config ready to paste into your
         Claude Desktop config file or <code>.mcp.json</code>. Everything runs in your browser and no
         credentials are stored.

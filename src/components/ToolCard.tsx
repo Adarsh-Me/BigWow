@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 import { Heart } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Tool, isToolNew } from "@/lib/tools-config";
 import { useFavoritesStore } from "@/store/favorites-store";
 import {
@@ -14,6 +11,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 interface ToolCardProps {
   tool: Tool & { category: string };
@@ -50,65 +48,57 @@ export default function ToolCard({
     return (
       <Link
         href={tool.available ? tool.href : "#"}
-        className={`block ${
-          tool.available ? "group" : "cursor-not-allowed"
-        } ${className}`}
+        className={cn("block", tool.available ? "group" : "cursor-not-allowed", className)}
       >
-        <Card
+        <article
           data-testid="tool-card"
-          className={`h-full transition-all shadow-none duration-200 ${
-            tool.available ? "hover:shadow-sm cursor-pointer" : "opacity-50"
-          }`}
+          className={cn(
+            "premium-card relative flex w-full items-center gap-4 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.01)]",
+            tool.available ? "cursor-pointer" : "opacity-55",
+          )}
         >
-          <CardContent className="px-4 py-2">
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-md bg-muted group-hover:bg-primary/10 transition-colors duration-200">
-                <IconComponent className="w-4 h-4" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-medium text-sm truncate">{toolName}</h3>
-                </div>
-                <p className="text-xs text-muted-foreground line-clamp-1">
-                  {toolDesc}
-                </p>
-              </div>
-              {showFavoriteButton && tool.available && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-6 w-6 p-0 hover:bg-transparent"
-                  onClick={handleFavoriteClick}
-                  aria-label={
-                    isFavorited
-                      ? tCommon("removeFromFavorites")
-                      : tCommon("addToFavorites")
-                  }
-                >
-                  <Heart
-                    className={`h-3 w-3 transition-colors ${
-                      isFavorited
-                        ? "fill-red-500 text-red-500"
-                        : "text-muted-foreground hover:text-red-500"
-                    }`}
-                  />
-                </Button>
-              )}
+          <div className="shrink-0 rounded-xl bg-secondary/80 p-3 text-muted-foreground transition-all duration-200 group-hover:bg-accent/10 group-hover:text-accent group-hover:scale-105">
+            <IconComponent className="h-5 w-5" />
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <div className="mb-1 flex items-center gap-2">
+              <h3 className="truncate text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                {toolName}
+              </h3>
               {!tool.available ? (
-                <Badge variant="secondary" className="text-[10px] rounded-xl">
+                <span className="rounded-full bg-secondary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
                   {tCommon("comingSoon")}
-                </Badge>
+                </span>
               ) : isToolNew(tool.creationDate) ? (
-                <Badge
-                  variant="default"
-                  className="text-[10px] -top-4 -left-4 shadow-sm rounded-xl bg-green-100 text-green-700 hover:bg-green-200 border border-green-200"
-                >
+                <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-accent">
                   {tCommon("new")}
-                </Badge>
+                </span>
               ) : null}
             </div>
-          </CardContent>
-        </Card>
+            <p className="line-clamp-1 text-xs text-muted-foreground">{toolDesc}</p>
+          </div>
+
+          {showFavoriteButton && tool.available && (
+            <button
+              type="button"
+              className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground/80 hover:text-rose-500 hover:border-rose-100 hover:bg-rose-50 transition active:scale-95"
+              onClick={handleFavoriteClick}
+              aria-label={
+                isFavorited
+                  ? tCommon("removeFromFavorites")
+                  : tCommon("addToFavorites")
+              }
+            >
+              <Heart
+                className={cn(
+                  "h-4 w-4 transition-all duration-200",
+                  isFavorited ? "fill-rose-500 text-rose-500" : "hover:text-rose-500",
+                )}
+              />
+            </button>
+          )}
+        </article>
       </Link>
     );
   }
@@ -117,42 +107,30 @@ export default function ToolCard({
     return (
       <Link
         href={tool.available ? tool.href : "#"}
-        className={`block ${
-          tool.available ? "group" : "cursor-not-allowed"
-        } ${className}`}
+        className={cn("block", tool.available ? "group" : "cursor-not-allowed", className)}
       >
-        <Card
+        <article
           data-testid="tool-card"
-          className={`h-full transition-all rounded-md shadow-none duration-200 relative ${
-            tool.available ? "hover:shadow-lg cursor-pointer" : "opacity-50"
-          }`}
+          className={cn(
+            "premium-card relative flex w-full items-center gap-3 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.01)]",
+            tool.available ? "cursor-pointer" : "opacity-55",
+          )}
         >
-          {/* Status Badge - Overlapping Top Right Corner */}
-          <div className="absolute top-0.5 end-0.5 z-10">
-            {!tool.available && (
-              <Badge
-                variant="secondary"
-                className="text-[10px] px-1 py-0 shadow-sm rounded-md"
-              >
-                {tCommon("comingSoon")}
-              </Badge>
-            )}
+          <div className="shrink-0 rounded-xl bg-secondary/80 p-2.5 text-muted-foreground transition-all duration-200 group-hover:bg-accent/10 group-hover:text-accent group-hover:scale-105">
+            <IconComponent className="h-4 w-4" />
           </div>
-
-          <CardContent className="p-2">
-            <div className="flex items-center gap-2">
-              {/* Icon */}
-              <div className="p-1 rounded-md bg-muted group-hover:bg-primary/10 transition-colors duration-200 flex-shrink-0">
-                <IconComponent className="w-3 h-3" />
-              </div>
-
-              {/* Tool Name */}
-              <h3 className="font-medium text-xs leading-tight truncate">
-                {toolName}
-              </h3>
-            </div>
-          </CardContent>
-        </Card>
+          <div className="min-w-0 flex-1">
+            <h3 className="truncate text-xs font-semibold text-foreground transition-colors group-hover:text-accent">
+              {toolName}
+            </h3>
+            <p className="mt-1 line-clamp-1 text-[11px] text-muted-foreground">{toolDesc}</p>
+          </div>
+          {!tool.available && (
+            <span className="rounded-full bg-secondary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
+              {tCommon("comingSoon")}
+            </span>
+          )}
+        </article>
       </Link>
     );
   }
@@ -163,43 +141,33 @@ export default function ToolCard({
         <TooltipTrigger asChild>
           <Link
             href={tool.available ? tool.href : "#"}
-            className={`block ${
-              tool.available ? "group" : "cursor-not-allowed"
-            } ${className}`}
+            className={cn("block h-full", tool.available ? "group" : "cursor-not-allowed", className)}
           >
-            <Card
+            <article
               data-testid="tool-card"
-              className={`h-full transition-all shadow-none duration-200 relative ${
-                tool.available ? "hover:shadow-sm cursor-pointer" : "opacity-50"
-              }`}
+              className={cn(
+                "premium-card relative flex h-full min-h-[200px] w-full flex-col p-5 shadow-[0_2px_8px_rgba(0,0,0,0.01)]",
+                tool.available ? "cursor-pointer" : "opacity-55",
+              )}
             >
-              {/* Badges - Top Start Corner */}
-              <div className="absolute top-0.5 start-1 z-10">
+              <div className="absolute left-4 top-4 z-10 flex gap-1.5">
                 {!tool.available && (
-                  <Badge
-                    variant="secondary"
-                    className="text-xs shadow-sm rounded-xl"
-                  >
+                  <span className="rounded-full bg-secondary px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground/60">
                     {tCommon("comingSoon")}
-                  </Badge>
+                  </span>
                 )}
                 {tool.available && isToolNew(tool.creationDate) && (
-                  <Badge
-                    variant="default"
-                    className="text-xs shadow-sm -top-2 -start-4 absolute rounded-xl bg-green-100 text-green-700 hover:bg-green-200 border border-green-200"
-                  >
+                  <span className="rounded-full bg-accent/10 px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-accent">
                     {tCommon("new")}
-                  </Badge>
+                  </span>
                 )}
               </div>
 
-              {/* Favorite Button - Top End Corner */}
               {showFavoriteButton && tool.available && (
-                <div className="absolute top-0.5 end-1 z-10">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="h-6 w-6 p-0 hover:bg-transparent"
+                <div className="absolute right-4 top-4 z-10">
+                  <button
+                    type="button"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground/80 hover:text-rose-500 hover:border-rose-100 hover:bg-rose-50 transition active:scale-95"
                     onClick={handleFavoriteClick}
                     aria-label={
                       isFavorited
@@ -208,36 +176,32 @@ export default function ToolCard({
                     }
                   >
                     <Heart
-                      className={`h-3 w-3 transition-colors ${
-                        isFavorited
-                          ? "fill-red-500 text-red-500"
-                          : "text-muted-foreground hover:text-red-500"
-                      }`}
+                      className={cn(
+                        "h-4 w-4 transition-all duration-200",
+                        isFavorited ? "fill-rose-500 text-rose-500" : "hover:text-rose-500",
+                      )}
                     />
-                  </Button>
+                  </button>
                 </div>
               )}
 
-              <CardContent className="p-4">
-                <div className="flex flex-col items-center text-center space-y-3">
-                  {/* Icon */}
-                  <div className="p-3 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors duration-200">
-                    <IconComponent className="w-6 h-6" />
-                  </div>
+              <div className="mb-4 mt-8 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/80 text-muted-foreground transition-all duration-200 group-hover:bg-accent/10 group-hover:text-accent group-hover:scale-105">
+                <IconComponent className="h-5 w-5" />
+              </div>
 
-                  {/* Tool Name */}
-                  <div className="space-y-2">
-                    <h3 className="font-medium text-sm leading-tight">
-                      {toolName}
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              <div className="mt-auto">
+                <h3 className="text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  {toolName}
+                </h3>
+                <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                  {toolDesc}
+                </p>
+              </div>
+            </article>
           </Link>
         </TooltipTrigger>
-        <TooltipContent side="top" className="max-w-xs">
-          <p className="text-sm">{toolDesc}</p>
+        <TooltipContent side="top" className="max-w-xs rounded-xl border border-border bg-card p-3 shadow-md">
+          <p className="text-[11px] font-medium leading-relaxed text-foreground">{toolDesc}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

@@ -5,7 +5,7 @@ import { Clock, Tag } from "lucide-react";
 import { BlogHeroTitle, BlogPrivacyCta, BlogSectionLabel } from "@/components/blog-client-text";
 
 export const metadata = {
-  title: "Blog — Privacy, Security & Free Tool Guides | BrowseryTools",
+  title: "Blog — Privacy, Security & Free Tool Guides | BigWow",
   description: "Learn how to protect your privacy online, use free browser tools without uploading data, and master essential developer and productivity tools.",
 };
 

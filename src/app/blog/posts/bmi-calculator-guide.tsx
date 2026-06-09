@@ -7,7 +7,7 @@ export default function Content() {
         most people who know their BMI number have only a vague sense of what it actually measures, how it
         is calculated, and — critically — what it cannot tell you. This guide covers all of it: the formula,
         the categories, the history, the genuine limitations, and how to use the{" "}
-        <a href="/tools/bmi-calculator">BrowseryTools BMI Calculator</a> to get your result instantly and
+        <a href="/tools/bmi-calculator">BigWow BMI Calculator</a> to get your result instantly and
         privately in your browser.
       </p>
 
@@ -235,7 +235,7 @@ Upper bound = 24.9 × 3.0625 = 76.3 kg`}
       </pre>
       <p>
         So for a person 1.75 m tall, a Normal BMI corresponds to a body weight between approximately
-        56.7 kg and 76.3 kg — a range of nearly 20 kg. The <a href="/tools/bmi-calculator">BrowseryTools
+        56.7 kg and 76.3 kg — a range of nearly 20 kg. The <a href="/tools/bmi-calculator">BigWow
         BMI Calculator</a> displays this healthy range automatically below your result, so you can see
         exactly where you stand relative to the Normal category for your specific height.
       </p>
@@ -263,9 +263,9 @@ Upper bound = 24.9 × 3.0625 = 76.3 kg`}
         range.
       </p>
 
-      <h2>How to Use the BrowseryTools BMI Calculator</h2>
+      <h2>How to Use the BigWow BMI Calculator</h2>
       <p>
-        The <a href="/tools/bmi-calculator">BrowseryTools BMI Calculator</a> is designed to give you
+        The <a href="/tools/bmi-calculator">BigWow BMI Calculator</a> is designed to give you
         an instant, clear result with useful context:
       </p>
       <ul>
@@ -290,7 +290,7 @@ Upper bound = 24.9 × 3.0625 = 76.3 kg`}
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "28px 0"}}>
         <strong>Your data never leaves your device.</strong> The BMI Calculator runs entirely in your
         browser. The height and weight values you enter are used only for the on-screen calculation and
-        are never transmitted to BrowseryTools servers, stored in any database, or shared with any
+        are never transmitted to BigWow servers, stored in any database, or shared with any
         third party. Nothing is logged. Closing the tab discards everything.
       </div>
 
@@ -299,7 +299,7 @@ Upper bound = 24.9 × 3.0625 = 76.3 kg`}
           Medical Disclaimer
         </p>
         <p style={{marginTop: 0, marginBottom: 0, fontSize: "0.95rem"}}>
-          The BrowseryTools BMI Calculator is an informational tool only. BMI is a screening metric, not
+          The BigWow BMI Calculator is an informational tool only. BMI is a screening metric, not
           a diagnostic measure. The result it provides is not medical advice and should not be used to
           make decisions about your health, diet, or treatment without consulting a qualified healthcare
           professional. If you have concerns about your weight, body composition, or related health

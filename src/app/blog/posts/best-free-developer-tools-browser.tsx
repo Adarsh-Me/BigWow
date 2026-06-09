@@ -9,7 +9,7 @@ export default function Content() {
       </p>
 
       <p>
-        <strong>BrowseryTools</strong> consolidates the most essential developer utilities into a single, fast, privacy-first suite. Everything runs locally in your browser. No uploads. No API keys. No rate limits. This guide walks through each tool and shows you exactly when and why you'd reach for it.
+        <strong>BigWow</strong> consolidates the most essential developer utilities into a single, fast, privacy-first suite. Everything runs locally in your browser. No uploads. No API keys. No rate limits. This guide walks through each tool and shows you exactly when and why you'd reach for it.
       </p>
 
       <div style={{background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.25)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
@@ -39,7 +39,7 @@ curl -s https://api.example.com/user/42
 # Minified response that's hard to read:
 {"id":42,"name":"Alice","roles":["admin","editor"],"meta":{"created":"2024-01-01","active":true}}
 
-# Paste into BrowseryTools JSON Formatter → instantly readable:
+# Paste into BigWow JSON Formatter → instantly readable:
 {
   "id": 42,
   "name": "Alice",
@@ -70,7 +70,7 @@ curl -s https://api.example.com/user/42
 echo "dXNlcjpwYXNzd29yZA==" | base64 -d
 # Output: user:password
 
-# Same thing — paste into BrowseryTools Base64 Decoder, no terminal needed`}</code></pre>
+# Same thing — paste into BigWow Base64 Decoder, no terminal needed`}</code></pre>
 
       <Link href="/tools/base64" style={{display: "inline-block", margin: "8px 0 24px", padding: "8px 18px", background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "8px", textDecoration: "none", fontWeight: "600", fontSize: "14px"}}>Open Base64 Encoder/Decoder →</Link>
 
@@ -85,13 +85,13 @@ echo "dXNlcjpwYXNzd29yZA==" | base64 -d
       </p>
 
       <div style={{background: "rgba(239,68,68,0.07)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Security note:</strong> Never paste production JWT tokens into an unknown third-party decoder — those tokens represent active user sessions. BrowseryTools decodes JWTs entirely in your browser using Base64 string operations. The token never leaves your device, making it the only safe choice for inspecting tokens from live environments.
+        <strong>Security note:</strong> Never paste production JWT tokens into an unknown third-party decoder — those tokens represent active user sessions. BigWow decodes JWTs entirely in your browser using Base64 string operations. The token never leaves your device, making it the only safe choice for inspecting tokens from live environments.
       </div>
 
       <pre style={{background: "rgba(128,128,128,0.08)", border: "1px solid rgba(128,128,128,0.2)", borderRadius: "10px", padding: "16px", overflowX: "auto", fontSize: "13px", lineHeight: "1.6"}}><code>{`// A typical JWT has three Base64-encoded parts separated by dots:
 // eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyXzQyIiwiZXhwIjoxNzA5MDAwMDAwfQ.sig
 
-// BrowseryTools JWT Decoder shows:
+// BigWow JWT Decoder shows:
 // Header:  { "alg": "HS256" }
 // Payload: { "sub": "user_42", "exp": 1709000000 }
 // Status:  ⚠ Expired (expired 3 days ago)`}</code></pre>
@@ -134,7 +134,7 @@ f47ac10b-58cc-4372-a567-0e02b2c3d479
         <li>Checking whether two large text blobs are identical without diffing them character by character</li>
       </ul>
 
-      <pre style={{background: "rgba(128,128,128,0.08)", border: "1px solid rgba(128,128,128,0.2)", borderRadius: "10px", padding: "16px", overflowX: "auto", fontSize: "13px", lineHeight: "1.6"}}><code>{`Input: "Hello, BrowseryTools!"
+      <pre style={{background: "rgba(128,128,128,0.08)", border: "1px solid rgba(128,128,128,0.2)", borderRadius: "10px", padding: "16px", overflowX: "auto", fontSize: "13px", lineHeight: "1.6"}}><code>{`Input: "Hello, BigWow!"
 
 MD5:    a4e1c5f0e8d2b3c7a1f6e9d4b2c8a0f3
 SHA-1:  3f4a7b2e1c9d5f0a8b3e6c4d2a1f7e9b5c0d8a2
@@ -289,10 +289,10 @@ Octal 644 → Binary: 110 100 100
         </table>
       </div>
 
-      <h2>Why BrowseryTools Instead of npm Packages or Cloud APIs?</h2>
+      <h2>Why BigWow Instead of npm Packages or Cloud APIs?</h2>
 
       <p>
-        The honest comparison: when should you use BrowseryTools vs. installing a package or calling an API?
+        The honest comparison: when should you use BigWow vs. installing a package or calling an API?
       </p>
 
       <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "14px", margin: "24px 0"}}>
@@ -315,7 +315,7 @@ Octal 644 → Binary: 110 100 100
           </ul>
         </div>
         <div style={{background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.2)", borderRadius: "10px", padding: "16px"}}>
-          <div style={{fontWeight: "700", marginBottom: "8px", fontSize: "14px", color: "#16a34a"}}>BrowseryTools</div>
+          <div style={{fontWeight: "700", marginBottom: "8px", fontSize: "14px", color: "#16a34a"}}>BigWow</div>
           <ul style={{margin: 0, paddingLeft: "16px", fontSize: "13px", lineHeight: "1.7", opacity: 0.85}}>
             <li>Zero setup, works instantly</li>
             <li>No dependencies</li>
@@ -326,17 +326,17 @@ Octal 644 → Binary: 110 100 100
       </div>
 
       <p>
-        The answer is: use BrowseryTools for the <em>manual, exploratory, one-off tasks</em> that would be overkill to script. Decoding a JWT to debug an auth issue, formatting an API response to understand its shape, generating a UUID for a one-time test — these are exactly the moments where a fast, no-friction browser tool saves 10 minutes of setup for a 10-second job.
+        The answer is: use BigWow for the <em>manual, exploratory, one-off tasks</em> that would be overkill to script. Decoding a JWT to debug an auth issue, formatting an API response to understand its shape, generating a UUID for a one-time test — these are exactly the moments where a fast, no-friction browser tool saves 10 minutes of setup for a 10-second job.
       </p>
 
       <div style={{background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.25)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Tip for developers:</strong> Bookmark <code>browserytools.com</code> alongside your browser's dev tools. When you're in the middle of debugging and need to quickly decode, hash, format, or convert something, having these tools a tab away means you can stay in flow instead of switching context to write a throwaway script.
+        <strong>Tip for developers:</strong> Bookmark <code>bigwow.space</code> alongside your browser's dev tools. When you're in the middle of debugging and need to quickly decode, hash, format, or convert something, having these tools a tab away means you can stay in flow instead of switching context to write a throwaway script.
       </div>
 
-      <h2>Beyond Developer Tools: More BrowseryTools Utilities</h2>
+      <h2>Beyond Developer Tools: More BigWow Utilities</h2>
 
       <p>
-        BrowseryTools covers far more than developer utilities. The same privacy-first, no-upload approach applies to:
+        BigWow covers far more than developer utilities. The same privacy-first, no-upload approach applies to:
       </p>
 
       <ul>
@@ -366,7 +366,7 @@ Octal 644 → Binary: 110 100 100
       {/* CTA */}
       <div style={{background: "linear-gradient(135deg, rgba(245,158,11,0.1), rgba(234,88,12,0.1))", border: "1px solid rgba(245,158,11,0.3)", borderRadius: "16px", padding: "32px", margin: "40px 0", textAlign: "center"}}>
         <div style={{fontSize: "48px", marginBottom: "16px"}}>⚡</div>
-        <h2 style={{margin: "0 0 12px", fontSize: "22px"}}>Start Using BrowseryTools — No Setup Required</h2>
+        <h2 style={{margin: "0 0 12px", fontSize: "22px"}}>Start Using BigWow — No Setup Required</h2>
         <p style={{margin: "0 0 20px", opacity: 0.8, maxWidth: "520px", marginLeft: "auto", marginRight: "auto"}}>
           All 10 developer tools above — plus dozens more — are free, instant, and require no account, no install, and no configuration. Open a tool and start working in under 3 seconds.
         </p>

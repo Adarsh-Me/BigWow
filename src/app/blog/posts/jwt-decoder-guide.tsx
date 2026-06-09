@@ -9,7 +9,7 @@ export default function Content() {
         makes authentication debugging dramatically faster.
       </p>
       <p>
-        The <a href="/tools/jwt-decoder">BrowseryTools JWT Decoder</a> lets you paste any JWT token and
+        The <a href="/tools/jwt-decoder">BigWow JWT Decoder</a> lets you paste any JWT token and
         instantly see its decoded header, payload, and expiry status — all in your browser, with the token
         never leaving your device.
       </p>
@@ -179,7 +179,7 @@ export default function Content() {
         weeks) are more convenient but more dangerous if compromised.
       </p>
       <p>
-        The <a href="/tools/jwt-decoder">BrowseryTools JWT Decoder</a> automatically reads the <code>exp</code>{" "}
+        The <a href="/tools/jwt-decoder">BigWow JWT Decoder</a> automatically reads the <code>exp</code>{" "}
         and <code>iat</code> claims and displays them as human-readable dates alongside the raw Unix timestamps,
         so you never have to do the mental math manually.
       </p>
@@ -256,7 +256,7 @@ export default function Content() {
         claims (like showing the user's name in a UI), never for making authorization decisions.
       </div>
 
-      <h2>How to Use the BrowseryTools JWT Decoder</h2>
+      <h2>How to Use the BigWow JWT Decoder</h2>
       <p>
         Open the <a href="/tools/jwt-decoder">JWT Decoder</a> and paste your token into the input field.
         The tool immediately splits the token at the two dots and displays:
@@ -289,7 +289,7 @@ export default function Content() {
 
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
         <strong>Your tokens stay private:</strong> JWT tokens frequently contain user IDs, email addresses,
-        roles, and other personal data. The BrowseryTools JWT Decoder processes your token entirely in your
+        roles, and other personal data. The BigWow JWT Decoder processes your token entirely in your
         browser — it is never sent to any server, never logged, and never stored. You can safely paste
         production tokens to inspect them without worrying about exposure. Once you close the tab, it is gone.
       </div>
@@ -298,7 +298,7 @@ export default function Content() {
       <p>
         Whether you are debugging an expired token, inspecting claims from an OAuth provider, checking what
         roles a user has been granted, or simply trying to understand what your authentication system is
-        actually issuing — the <a href="/tools/jwt-decoder">BrowseryTools JWT Decoder</a> gives you the
+        actually issuing — the <a href="/tools/jwt-decoder">BigWow JWT Decoder</a> gives you the
         answers instantly. No registration, no extensions to install, no data sent anywhere.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>

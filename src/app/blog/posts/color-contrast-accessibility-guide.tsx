@@ -9,7 +9,7 @@ export default function Content() {
         makes content genuinely inaccessible. Color contrast is one of the most impactful and most
         frequently violated aspects of web accessibility, and it is also one of the easiest to fix once
         you understand the rules. This guide explains the standard, the math, the common mistakes, and
-        how to use the <a href="/tools/contrast-checker">BrowseryTools Color Contrast Checker</a> to
+        how to use the <a href="/tools/contrast-checker">BigWow Color Contrast Checker</a> to
         verify any color pair instantly in your browser.
       </p>
 
@@ -375,9 +375,9 @@ L = 0.2126 × R_linear + 0.7152 × G_linear + 0.0722 × B_linear`}
         <li>Anyone under cognitive load — when tired or distracted, high contrast reduces reading errors</li>
       </ul>
 
-      <h2>How to Use the BrowseryTools Color Contrast Checker</h2>
+      <h2>How to Use the BigWow Color Contrast Checker</h2>
       <p>
-        The <a href="/tools/contrast-checker">BrowseryTools Color Contrast Checker</a> makes it trivial
+        The <a href="/tools/contrast-checker">BigWow Color Contrast Checker</a> makes it trivial
         to verify any color combination against WCAG standards:
       </p>
       <ul>

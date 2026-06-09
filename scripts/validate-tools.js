@@ -109,7 +109,7 @@ function loadReadmeTools() {
     const readmeContent = fs.readFileSync(readmePath, "utf8");
 
     const tools = [];
-    const lines = readmeContent.split("\n");
+    const lines = readmeContent.replace(/\r/g, "").split("\n");
     let currentCategory = "";
 
     for (const line of lines) {

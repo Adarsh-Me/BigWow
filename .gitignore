@@ -43,3 +43,16 @@ next-env.d.ts
 
 docs/
 plans/
+
+# local tools / testing artifacts
+/.agents/
+/.opencode/
+/scratch/
+/test-results/
+/playwright-report/
+/flowstate_screenshot_*.png
+/homepage_screenshot_*.png
+/report.html
+/report.json
+*.log
+.playwright-mcp/

@@ -56,9 +56,13 @@ const generateQRCode = async (
   }
 };
 
-export default function QRCodeGenerator() {
+interface QRCodeGeneratorProps {
+  initialText?: string;
+}
+
+export default function QRCodeGenerator({ initialText }: QRCodeGeneratorProps = {}) {
   const t = useTranslations("Tools.QRCodeGenerator");
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState(initialText ?? "");
   const [qrCodeDataUrl, setQrCodeDataUrl] = useState("");
   const [size, setSize] = useState(256);
   const [errorCorrectionLevel, setErrorCorrectionLevel] = useState("M");
@@ -170,6 +174,12 @@ export default function QRCodeGenerator() {
 
     setInputText(samples[type as keyof typeof samples] || samples.text);
   };
+
+  useEffect(() => {
+    if (initialText) {
+      setInputText(initialText);
+    }
+  }, [initialText]);
 
   // Auto-generate when text changes
   useEffect(() => {

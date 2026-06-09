@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -110,15 +110,47 @@ const conversionCategories: ConversionCategory[] = [
   },
 ];
 
-export default function UnitConverter() {
+interface UnitConverterProps {
+  initialValue?: number;
+  initialCategory?: string;
+  initialFrom?: string;
+  initialTo?: string;
+}
+
+export default function UnitConverter({
+  initialValue,
+  initialCategory,
+  initialFrom,
+  initialTo,
+}: UnitConverterProps = {}) {
   const t = useTranslations("Tools.UnitConverter");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const tAny = t as any;
-  const [activeCategory, setActiveCategory] = useState("Length");
-  const [fromUnit, setFromUnit] = useState("Meter");
-  const [toUnit, setToUnit] = useState("Kilometer");
-  const [fromValue, setFromValue] = useState("");
+  const [activeCategory, setActiveCategory] = useState(initialCategory ?? "Length");
+  const [fromUnit, setFromUnit] = useState(initialFrom ?? "Meter");
+  const [toUnit, setToUnit] = useState(initialTo ?? "Kilometer");
+  const [fromValue, setFromValue] = useState(initialValue ? String(initialValue) : "");
   const [toValue, setToValue] = useState("");
+
+  useEffect(() => {
+    if (initialCategory) setActiveCategory(initialCategory);
+    if (initialFrom) setFromUnit(initialFrom);
+    if (initialTo) setToUnit(initialTo);
+    if (initialValue) {
+      const valStr = String(initialValue);
+      setFromValue(valStr);
+      const catName = initialCategory ?? activeCategory;
+      const fromUName = initialFrom ?? fromUnit;
+      const toUName = initialTo ?? toUnit;
+      const currentCat = conversionCategories.find(cat => cat.name === catName);
+      const fromU = currentCat?.units.find(u => u.name === fromUName);
+      const toU = currentCat?.units.find(u => u.name === toUName);
+      if (fromU && toU) {
+        const converted = convertValue(initialValue, fromU, toU);
+        setToValue(converted.toFixed(6).replace(/\.?0+$/, ""));
+      }
+    }
+  }, [initialValue, initialCategory, initialFrom, initialTo]);
 
   const currentCategory = conversionCategories.find(
     (cat) => cat.name === activeCategory

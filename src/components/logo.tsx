@@ -5,7 +5,7 @@ export default function Logo() {
     <Image
       className="dark:invert"
       src="/icon.svg"
-      alt="Browsery Tools"
+      alt="Big Wow"
       width={24}
       height={24}
     />

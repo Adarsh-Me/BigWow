@@ -16,7 +16,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/loan-calculator">BrowseryTools Loan Calculator</a> — free, no sign-up,
+        <a href="/tools/loan-calculator">BigWow Loan Calculator</a> — free, no sign-up,
         everything stays in your browser.
       </p>
 
@@ -45,7 +45,7 @@ export default function Content() {
       </p>
       <p>
         You do not need to calculate this by hand. The{" "}
-        <a href="/tools/loan-calculator">BrowseryTools Loan Calculator</a> handles the formula
+        <a href="/tools/loan-calculator">BigWow Loan Calculator</a> handles the formula
         instantly — but understanding what the formula does helps you interpret the results
         intelligently.
       </p>
@@ -186,7 +186,7 @@ export default function Content() {
       </p>
       <p>
         Run the numbers before refinancing. The{" "}
-        <a href="/tools/loan-calculator">BrowseryTools Loan Calculator</a> lets you compare
+        <a href="/tools/loan-calculator">BigWow Loan Calculator</a> lets you compare
         scenarios side by side — adjust the term and see the exact impact on total interest paid
         before making any decisions.
       </p>

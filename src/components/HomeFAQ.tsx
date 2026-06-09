@@ -12,9 +12,68 @@ import { useTranslations } from "next-intl";
 export default function HomeFAQ() {
   const t = useTranslations("Home");
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t("faq.q1"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t("faq.a1"),
+        },
+      },
+      {
+        "@type": "Question",
+        "name": t("faq.q2"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t("faq.a2"),
+        },
+      },
+      {
+        "@type": "Question",
+        "name": t("faq.q3"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t("faq.a3"),
+        },
+      },
+      {
+        "@type": "Question",
+        "name": t("faq.q4"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${t("faq.a4_pre")} GitHub.`,
+        },
+      },
+      {
+        "@type": "Question",
+        "name": t("faq.q5"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t("faq.a5"),
+        },
+      },
+      {
+        "@type": "Question",
+        "name": t("faq.q6"),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${t("faq.a6_pre")} GitHub.`,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="container mx-auto px-4 pb-12">
-      <div className="mt-10 border rounded-lg p-4 md:p-6 bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema, null, 2) }}
+      />
+      <div className="mt-10 border p-4 md:p-6 bg-background">
         <h2 className="text-2xl font-semibold mb-4 text-start">{t("faq.title")}</h2>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">

@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Copy, Download, RotateCcw, Eye, Code, FileText } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
+import { siteConfig } from "@/lib/site";
 
 // ─── Markdown Parser ────────────────────────────────────────────────────────
 
@@ -192,7 +193,7 @@ This converter supports **bold**, *italic*, ~~strikethrough~~, and \`inline code
 
 ### Links and Images
 
-[Visit ${tCommon("siteName")}](https://browserytools.com) — your favorite browser toolbox.
+[Visit ${tCommon("siteName")}](${siteConfig.baseUrl}) — your favorite browser toolbox.
 
 ### Lists
 

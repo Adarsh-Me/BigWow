@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can encrypt and decrypt any text directly in your browser using the{" "}
-        <a href="/tools/text-encryption">BrowseryTools Text Encryption tool</a> — free, no sign-up,
+        <a href="/tools/text-encryption">BigWow Text Encryption tool</a> — free, no sign-up,
         your data never leaves your device.
       </p>
 
@@ -115,7 +115,7 @@ export default function Content() {
         (the encrypted output) would ever be transmitted — and only if you choose to transmit it.
       </p>
       <p>
-        The <a href="/tools/text-encryption">BrowseryTools Text Encryption tool</a> goes further: nothing
+        The <a href="/tools/text-encryption">BigWow Text Encryption tool</a> goes further: nothing
         is transmitted at all. The entire operation is local. You can verify this by opening your browser's
         Developer Tools, switching to the Network tab, and observing that no requests are made when you
         encrypt or decrypt. The tool uses the Web Crypto API — a browser-native cryptographic library

@@ -11,7 +11,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/context-window">BrowseryTools Context Window tool</a> — free, no sign-up,
+        <a href="/tools/context-window">BigWow Context Window tool</a> — free, no sign-up,
         everything stays in your browser — to visualize how much of a model's context window
         your content occupies before you send it to an API.
       </p>
@@ -170,7 +170,7 @@ export default function Content() {
       </p>
       <p>
         For pre-flight checks before sending a request, use the{" "}
-        <a href="/tools/context-window">BrowseryTools Context Window tool</a> to paste your prompt
+        <a href="/tools/context-window">BigWow Context Window tool</a> to paste your prompt
         and see exactly how many tokens it occupies and what percentage of each model's context window
         that represents. This is especially useful when building system prompts or designing RAG
         retrieval strategies — you can see the impact of your choices before making a single API call.

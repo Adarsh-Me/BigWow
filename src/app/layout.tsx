@@ -1,19 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
-import { cookies } from "next/headers";
 import "./globals.css";
 import { Providers } from "@/providers/providers";
 import type { Locale } from "@/store/language-store";
+import StructuredDataInjector from "@/components/StructuredDataInjector";
+import { absoluteUrl, languageAlternates, siteConfig } from "@/lib/site";
 
-const geist = Geist({ subsets: ["latin"] });
+const geistSans = {
+  variable: "--font-geist-sans",
+};
+
+const geistMono = {
+  variable: "--font-geist-mono",
+};
 
 export const metadata: Metadata = {
   title: {
-    default: "BrowseryTools — أدواتك | Free Browser-Based Productivity Tools",
-    template: "%s | BrowseryTools — أدواتك",
+    default: "BigWow | Free Browser-Based Productivity Tools",
+    template: "%s | BigWow",
   },
   description:
-    "Essential browser-based tools for productivity. No servers. Full privacy. Convert files, compress images, generate passwords, format code, and more — all in your browser. | أدواتك — كل أدوات المتصفح في مكان واحد. بدون خوادم. خصوصية تامة.",
+    "Essential browser-based tools for productivity. No servers. Full privacy. Convert files, compress images, generate passwords, format code, and more — all in your browser.",
   keywords: [
     "browser tools",
     "productivity tools",
@@ -27,62 +33,43 @@ export const metadata: Metadata = {
     "client-side tools",
     "no server required",
     "free online tools",
-    // Arabic keywords
-    "أدواتك",
-    "أدوات متصفح",
-    "أدوات مجانية",
-    "أدوات إنتاجية",
-    "خصوصية تامة",
-    "بدون خوادم",
-    "أدوات الويب",
-    "تحويل الملفات",
-    "ضغط الصور",
-    "مولد كلمات المرور",
-    "أدوات مجانية للمطورين",
   ],
-  authors: [{ name: "aghyadev" }],
-  creator: "aghyadev",
-  publisher: "aghyadev",
+  authors: [{ name: "BigWow" }],
+  creator: "BigWow",
+  publisher: "BigWow",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://browserytools.com"),
+  metadataBase: new URL(siteConfig.baseUrl),
   alternates: {
     canonical: "/",
-    languages: {
-      "x-default": "https://browserytools.com",
-      "en": "https://browserytools.com",
-      "ar": "https://browserytools.com",
-    },
+    languages: languageAlternates(),
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    alternateLocale: ["ar_SA", "ar_AE", "ar_EG"],
-    url: "https://browserytools.com",
-    title: "BrowseryTools — أدواتك | Free Browser-Based Productivity Tools",
+    url: siteConfig.baseUrl,
+    title: "BigWow | Free Browser-Based Productivity Tools",
     description:
-      "Essential browser-based tools for productivity. No servers. Full privacy. | أدواتك — كل أدوات المتصفح في مكان واحد. بدون خوادم. خصوصية تامة.",
-    siteName: "BrowseryTools — أدواتك",
+      "Essential browser-based tools for productivity. No servers. Full privacy.",
+    siteName: "BigWow",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BrowseryTools - Essential Browser-Based Productivity Tools",
+        alt: "BigWow - Essential Browser-Based Productivity Tools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrowseryTools — أدواتك | Free Browser-Based Productivity Tools",
+    title: "BigWow | Free Browser-Based Productivity Tools",
     description:
-      "Essential browser-based tools for productivity. No servers. Full privacy. | أدواتك — كل أدوات المتصفح في مكان واحد. بدون خوادم. خصوصية تامة.",
+      "Essential browser-based tools for productivity. No servers. Full privacy.",
     images: ["/og-image.png"],
-    creator: "@aghyadev",
-    site: "@aghyadev",
   },
   robots: {
     index: true,
@@ -98,11 +85,6 @@ export const metadata: Metadata = {
   category: "technology",
   classification: "Productivity Tools",
   referrer: "origin-when-cross-origin",
-  colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -121,13 +103,11 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "BrowseryTools",
+    title: "BigWow",
   },
   other: {
     "msapplication-TileColor": "#000000",
     "msapplication-config": "/browserconfig.xml",
-    github: "https://github.com/aghyad97",
-    x: "https://twitter.com/aghyadev",
   },
 };
 
@@ -135,6 +115,11 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default async function RootLayout({
@@ -142,26 +127,102 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get("browsery-locale")?.value;
-  const initialLocale: Locale = localeCookie === "ar" ? "ar" : "en";
+  const initialLocale: Locale = "en";
+
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteConfig.baseUrl}/#organization`,
+    "name": "BigWow",
+    "url": siteConfig.baseUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": absoluteUrl("/icon.svg"),
+      "width": 512,
+      "height": 512
+    },
+    "description": "100% free, privacy-first, client-side productivity tools. No servers. No tracking. No data collection.",
+    "foundingDate": "2024",
+    "founder": {
+      "@type": "Organization",
+      "name": "BigWow"
+    },
+    "sameAs": [],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "studio365@zohomail.in",
+        "availableLanguage": ["English"]
+      }
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.baseUrl}/#website`,
+    "url": siteConfig.baseUrl,
+    "name": "BigWow",
+    "description": "Essential browser-based tools for productivity. No servers. Full privacy.",
+    "publisher": { "@id": `${siteConfig.baseUrl}/#organization` },
+    "inLanguage": ["en"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteConfig.baseUrl}/browser-tools?search={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
 
   return (
-    <html lang={initialLocale} dir={initialLocale === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        {/* IBM Plex Sans Arabic — loaded via standard Google Fonts link to avoid Turbopack font bundling issues */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        {/* Raw Form: Cabinet Grotesk & Satoshi from Fontshare */}
+        <link rel="preconnect" href="https://api.fontshare.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@300,400,500,700&display=swap"
           rel="stylesheet"
         />
+        {/* Poppins & other Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700;800;900&family=Syne:wght@400..800&display=swap"
+          rel="stylesheet"
+        />
+        {/* OpenSearch — let browsers add BigWow as a search engine */}
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="BigWow"
+          href="/opensearch.xml"
+        />
+        {/* DNS prefetch for known external origins used by tools */}
+        <link rel="dns-prefetch" href="https://api.fontshare.com" />
+        {/* Theme color hints for mobile browsers (Safari, Chrome Android) */}
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="1 day" />
+        <meta httpEquiv="x-ua-compatible" content="IE=edge" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
-      <body className={geist.className}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers initialLocale={initialLocale}>
           {children}
+          <StructuredDataInjector />
         </Providers>
       </body>
     </html>

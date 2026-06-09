@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { BlogNavBar, BlogFooterNote } from "@/components/blog-client-text";
 
 export const metadata: Metadata = {
-  title: "Blog — BrowseryTools | Privacy, Security & Free Browser Tool Guides",
+  title: "Blog — BigWow | Privacy, Security & Free Browser Tool Guides",
   description: "Expert guides on privacy-first browser tools, security best practices, developer tips, and how to use free online tools without uploading your data.",
   openGraph: {
-    title: "Blog — BrowseryTools",
+    title: "Blog — BigWow",
     description: "Expert guides on privacy-first browser tools and security best practices.",
     type: "website",
-    siteName: "BrowseryTools",
+    siteName: "BigWow",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog — BrowseryTools",
+    title: "Blog — BigWow",
     description: "Expert guides on privacy-first browser tools and security best practices.",
     images: ["/og-image.png"],
   },

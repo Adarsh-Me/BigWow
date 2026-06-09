@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>BrowseryTools</ShortName>
+  <Description>Search 100+ free, privacy-first browser-based productivity tools.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" template="https://browserytools.com/browser-tools?search={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://browserytools.com/opensearch.xml"/>
+  <LongName>BrowseryTools — Free Online Browser Tools</LongName>
+  <Image width="64" height="64" type="image/svg+xml">https://browserytools.com/icon.svg</Image>
+  <Developer>aghyadev</Developer>
+  <Attribution>BrowseryTools — أدواتك</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en-us</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <moz:SearchForm>https://browserytools.com/browser-tools</moz:SearchForm>
+</OpenSearchDescription>

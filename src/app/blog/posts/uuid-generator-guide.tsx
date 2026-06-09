@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can generate UUIDs and other unique IDs instantly with the{" "}
-        <a href="/tools/uuid-generator">BrowseryTools UUID Generator</a> — free, no sign-up, everything
+        <a href="/tools/uuid-generator">BigWow UUID Generator</a> — free, no sign-up, everything
         generated locally in your browser.
       </p>
 
@@ -167,7 +167,7 @@ nanoid(10);    // → "IRFa-VaY2b"  (custom length)`}
         fragments the clustered index. In PostgreSQL with a non-clustered UUID index, the penalty is less
         severe but still real at large scale. The practical solution: use UUID v7 or CUID2 (which are
         monotonically increasing) and the fragmentation problem largely disappears. Use the{" "}
-        <a href="/tools/uuid-generator">BrowseryTools UUID Generator</a> to generate v7 UUIDs for testing
+        <a href="/tools/uuid-generator">BigWow UUID Generator</a> to generate v7 UUIDs for testing
         your schema before committing to a format.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>

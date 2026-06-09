@@ -11,7 +11,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/currency-converter">BrowseryTools Currency Converter</a> — free, no sign-up,
+        <a href="/tools/currency-converter">BigWow Currency Converter</a> — free, no sign-up,
         everything stays in your browser — to check current mid-market rates before any exchange.
       </p>
 
@@ -65,7 +65,7 @@ export default function Content() {
         <li>
           <strong>Mid-market rate</strong> — The true interbank rate. Available for reference on
           financial data sites and the{" "}
-          <a href="/tools/currency-converter">BrowseryTools Currency Converter</a>. Not available
+          <a href="/tools/currency-converter">BigWow Currency Converter</a>. Not available
           for retail transactions, but useful as a benchmark to measure how much you are losing
           on any exchange.
         </li>

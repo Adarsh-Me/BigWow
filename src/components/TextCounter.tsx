@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
@@ -24,11 +24,21 @@ import { useTextCounterStore } from "@/store/text-counter-store";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
-export default function TextCounter() {
+interface TextCounterProps {
+  initialText?: string;
+}
+
+export default function TextCounter({ initialText }: TextCounterProps = {}) {
   const t = useTranslations("Tools.TextCounter");
   const tCommon = useTranslations("Common");
 
   const { text, stats, setText, clearText } = useTextCounterStore();
+
+  useEffect(() => {
+    if (initialText) {
+      setText(initialText);
+    }
+  }, [initialText, setText]);
 
   const handleCopy = () => {
     if (!text) {

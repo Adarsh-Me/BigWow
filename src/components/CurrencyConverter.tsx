@@ -176,11 +176,27 @@ function setStored(value: StoredRates) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
 }
 
-export default function CurrencyConverter() {
+interface CurrencyConverterProps {
+  initialAmount?: number;
+  initialFrom?: string;
+  initialTo?: string;
+}
+
+export default function CurrencyConverter({
+  initialAmount,
+  initialFrom,
+  initialTo,
+}: CurrencyConverterProps = {}) {
   const t = useTranslations("Tools.CurrencyConverter");
-  const [amount, setAmount] = useState<string>("1");
-  const [from, setFrom] = useState<string>("USD");
-  const [to, setTo] = useState<string>("EUR");
+  const [amount, setAmount] = useState<string>(initialAmount ? String(initialAmount) : "1");
+  const [from, setFrom] = useState<string>(initialFrom ?? "USD");
+  const [to, setTo] = useState<string>(initialTo ?? "EUR");
+
+  useEffect(() => {
+    if (initialAmount) setAmount(String(initialAmount));
+    if (initialFrom) setFrom(initialFrom);
+    if (initialTo) setTo(initialTo);
+  }, [initialAmount, initialFrom, initialTo]);
   const [rates, setRates] = useState<StoredRates | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");

@@ -17,7 +17,7 @@ export default function Content() {
       <p>
         There is a much simpler option that almost nobody knows about: your browser can already do this, on
         every operating system, with zero installs. That is the entire idea behind the{" "}
-        <a href="/tools/keep-awake">BrowseryTools Keep Awake</a> tool — a single tab you open and a single
+        <a href="/tools/keep-awake">BigWow Keep Awake</a> tool — a single tab you open and a single
         button you press to prevent your screen from sleeping, with no app, no account, and no setup.
       </p>
 
@@ -58,7 +58,7 @@ export default function Content() {
       </p>
       <p>
         <strong>Privacy-respecting.</strong> The{" "}
-        <a href="/tools/keep-awake">BrowseryTools Keep Awake</a> tool runs 100% in your browser. There is no
+        <a href="/tools/keep-awake">BigWow Keep Awake</a> tool runs 100% in your browser. There is no
         analytics tracking what you do, no account to sign up for, no server that knows when you activated
         it. It is a static page that talks directly to your browser's Wake Lock API.
       </p>
@@ -141,7 +141,7 @@ export default function Content() {
       </p>
       <p>
         The other subtlety is that the wake lock is released automatically when the tab becomes hidden. This
-        is a privacy and battery safeguard built into the API. The BrowseryTools Keep Awake tool listens for
+        is a privacy and battery safeguard built into the API. The BigWow Keep Awake tool listens for
         the tab becoming visible again and re-acquires the lock automatically — so if you switch tabs or
         apps and come back, the keep-awake resumes seamlessly. The only way to break it is to fully close or
         minimize the entire browser.
@@ -149,7 +149,7 @@ export default function Content() {
 
       <h2>Why No Downloads, No Ads, No Tracking</h2>
       <p>
-        Every tool on BrowseryTools follows the same philosophy: run entirely in the browser, never upload
+        Every tool on BigWow follows the same philosophy: run entirely in the browser, never upload
         data, never require an account, never show ads. Keep Awake is a particularly clean example. There is
         literally nothing to send anywhere. The tool asks your browser for a permission, the browser asks
         your OS, and that is the whole transaction. There is no user-identifying data, no analytics event,
@@ -169,7 +169,7 @@ export default function Content() {
         share the link with a friend who has the same frustration.
       </p>
       <p>
-        And while you are there, take a look around. BrowseryTools has dozens of other free,
+        And while you are there, take a look around. BigWow has dozens of other free,
         privacy-respecting utilities that run entirely in your browser — from a{" "}
         <a href="/tools/pomodoro">Pomodoro timer</a> to a <a href="/tools/json-formatter">JSON formatter</a>,
         a <a href="/tools/password-generator">password generator</a>, a{" "}

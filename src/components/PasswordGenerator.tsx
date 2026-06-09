@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,11 +35,15 @@ interface PasswordStrength {
   feedback: string[];
 }
 
-export default function PasswordGenerator() {
+interface PasswordGeneratorProps {
+  initialLength?: number;
+}
+
+export default function PasswordGenerator({ initialLength }: PasswordGeneratorProps = {}) {
   const t = useTranslations("Tools.PasswordGenerator");
   const [password, setPassword] = useState("");
   const [options, setOptions] = useState<PasswordOptions>({
-    length: 12,
+    length: initialLength ?? 12,
     includeUppercase: true,
     includeLowercase: true,
     includeNumbers: true,
@@ -194,6 +198,21 @@ export default function PasswordGenerator() {
       feedback: feedback.length > 0 ? feedback : [t("feedbackLooksGood")],
     });
   };
+
+  // Sync options if initialLength changes
+  useEffect(() => {
+    if (initialLength) {
+      setOptions((prev) => ({ ...prev, length: initialLength }));
+    }
+  }, [initialLength]);
+
+  // Auto-generate password on mount/change if initialLength is passed
+  useEffect(() => {
+    if (initialLength) {
+      generatePassword();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialLength]);
 
   const handleCopy = () => {
     if (!password) {

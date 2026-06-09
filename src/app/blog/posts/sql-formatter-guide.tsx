@@ -16,7 +16,7 @@ export default function Content() {
         in minutes. An unformatted one can waste hours.
       </p>
       <p>
-        The <a href="/tools/sql-formatter">BrowseryTools SQL Formatter</a> lets you paste any SQL
+        The <a href="/tools/sql-formatter">BigWow SQL Formatter</a> lets you paste any SQL
         query and instantly format it with proper indentation, uppercase keywords, and clause
         separation — all processed locally in your browser, with no query ever sent to a server.
       </p>
@@ -144,7 +144,7 @@ LIMIT 20;`}
         </li>
       </ul>
       <p>
-        Both are valid. Pick one and use it consistently within a project. The BrowseryTools SQL
+        Both are valid. Pick one and use it consistently within a project. The BigWow SQL
         Formatter uses trailing commas by default, which aligns with the majority of style guides
         and is the convention most readers expect.
       </p>
@@ -365,7 +365,7 @@ LIMIT 20;`}
         window functions, and string functions.
       </div>
 
-      <h2>How to Use the BrowseryTools SQL Formatter</h2>
+      <h2>How to Use the BigWow SQL Formatter</h2>
       <p>
         Using the formatter takes three steps:
       </p>
@@ -393,7 +393,7 @@ LIMIT 20;`}
 
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
         <strong>Your queries stay private:</strong> SQL queries frequently contain schema details,
-        business logic, and data that should not leave your environment. The BrowseryTools SQL
+        business logic, and data that should not leave your environment. The BigWow SQL
         Formatter runs 100% in your browser — your queries are never sent to any server, never
         logged, and never stored. Paste production queries with confidence.
       </div>

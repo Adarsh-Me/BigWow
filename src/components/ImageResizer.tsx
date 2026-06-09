@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import {
   Card,
@@ -62,7 +62,12 @@ function formatBytes(bytes: number): string {
   if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
   return (bytes / (1024 * 1024)).toFixed(2) + " MB";
 }
-export default function ImageResizer() {
+interface ImageResizerProps {
+  initialWidth?: number;
+  initialHeight?: number;
+}
+
+export default function ImageResizer({ initialWidth, initialHeight }: ImageResizerProps = {}) {
   const t = useTranslations("Tools.ImageResizer");
   const [original, setOriginal] = useState<ImageInfo | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -72,8 +77,8 @@ export default function ImageResizer() {
 
   // Resize mode
   const [mode, setMode] = useState<ResizeMode>("dimensions");
-  const [width, setWidth] = useState(800);
-  const [height, setHeight] = useState(600);
+  const [width, setWidth] = useState(initialWidth ?? 800);
+  const [height, setHeight] = useState(initialHeight ?? 600);
   const [percentage, setPercentage] = useState(100);
   const [longestSide, setLongestSide] = useState(1920);
   const [lockAspect, setLockAspect] = useState(true);
@@ -81,6 +86,11 @@ export default function ImageResizer() {
   const [quality, setQuality] = useState(85);
   const [isDragOver, setIsDragOver] = useState(false);
   const [processing, setProcessing] = useState(false);
+
+  useEffect(() => {
+    if (initialWidth) setWidth(initialWidth);
+    if (initialHeight) setHeight(initialHeight);
+  }, [initialWidth, initialHeight]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const loadImage = useCallback((file: File) => {

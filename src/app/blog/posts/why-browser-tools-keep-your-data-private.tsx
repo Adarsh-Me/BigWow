@@ -9,7 +9,7 @@ export default function Content() {
       </p>
 
       <p>
-        Browser-based tools like those on <strong>BrowseryTools</strong> operate on a fundamentally different principle: <em>your data never leaves your device</em>. Understanding why that distinction matters could protect your career, your business, and your personal life.
+        Browser-based tools like those on <strong>BigWow</strong> operate on a fundamentally different principle: <em>your data never leaves your device</em>. Understanding why that distinction matters could protect your career, your business, and your personal life.
       </p>
 
       <h2>The Hidden Cost of "Free" Cloud Tools</h2>
@@ -53,15 +53,15 @@ export default function Content() {
         "Free" tools have to make money somehow. When the product is free, you are often the product. User data — including metadata about the files you upload, the frequency of your visits, and even the content of your documents — can be sold to data brokers, used for targeted advertising, or licensed to research companies.
       </p>
 
-      <h2>How BrowseryTools Is Different: Everything Runs in Your Browser</h2>
+      <h2>How BigWow Is Different: Everything Runs in Your Browser</h2>
 
       <p>
-        BrowseryTools is built around a single architectural principle: <strong>zero server processing</strong>. Every computation happens inside your browser using JavaScript, Web APIs, and WebAssembly. When you use a BrowseryTools tool, the only server involved is the one that initially delivers the webpage code — after that, your browser does all the work.
+        BigWow is built around a single architectural principle: <strong>zero server processing</strong>. Every computation happens inside your browser using JavaScript, Web APIs, and WebAssembly. When you use a BigWow tool, the only server involved is the one that initially delivers the webpage code — after that, your browser does all the work.
       </p>
 
       {/* Visual comparison */}
       <div style={{margin: "32px 0"}}>
-        <h3>Cloud Tool vs. BrowseryTools: What Actually Happens</h3>
+        <h3>Cloud Tool vs. BigWow: What Actually Happens</h3>
 
         <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "16px"}}>
           {/* Cloud Tool column */}
@@ -81,11 +81,11 @@ export default function Content() {
             </ol>
           </div>
 
-          {/* BrowseryTools column */}
+          {/* BigWow column */}
           <div style={{background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.2)", borderRadius: "12px", padding: "20px"}}>
             <div style={{fontWeight: "700", color: "#16a34a", marginBottom: "12px", display: "flex", alignItems: "center", gap: "8px"}}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              BrowseryTools
+              BigWow
             </div>
             <ol style={{margin: 0, paddingLeft: "18px", fontSize: "14px", lineHeight: "1.8"}}>
               <li>You open a tool in your browser</li>
@@ -103,13 +103,13 @@ export default function Content() {
       <h2>The Technology Behind Local Processing</h2>
 
       <p>
-        Privacy-first browser tools are only possible because of significant advances in web browser capabilities over the past decade. Here's how BrowseryTools leverages these technologies:
+        Privacy-first browser tools are only possible because of significant advances in web browser capabilities over the past decade. Here's how BigWow leverages these technologies:
       </p>
 
       <h3>Background Removal: ONNX Machine Learning Model Running Locally</h3>
 
       <p>
-        Removing a background from a photo has traditionally required sending your image to a cloud AI service like Remove.bg. BrowseryTools' <Link href="/tools/bg-removal">background removal tool</Link> runs a compressed ONNX (Open Neural Network Exchange) model directly inside your browser using the ONNX Runtime for Web. Your photo is processed by a neural network running on your own machine — no pixels are ever transmitted anywhere.
+        Removing a background from a photo has traditionally required sending your image to a cloud AI service like Remove.bg. BigWow' <Link href="/tools/bg-removal">background removal tool</Link> runs a compressed ONNX (Open Neural Network Exchange) model directly inside your browser using the ONNX Runtime for Web. Your photo is processed by a neural network running on your own machine — no pixels are ever transmitted anywhere.
       </p>
 
       <div style={{background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.25)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
@@ -119,7 +119,7 @@ export default function Content() {
       <h3>Password Generation: Web Crypto API</h3>
 
       <p>
-        When you use the <Link href="/tools/password-generator">password generator</Link>, BrowseryTools calls <code>crypto.getRandomValues()</code> — a browser-native API backed by the operating system's cryptographically secure pseudorandom number generator (CSPRNG). This is the same entropy source used by operating systems for cryptographic keys. The generated password is computed entirely in memory and displayed to you. It is never sent anywhere.
+        When you use the <Link href="/tools/password-generator">password generator</Link>, BigWow calls <code>crypto.getRandomValues()</code> — a browser-native API backed by the operating system's cryptographically secure pseudorandom number generator (CSPRNG). This is the same entropy source used by operating systems for cryptographic keys. The generated password is computed entirely in memory and displayed to you. It is never sent anywhere.
       </p>
 
       <h3>Hashing: Web Crypto API's SubtleCrypto</h3>
@@ -143,7 +143,7 @@ export default function Content() {
             <tr style={{background: "rgba(99,102,241,0.1)"}}>
               <th style={{padding: "12px 16px", textAlign: "left", borderBottom: "2px solid rgba(99,102,241,0.3)", fontWeight: "700"}}>Feature</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)", fontWeight: "700", color: "#ef4444"}}>Cloud Tool</th>
-              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)", fontWeight: "700", color: "#16a34a"}}>BrowseryTools</th>
+              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(99,102,241,0.3)", fontWeight: "700", color: "#16a34a"}}>BigWow</th>
             </tr>
           </thead>
           <tbody>
@@ -201,25 +201,25 @@ export default function Content() {
       <h3>"Is this approach actually proven for AI tasks like background removal?"</h3>
 
       <p>
-        Yes. ONNX Runtime for Web and TensorFlow.js have made it possible to run sophisticated neural networks locally. WebGPU acceleration (available in recent Chrome and Firefox versions) can dramatically speed up model inference. The quality of BrowseryTools' local background removal matches many cloud services precisely because the underlying model is the same — only the execution environment differs.
+        Yes. ONNX Runtime for Web and TensorFlow.js have made it possible to run sophisticated neural networks locally. WebGPU acceleration (available in recent Chrome and Firefox versions) can dramatically speed up model inference. The quality of BigWow' local background removal matches many cloud services precisely because the underlying model is the same — only the execution environment differs.
       </p>
 
       <h3>"How do I know data isn't being sent secretly?"</h3>
 
       <p>
-        You can verify this yourself. Open your browser's Developer Tools (F12), navigate to the Network tab, and watch the requests while using any BrowseryTools tool. You will see no outbound requests containing your data. This transparency is something no closed-source cloud service can offer.
+        You can verify this yourself. Open your browser's Developer Tools (F12), navigate to the Network tab, and watch the requests while using any BigWow tool. You will see no outbound requests containing your data. This transparency is something no closed-source cloud service can offer.
       </p>
 
-      <h2>A Note on BrowseryTools' Own Data Practices</h2>
+      <h2>A Note on BigWow' Own Data Practices</h2>
 
       <p>
-        BrowseryTools uses no user accounts, no cookies for tracking, and no third-party analytics that receive your file data. The site uses standard web server access logs (like any website) and may use privacy-respecting analytics to understand aggregate traffic — but the content of your work, files, passwords, and documents never touches a BrowseryTools server. Ever.
+        BigWow uses no user accounts, no cookies for tracking, and no third-party analytics that receive your file data. The site uses standard web server access logs (like any website) and may use privacy-respecting analytics to understand aggregate traffic — but the content of your work, files, passwords, and documents never touches a BigWow server. Ever.
       </p>
 
       {/* CTA */}
       <div style={{background: "linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1))", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "16px", padding: "32px", margin: "40px 0", textAlign: "center"}}>
         <div style={{fontSize: "48px", marginBottom: "16px"}}>🔒</div>
-        <h2 style={{margin: "0 0 12px", fontSize: "22px"}}>Try BrowseryTools — Your Data Stays With You</h2>
+        <h2 style={{margin: "0 0 12px", fontSize: "22px"}}>Try BigWow — Your Data Stays With You</h2>
         <p style={{margin: "0 0 20px", color: "inherit", opacity: 0.8, maxWidth: "480px", marginLeft: "auto", marginRight: "auto"}}>
           Over 70 free tools — image editors, developer utilities, text tools, converters, and more — all running 100% in your browser. No sign-up. No uploads. No ads.
         </p>

@@ -360,10 +360,10 @@ cron(0 0 1 * ? *)           # First day of every month at midnight`}</pre>
         mean something different) in AWS EventBridge, Quartz, or a node-cron context.
       </div>
 
-      <h2>How to Use the BrowseryTools Cron Parser</h2>
+      <h2>How to Use the BigWow Cron Parser</h2>
       <p>
         Writing a cron expression from scratch is one skill — validating that you wrote it correctly is another.
-        The <a href="/tools/cron-parser">BrowseryTools Cron Parser</a> makes it trivial to verify any expression
+        The <a href="/tools/cron-parser">BigWow Cron Parser</a> makes it trivial to verify any expression
         before it goes anywhere near production.
       </p>
       <p>Paste any 5-field (or 6-field) cron expression into the tool and instantly get:</p>

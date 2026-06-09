@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Calculator from "@/components/Calculator";
 
 export const metadata: Metadata = {
-  title: "Calculator - Basic & Scientific | BrowseryTools",
+  title: "Calculator - Basic & Scientific | BigWow",
   description:
     "Advanced calculator with both basic and scientific modes. Perform arithmetic operations, trigonometric functions, logarithms, and more. Free online calculator tool.",
   keywords: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     "online calculator",
   ],
   openGraph: {
-    title: "Calculator - Basic & Scientific | BrowseryTools",
+    title: "Calculator - Basic & Scientific | BigWow",
     description:
       "Advanced calculator with both basic and scientific modes. Perform arithmetic operations, trigonometric functions, logarithms, and more.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calculator - Basic & Scientific | BrowseryTools",
+    title: "Calculator - Basic & Scientific | BigWow",
     description:
       "Advanced calculator with both basic and scientific modes. Perform arithmetic operations, trigonometric functions, logarithms, and more.",
   },

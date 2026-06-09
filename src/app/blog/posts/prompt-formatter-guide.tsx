@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/prompt-formatter">BrowseryTools Prompt Formatter</a> — free, no sign-up, everything
+        <a href="/tools/prompt-formatter">BigWow Prompt Formatter</a> — free, no sign-up, everything
         stays in your browser — to clean up, restructure, and refine your prompts before sending them to any
         AI model.
       </p>
@@ -196,7 +196,7 @@ Subject line + email body, under 150 words`}
       <h2>Using the Prompt Formatter</h2>
       <p>
         The{" "}
-        <a href="/tools/prompt-formatter">BrowseryTools Prompt Formatter</a> helps you apply these
+        <a href="/tools/prompt-formatter">BigWow Prompt Formatter</a> helps you apply these
         techniques without memorizing every rule. Paste your raw prompt, choose the structure that fits
         your use case, and get a clean, well-organized version ready to send to ChatGPT, Claude, Gemini,
         or any other model. No account needed, and your prompts never leave your browser.

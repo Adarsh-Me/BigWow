@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useDropzone } from "react-dropzone";
 import { Card } from "@/components/ui/card";
@@ -42,6 +42,17 @@ export default function ZipTool() {
   const [zipContent, setZipContent] = useState<FileEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [activeTab, setActiveTab] = useState("compress");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const sub = params.get("subTool");
+      if (sub === "compress" || sub === "extract") {
+        setActiveTab(sub);
+      }
+    }
+  }, []);
 
   const onDropCompress = useCallback(async (acceptedFiles: File[]) => {
     try {
@@ -198,7 +209,7 @@ export default function ZipTool() {
 
       <div className="flex-1 overflow-auto p-6">
         <div className="max-w-7xl mx-auto space-y-6">
-          <Tabs defaultValue="compress" className="space-y-6">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="compress">
                 <FileArchive className="w-4 h-4 me-2" />

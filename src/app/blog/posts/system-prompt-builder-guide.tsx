@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/system-prompt-builder">BrowseryTools System Prompt Builder</a> — free, no
+        <a href="/tools/system-prompt-builder">BigWow System Prompt Builder</a> — free, no
         sign-up, everything stays in your browser — to draft, structure, and iterate on system prompts
         for any use case.
       </p>
@@ -178,7 +178,7 @@ Always include a specific, actionable takeaway at the end of each response.`}
       <h2>Build Yours with the System Prompt Builder</h2>
       <p>
         The{" "}
-        <a href="/tools/system-prompt-builder">BrowseryTools System Prompt Builder</a> walks you through
+        <a href="/tools/system-prompt-builder">BigWow System Prompt Builder</a> walks you through
         each layer of the system prompt structure — role, context, constraints, output format, examples —
         and assembles them into a clean, copy-ready prompt. It is the fastest way to go from a blank page
         to a well-structured system prompt that actually works.

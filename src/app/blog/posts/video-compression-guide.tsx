@@ -9,7 +9,7 @@ export default function Content() {
       </p>
       <p>
         You can compress any video file right now using the{" "}
-        <a href="/tools/compress-video">BrowseryTools Video Compressor</a> — free, no sign-up, and the entire
+        <a href="/tools/compress-video">BigWow Video Compressor</a> — free, no sign-up, and the entire
         process runs locally in your browser. Your footage never leaves your device.
       </p>
 
@@ -183,7 +183,7 @@ export default function Content() {
       </ul>
       <p>
         For quick compression without configuring a full editing environment, the{" "}
-        <a href="/tools/compress-video">BrowseryTools Video Compressor</a> handles the settings for you and
+        <a href="/tools/compress-video">BigWow Video Compressor</a> handles the settings for you and
         processes everything in your browser — no uploads, no waiting, no third-party access to your footage.
       </p>
 

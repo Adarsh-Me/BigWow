@@ -11,7 +11,7 @@ export default function Content() {
       </p>
       <p>
         You can convert any Unix timestamp to a human-readable date (and back) using the{" "}
-        <a href="/tools/unix-timestamp">BrowseryTools Unix Timestamp Converter</a> — free,
+        <a href="/tools/unix-timestamp">BigWow Unix Timestamp Converter</a> — free,
         no sign-up, everything stays in your browser.
       </p>
 
@@ -192,7 +192,7 @@ new Intl.DateTimeFormat("en-US", {
       <h2>Quick Reference: Timestamp Conversions</h2>
       <p>
         For fast, accurate conversions between Unix timestamps and human-readable dates, use the{" "}
-        <a href="/tools/unix-timestamp">BrowseryTools Unix Timestamp Converter</a>. Paste a
+        <a href="/tools/unix-timestamp">BigWow Unix Timestamp Converter</a>. Paste a
         timestamp to see the corresponding UTC and local date, or enter a date to get its
         timestamp. Everything runs in the browser — no server, no tracking.
       </p>

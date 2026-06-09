@@ -1,6 +1,6 @@
-# BrowseryTools 🛠️
+# BigWow 🛠️
 
-![BrowseryTools](https://github.com/aghyad97/browserytools/blob/main/public/og-image.png?raw=true)
+![BigWow](https://github.com/aghyad97/bigwow/blob/main/public/og-image.png?raw=true)
 
 A comprehensive collection of **80+ browser-based tools** built with Next.js, TypeScript, and Tailwind CSS. Every tool runs entirely in your browser — no uploads, no servers, no accounts required.
 
@@ -28,6 +28,21 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **Video Editor**: Trim, convert, and edit video files
 - **Audio Editor**: Edit and process audio files
 - **Mic & Camera Tester**: Check your camera preview and test microphone levels
+- **Video Compressor**: Compress video files to reduce size while maintaining quality
+
+### 📥 Media & Downloader Tools
+
+- **YouTube Downloader**: Download YouTube videos and audio tracks for free
+- **TikTok Downloader**: Download TikTok videos without watermark
+- **Instagram Downloader**: Download Instagram Reels, videos, and stories
+- **Twitter / X Downloader**: Download videos from Twitter (X) tweets
+- **Reddit Downloader**: Download Reddit videos and GIFs from public posts
+- **SoundCloud Downloader**: Download SoundCloud tracks as MP3 audio files
+- **Universal Downloader**: All-in-one media downloader supporting multiple sites
+- **HLS Stream Downloader**: Download HLS (.m3u8) video streams in your browser
+- **YouTube Thumbnail Grabber**: Fetch and download YouTube video thumbnails
+- **Video Frame Extractor**: Extract individual frames from any video file
+
 
 ### 📝 Text & Language Tools
 
@@ -46,6 +61,7 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **Word Frequency Analyzer**: Analyze word frequency with CSV export
 - **Markdown to HTML**: Convert Markdown to clean HTML output
 - **Text Repeater**: Repeat any text N times with a custom separator
+- **Markdown Table Generator**: Build tables in a visual grid editor and export as valid Markdown table syntax
 
 ### 📊 Data Tools
 
@@ -61,6 +77,8 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **Barcode Scanner**: Scan barcodes via camera or image upload
 - **Charts**: Create bar, line, pie, and other chart types
 - **Fake Data Generator**: Generate realistic JSON/CSV test data (names, emails, addresses, and more)
+- **JSON → TypeScript**: Paste JSON and instantly get TypeScript interfaces
+- **Mermaid Diagram Viewer**: Write Mermaid markdown and see your diagram rendered live
 
 ### 🧮 Math & Finance Tools
 
@@ -86,6 +104,7 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **World Clock**: Real-time clocks for multiple cities and time zones
 - **Stopwatch**: Precision stopwatch with lap tracking and CSV export
 - **Habit Tracker**: Daily habit tracking with streaks, stored locally
+- **Keep Awake**: Prevent your laptop or phone from sleeping
 
 ### 🔐 Security & Development Tools
 
@@ -101,6 +120,8 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **Cron Parser**: Parse cron expressions and show next scheduled runs
 - **CSS Minifier**: Minify or beautify CSS code
 - **SQL Formatter**: Format and beautify SQL queries
+- **Chmod Calculator**: Calculate Unix file permissions visually
+- **Meta Tags Generator**: Generate HTML meta tags, Open Graph tags, and Twitter Card tags
 
 ### 🎨 Design Tools
 
@@ -112,6 +133,25 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 - **Color Blindness Simulator**: Preview images as seen with deuteranopia, protanopia, tritanopia, and achromatopsia
 - **EXIF Viewer**: View camera metadata, GPS coordinates, and shooting settings
 - **Emoji Picker**: Browse, search, and copy Unicode emojis
+- **CSS Box Shadow Generator**: Build CSS box shadows visually with sliders for offset, blur, spread, color, and opacity
+
+### 🧠 AI Tools
+
+- **AI Image Upscaler**: Upscale and enhance images in-browser using local AI models. Boost resolution up to 4x, denoise, and optimize details
+- **Token Counter**: Count tokens for any text across popular AI models: GPT-4o, Claude, Llama 3, and more
+- **Context Window Calculator**: Calculate how much of a model's context window your text uses
+- **AI Cost Calculator**: Estimate your AI API costs by entering token counts and selecting a model
+- **Model Comparison**: Compare AI language models side by side: context window size, pricing, capabilities, speed, and provider
+- **System Prompt Builder**: Build structured system prompts for AI models using a guided form
+- **Prompt Library**: Save, organize, and search your AI prompts locally in the browser
+- **CLAUDE.md Generator**: Generate CLAUDE.md files for your projects using a structured form
+- **AI Rules Generator**: Generate .cursorrules, .windsurfrules, and GitHub Copilot instruction files for your IDE
+- **JSON Schema Builder**: Build JSON schemas for LLM tool calls and function calling using a visual form
+- **MCP Config Generator**: Generate Model Context Protocol (MCP) configuration files for Claude Desktop and other MCP clients
+- **Prompt Formatter**: Convert prompts between different AI formats: ChatML, Llama 3 Instruct, Claude XML tags, and plain text
+- **Skill / Agent Builder**: Scaffold AI agent skill files with a guided form
+- **AI Instruction Diff**: Compare two system prompts, CLAUDE.md files, or AI instruction sets side by side
+- **Text Similarity**: Measure semantic similarity between texts using TF-IDF cosine similarity, all in the browser
 
 ## 🛠️ Tech Stack
 
@@ -134,8 +174,8 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/aghyad97/browserytools.git
-cd browserytools
+git clone https://github.com/aghyad97/bigwow.git
+cd bigwow
 ```
 
 ### 2. Install Dependencies
@@ -210,7 +250,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## 📞 Contact
 
-- **GitHub Issues**: [Open an issue](https://github.com/aghyad97/browserytools/issues)
+- **GitHub Issues**: [Open an issue](https://github.com/aghyad97/bigwow/issues)
 - **Twitter**: [@aghyadev](https://twitter.com/aghyadev)
 
 ---

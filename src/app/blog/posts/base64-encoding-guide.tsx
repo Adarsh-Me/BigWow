@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can encode and decode any Base64 string instantly using the{" "}
-        <a href="/tools/base64">BrowseryTools Base64 Encoder/Decoder</a> — free, no sign-up, and nothing
+        <a href="/tools/base64">BigWow Base64 Encoder/Decoder</a> — free, no sign-up, and nothing
         ever leaves your browser.
       </p>
 
@@ -112,7 +112,7 @@ export default function Content() {
       </div>
       <p>
         The Base64 encoding of <code>"Man"</code> is <code>TWFu</code>. You can verify this using the{" "}
-        <a href="/tools/base64">BrowseryTools Base64 tool</a>. When the input length is not a multiple of 3,
+        <a href="/tools/base64">BigWow Base64 tool</a>. When the input length is not a multiple of 3,
         padding characters (<code>=</code> or <code>==</code>) are appended to bring the output to a multiple
         of 4 characters. For example, <code>"Ma"</code> encodes to <code>TWE=</code> and <code>"M"</code>{" "}
         encodes to <code>TQ==</code>.
@@ -187,7 +187,7 @@ data:
       </pre>
       <p>
         To find out what those values actually are, paste <code>YWRtaW4=</code> into the{" "}
-        <a href="/tools/base64">BrowseryTools Base64 Decoder</a>. The result is <code>admin</code>. Paste{" "}
+        <a href="/tools/base64">BigWow Base64 Decoder</a>. The result is <code>admin</code>. Paste{" "}
         <code>cGFzc3dvcmQxMjM=</code> and you get <code>password123</code>. Kubernetes Base64-encodes secret
         values for safe YAML formatting, not for security — the actual security comes from Kubernetes RBAC
         and at-rest encryption, not from the encoding itself.
@@ -210,7 +210,7 @@ data:
       <p>
         Base64URL is used in JWTs, OAuth tokens, and any context where the encoded string must survive URL
         transmission without percent-encoding. The{" "}
-        <a href="/tools/base64">BrowseryTools Base64 tool</a> supports both standard and URL-safe variants.
+        <a href="/tools/base64">BigWow Base64 tool</a> supports both standard and URL-safe variants.
       </p>
 
       <h2>When NOT to Use Base64</h2>
@@ -307,12 +307,12 @@ echo "SGVsbG8sIFdvcmxkIQ==" | base64 --decode`}
       </pre>
       <p>
         For quick ad-hoc encoding or decoding without writing any code, the{" "}
-        <a href="/tools/base64">BrowseryTools Base64 tool</a> is the fastest option — paste your string,
+        <a href="/tools/base64">BigWow Base64 tool</a> is the fastest option — paste your string,
         choose encode or decode, and the result appears instantly. Nothing is sent to a server.
       </p>
 
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Privacy guarantee:</strong> The BrowseryTools Base64 encoder and decoder processes everything
+        <strong>Privacy guarantee:</strong> The BigWow Base64 encoder and decoder processes everything
         locally in your browser using JavaScript. If you are encoding sensitive data — API keys, secrets,
         private configuration — it never touches a server. Your data stays on your device.
       </div>
@@ -321,7 +321,7 @@ echo "SGVsbG8sIFdvcmxkIQ==" | base64 --decode`}
       <p>
         Whether you are decoding a Kubernetes secret, inspecting a JWT payload, creating a data URI for an
         inline image, or just curious what a Base64 string contains — the{" "}
-        <a href="/tools/base64">BrowseryTools Base64 Encoder/Decoder</a> handles it in a single click.
+        <a href="/tools/base64">BigWow Base64 Encoder/Decoder</a> handles it in a single click.
         Paste your input, get your output. No ads, no sign-up, no data leaving your device.
       </p>
       <div style={{background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "20px 24px", margin: "32px 0", textAlign: "center" as const}}>

@@ -15,7 +15,7 @@ export default function Content() {
         Here is what most people do not realize: your browser already knows how to record your screen.
         The <strong>Screen Capture API</strong> (<code>getDisplayMedia</code>) is a W3C standard that
         has been shipping in every major browser for years. The{" "}
-        <Link href="/tools/screen-recorder">BrowseryTools Screen Recorder</Link> puts a clean, practical
+        <Link href="/tools/screen-recorder">BigWow Screen Recorder</Link> puts a clean, practical
         interface on top of it — so you can record your screen, a specific window, or a single browser
         tab without installing anything, creating an account, or paying a cent.
       </p>
@@ -90,7 +90,7 @@ export default function Content() {
         Nothing else on your machine is visible in the recording.
       </div>
 
-      <h2>Step-by-Step: How to Use the BrowseryTools Screen Recorder</h2>
+      <h2>Step-by-Step: How to Use the BigWow Screen Recorder</h2>
       <p>
         The entire process takes less than a minute to get your first recording. Here is exactly how it
         works:
@@ -181,7 +181,7 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
       <p>
         Not every tutorial needs professional production. If you are documenting a process for your team
         — how to configure a tool, how to navigate a complex workflow, how to set up an environment —
-        a screen recording with narration captures it in minutes. The BrowseryTools recorder lets you
+        a screen recording with narration captures it in minutes. The BigWow recorder lets you
         include microphone audio (grant the browser permission when prompted), so you can narrate while
         you work. The result is a complete, self-contained tutorial that lives in a single downloadable file.
       </p>
@@ -232,7 +232,7 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
       <p>
         This is not a minor detail. The recording is stored in memory as a <code>Blob</code> object
         inside your browser tab. When you click "Download," the browser writes that blob to your local
-        file system. Nothing is uploaded to any server — not BrowseryTools servers, not any cloud
+        file system. Nothing is uploaded to any server — not BigWow servers, not any cloud
         service. The recording does not transit the network at any point.
       </p>
       <p>
@@ -292,13 +292,13 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
         that go far beyond what any browser-based tool can match.
       </p>
 
-      <h2>Comparison: BrowseryTools vs. Common Screen Recording Options</h2>
+      <h2>Comparison: BigWow vs. Common Screen Recording Options</h2>
       <div style={{overflowX: "auto", margin: "24px 0"}}>
         <table style={{width: "100%", borderCollapse: "collapse", fontSize: "14px"}}>
           <thead>
             <tr style={{background: "rgba(239,68,68,0.08)"}}>
               <th style={{padding: "12px 16px", textAlign: "left", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>Feature</th>
-              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>BrowseryTools</th>
+              <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>BigWow</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>Loom (Free)</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>OBS Studio</th>
               <th style={{padding: "12px 16px", textAlign: "center", borderBottom: "2px solid rgba(239,68,68,0.25)", fontWeight: "700"}}>Camtasia</th>
@@ -334,7 +334,7 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
       <div style={{background: "var(--muted)", borderLeft: "4px solid var(--primary)", padding: "1rem 1.25rem", borderRadius: "0.5rem", margin: "1.5rem 0"}}>
         <strong>Privacy note:</strong> When you use Loom, every recording is uploaded to Loom's servers
         and stored there by default. Your screen content — which may include internal tools, sensitive
-        customer data, or unreleased features — lives on a third-party server. BrowseryTools recordings
+        customer data, or unreleased features — lives on a third-party server. BigWow recordings
         are never uploaded. The file goes from your browser directly to your hard drive.
       </div>
 
@@ -345,7 +345,7 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
         subscription, no privacy tradeoffs.
       </p>
       <p>
-        Open the <Link href="/tools/screen-recorder">BrowseryTools Screen Recorder</Link>, click Start,
+        Open the <Link href="/tools/screen-recorder">BigWow Screen Recorder</Link>, click Start,
         capture what you need, and download it. The whole process from opening the tool to having a
         WebM file on your desktop takes under two minutes.
       </p>
@@ -370,7 +370,7 @@ ffmpeg -i recording.webm -c:v libx264 -c:a aac output.mp4`}</code></pre>
         <Link href="/tools/image-compression">Image Compression</Link> ·{" "}
         <Link href="/tools/bg-removal">Background Removal</Link> ·{" "}
         <Link href="/tools/image-converter">Image Converter</Link> ·{" "}
-        <Link href="/">All BrowseryTools</Link>
+        <Link href="/">All BigWow</Link>
       </p>
     </div>
   );

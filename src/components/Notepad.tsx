@@ -9,7 +9,7 @@ import { Copy, Download, Trash2, BookOpen } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
-const STORAGE_KEY = "browserytools-notepad";
+const STORAGE_KEY = "bigwow-notepad";
 
 export default function Notepad() {
   const t = useTranslations("Tools.Notepad");

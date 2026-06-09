@@ -275,9 +275,9 @@ export default function Content() {
         works on a plane, in a cabin, or in any circumstance where you might be offline.
       </p>
 
-      <h2>How the BrowseryTools Habit Tracker Works</h2>
+      <h2>How the BigWow Habit Tracker Works</h2>
       <p>
-        The <a href="/tools/habit-tracker">BrowseryTools Habit Tracker</a> is designed around the
+        The <a href="/tools/habit-tracker">BigWow Habit Tracker</a> is designed around the
         principles above — simple enough that you will actually use it, feature-complete enough
         that it does everything a habit tracker needs to do.
       </p>
@@ -310,7 +310,7 @@ export default function Content() {
       </ul>
 
       <div style={{background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "12px", padding: "16px 20px", margin: "24px 0"}}>
-        <strong>Your habit data never leaves your device.</strong> The BrowseryTools Habit Tracker
+        <strong>Your habit data never leaves your device.</strong> The BigWow Habit Tracker
         stores everything in your browser's localStorage. Nothing is sent to any server, no account
         is required, and no one — including us — can see which habits you are tracking. Your
         private routines stay private.

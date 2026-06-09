@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can look up any HTTP status code with the{" "}
-        <a href="/tools/http-status">BrowseryTools HTTP Status Code Reference</a> — free, no sign-up,
+        <a href="/tools/http-status">BigWow HTTP Status Code Reference</a> — free, no sign-up,
         everything runs in your browser.
       </p>
 
@@ -175,7 +175,7 @@ Authorization: Bearer <valid-regular-user-token>
       </p>
       <p>
         When you encounter an unfamiliar status code, the{" "}
-        <a href="/tools/http-status">BrowseryTools HTTP Status Code Reference</a> gives you the official
+        <a href="/tools/http-status">BigWow HTTP Status Code Reference</a> gives you the official
         description, the RFC it comes from, and notes on common usage — without having to leave your
         browser tab.
       </p>

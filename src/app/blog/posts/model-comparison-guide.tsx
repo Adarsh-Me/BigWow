@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can use the{" "}
-        <a href="/tools/model-comparison">BrowseryTools Model Comparison tool</a> — free, no sign-up,
+        <a href="/tools/model-comparison">BigWow Model Comparison tool</a> — free, no sign-up,
         everything stays in your browser — to compare models side by side across key dimensions
         before making a decision.
       </p>
@@ -161,7 +161,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Test with the{" "}
-          <a href="/tools/model-comparison">BrowseryTools Model Comparison tool</a></strong> — See
+          <a href="/tools/model-comparison">BigWow Model Comparison tool</a></strong> — See
           model specs, pricing, and context window sizes side by side to quickly narrow your
           candidates before running your test suite.
         </li>
@@ -201,7 +201,7 @@ export default function Content() {
         No single model is best for every use case. The best model is the one that meets your quality
         bar at the lowest cost, with the context window your application needs, and the reliability
         your users expect. Start by comparing the specs and pricing with the{" "}
-        <a href="/tools/model-comparison">BrowseryTools Model Comparison tool</a>, then run your
+        <a href="/tools/model-comparison">BigWow Model Comparison tool</a>, then run your
         own evaluation on real examples before committing to a model in production.
       </p>
 

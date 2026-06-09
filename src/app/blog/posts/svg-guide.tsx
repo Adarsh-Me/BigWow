@@ -10,7 +10,7 @@ export default function Content() {
       </p>
       <p>
         You can view, inspect, and optimize any SVG file using the{" "}
-        <a href="/tools/svg">BrowseryTools SVG Tool</a> — free, no sign-up, everything runs in your
+        <a href="/tools/svg">BigWow SVG Tool</a> — free, no sign-up, everything runs in your
         browser.
       </p>
 
@@ -174,7 +174,7 @@ export default function Content() {
       </p>
       <p>
         The{" "}
-        <a href="/tools/svg">BrowseryTools SVG Tool</a> applies SVG optimization in your browser, giving
+        <a href="/tools/svg">BigWow SVG Tool</a> applies SVG optimization in your browser, giving
         you the optimized output without installing any command-line tools.
       </p>
 
@@ -249,7 +249,7 @@ export default function Content() {
       </p>
       <p>
         The{" "}
-        <a href="/tools/svg">BrowseryTools SVG Tool</a> can render SVG to PNG at your chosen resolution,
+        <a href="/tools/svg">BigWow SVG Tool</a> can render SVG to PNG at your chosen resolution,
         handling the conversion in-browser without any server upload. Useful when you have an SVG from
         a design tool and need a PNG for a context that does not accept SVG.
       </p>

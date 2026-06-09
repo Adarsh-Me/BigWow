@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { getBlogPost, blogPosts } from "@/lib/blog-data";
 import { Clock, Calendar, Tag, ArrowLeft, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site";
 
 // Dynamically import blog post content
 async function getBlogContent(slug: string): Promise<React.ComponentType | null> {
@@ -24,9 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
 
-  const baseUrl = "https://browserytools.com";
+  const baseUrl = siteConfig.baseUrl;
   return {
-    title: `${post.title} | BrowseryTools Blog`,
+    title: `${post.title} | BigWow Blog`,
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      siteName: "BrowseryTools",
+      siteName: "BigWow",
       url: `${baseUrl}/blog/${slug}`,
     },
     twitter: {
@@ -49,19 +50,54 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `${baseUrl}/blog/${slug}`,
     },
     other: {
-      "application/ld+json": JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.description,
-        datePublished: post.date,
-        dateModified: post.date,
-        author: { "@type": "Organization", name: post.author, url: baseUrl },
-        publisher: { "@type": "Organization", name: "BrowseryTools", url: baseUrl },
-        keywords: post.tags.join(", "),
-        url: `${baseUrl}/blog/${slug}`,
-        mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/blog/${slug}` },
-      }),
+      "application/ld+json": JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": `${baseUrl}/blog/${slug}#article`,
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          dateModified: post.date,
+          inLanguage: "en",
+          author: { "@type": "Organization", name: post.author, url: baseUrl },
+          publisher: {
+            "@type": "Organization",
+            "@id": `${baseUrl}#organization`,
+            name: "BigWow",
+            url: baseUrl,
+            logo: { "@type": "ImageObject", url: `${baseUrl}/icon.svg` },
+          },
+          keywords: post.tags.join(", "),
+          url: `${baseUrl}/blog/${slug}`,
+          mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/blog/${slug}` },
+          isPartOf: { "@id": `${baseUrl}/blog#blog` },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: baseUrl,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: `${baseUrl}/blog`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.title,
+              item: `${baseUrl}/blog/${slug}`,
+            },
+          ],
+        },
+      ]),
     },
   };
 }

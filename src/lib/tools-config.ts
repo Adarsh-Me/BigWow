@@ -66,6 +66,10 @@ import {
   GitBranchIcon,
   TagIcon,
   TableIcon,
+  DownloadIcon,
+  MusicIcon,
+  FilmIcon,
+  ImagePlayIcon,
 } from "lucide-react";
 
 export interface Tool {
@@ -99,7 +103,7 @@ export const tools: ToolCategory[] = [
         order: 1,
         creationDate: "2025-08-20",
         description:
-          "Remove background from your images instantly using AI. Perfect for product photos, portraits, and graphics. Supports PNG, JPG, and other formats. No watermark, completely free.",
+          "Remove image backgrounds privately — your photos never leave your device. An on-device AI model runs entirely in your browser, so no files are uploaded to any server. Perfect for product photos, portraits, and graphics. Supports PNG, JPG, and WebP. No watermark, no signup, completely free.",
       },
       {
         name: "Phone Mockups",
@@ -119,7 +123,7 @@ export const tools: ToolCategory[] = [
         order: 3,
         creationDate: "2025-08-20",
         description:
-          "Compress images to reduce file size while maintaining quality. Perfect for web optimization, email attachments, and storage. Supports JPG, PNG, and WebP.",
+          "Compress images locally in your browser — zero uploads, zero server processing, 100% private. Reduce JPG, PNG, and WebP file sizes by up to 90% using client-side canvas algorithms. Perfect for web optimization, email attachments, and confidential photos you can't risk uploading to a cloud.",
       },
       {
         name: "Format Converter",
@@ -175,7 +179,7 @@ export const tools: ToolCategory[] = [
         order: 1,
         creationDate: "2025-08-20",
         description:
-          "Merge, split, compress, and manipulate PDF files. Extract text, rotate pages, add watermarks, and convert to other formats. No file size limits.",
+          "Merge, split, compress, and manipulate PDFs locally — your documents never leave your browser. Powered by pdf-lib running entirely client-side, so no files are uploaded to any server. Extract text, rotate pages, and convert to other formats. No file size limits, no signup, no watermarks.",
       },
       {
         name: "Zip Tools",
@@ -245,15 +249,16 @@ export const tools: ToolCategory[] = [
         description:
           "Check your camera preview and test microphone input levels with a live meter.",
       },
-      // {
-      //   name: "Compress Video",
-      //   href: "/tools/compress-video",
-      //   icon: FileDownIcon,
-      //   available: false,
-      //   order: 3,
-      //   description:
-      //     "Compress videos in your browser using ffmpeg.wasm. Control quality (CRF), presets, and resolution. No uploads; runs entirely on-device.",
-      // },
+      {
+        name: "Video Compressor",
+        href: "/tools/compress-video",
+        icon: VideoIcon,
+        available: true,
+        order: 4,
+        creationDate: "2025-08-20",
+        description:
+          "Compress video files to reduce size while maintaining quality. Reduce MP4 and WebM file sizes with browser-based FFmpeg — no uploads needed.",
+      },
     ],
   },
   {
@@ -445,7 +450,7 @@ export const tools: ToolCategory[] = [
         order: 2,
         creationDate: "2025-08-20",
         description:
-          "Encode or decode Base64 strings and files. Convert images, documents, and binary data to text format. Essential for web development and data transmission.",
+          "Encode and decode Base64 strings and files entirely in your browser — nothing is sent to a server. Uses the native btoa/atob browser APIs so your binary data, images, and secrets stay local. Essential for web development, API debugging, and safely encoding credentials without log exposure.",
       },
       {
         name: "QR Code Generator",
@@ -505,7 +510,7 @@ export const tools: ToolCategory[] = [
         order: 8,
         creationDate: "2026-02-20",
         description:
-          "Format, validate, and minify JSON. Pretty-print with syntax highlighting, detect errors, sort keys, and minify for production. Works entirely in your browser.",
+          "Format, validate, and minify JSON offline — safe to use with API keys, credentials, and secrets. All parsing runs in local JavaScript, so your JSON payload is never sent to any server or logged. Pretty-print with syntax highlighting, detect errors, sort keys, and minify for production.",
       },
       {
         name: "YAML ↔ JSON",
@@ -807,7 +812,7 @@ export const tools: ToolCategory[] = [
         order: 2,
         creationDate: "2025-08-20",
         description:
-          "Decode and validate JSON Web Tokens (JWTs). View header, payload, and signature information with validation checks. Perfect for debugging and security analysis.",
+          "Decode JSON Web Tokens (JWTs) securely — your tokens are never sent to any server. Unlike jwt.io, BigWow parses JWTs entirely in your browser using local Base64 URL decoding, so your auth credentials, session tokens, and user claims stay private. View header, payload, expiry, and signature locally.",
       },
       {
         name: "Password Generator",
@@ -817,7 +822,7 @@ export const tools: ToolCategory[] = [
         order: 3,
         creationDate: "2025-08-20",
         description:
-          "Generate secure passwords with custom options including length, character types, and special requirements. Create strong passwords for accounts and applications.",
+          "Generate cryptographically secure passwords locally — nothing is ever transmitted to a server. Uses the browser's Crypto.getRandomValues() API so your generated passwords are provably random and completely private. Set length, character types, and special requirements. No account needed.",
       },
       {
         name: "Hash Generator",
@@ -827,7 +832,7 @@ export const tools: ToolCategory[] = [
         order: 4,
         creationDate: "2025-08-20",
         description:
-          "Generate cryptographic hashes from text input. Supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Perfect for data integrity and security.",
+          "Generate cryptographic hashes privately in your browser — your input text is never sent to a server. Uses the Web Crypto API (SubtleCrypto) for SHA-256, SHA-384, SHA-512, and MD5. Perfect for verifying data integrity, generating checksums, and hashing sensitive strings without network exposure.",
       },
       {
         name: "Unix Timestamp Converter",
@@ -846,7 +851,7 @@ export const tools: ToolCategory[] = [
         order: 6,
         creationDate: "2025-09-10",
         description:
-          "Test JavaScript regular expressions with live highlighting and flags.",
+          "Test regular expressions privately — your input text and patterns are never sent to a server. Unlike Regex101, BigWow runs all matching locally using the browser's native JavaScript RegExp engine. Safe to test against log snippets, emails, tokens, or any sensitive text data.",
       },
       {
         name: "Cron Parser",
@@ -875,7 +880,7 @@ export const tools: ToolCategory[] = [
         order: 9,
         creationDate: "2026-02-20",
         description:
-          "Encrypt and decrypt text using AES-256-GCM via the Web Crypto API. Your data never leaves the browser. Use a passphrase or generate a random key.",
+          "Encrypt and decrypt text with AES-256-GCM entirely in your browser — no data ever touches a server. Powered by the Web Crypto API so your plaintext and keys are processed exclusively in local memory. Use a passphrase or generate a random key. Zero cloud storage, zero third-party exposure.",
       },
       {
         name: "HTTP Status Codes",
@@ -1032,11 +1037,21 @@ export const tools: ToolCategory[] = [
     order: 10,
     items: [
       {
+        name: "AI Image Upscaler",
+        href: "/tools/ai-upscaler",
+        icon: ImageIcon,
+        available: true,
+        order: 1,
+        creationDate: "2026-06-08",
+        description:
+          "Upscale and enhance images in-browser using local AI models. Boost resolution up to 4x, denoise, and optimize details. 100% private, runs entirely on your device.",
+      },
+      {
         name: "Token Counter",
         href: "/tools/token-counter",
         icon: BrainIcon,
         available: true,
-        order: 1,
+        order: 2,
         creationDate: "2026-03-05",
         description:
           "Count tokens for any text across popular AI models: GPT-4o, Claude, Llama 3, and more. Instantly see token usage before sending to an API. No API key needed.",
@@ -1170,6 +1185,113 @@ export const tools: ToolCategory[] = [
         creationDate: "2026-03-05",
         description:
           "Measure semantic similarity between texts using TF-IDF cosine similarity, all in the browser. Useful for comparing prompts, outputs, or any text pairs.",
+      },
+    ],
+  },
+  {
+    category: "Media & Downloader Tools",
+    id: "mediaDownloaders",
+    order: 11,
+    items: [
+      {
+        name: "YouTube Downloader",
+        href: "/tools/youtube-downloader",
+        icon: VideoIcon,
+        available: true,
+        order: 1,
+        creationDate: "2026-06-07",
+        description:
+          "Download YouTube videos and audio tracks for free. Supports 1080p, 720p, 480p quality and audio-only MP3 extraction. Powered by the open-source Cobalt engine. No account needed.",
+      },
+      {
+        name: "TikTok Downloader",
+        href: "/tools/tiktok-downloader",
+        icon: FilmIcon,
+        available: true,
+        order: 2,
+        creationDate: "2026-06-07",
+        description:
+          "Download TikTok videos without watermark. Save TikTok clips in full quality directly to your device. Optionally remove the TikTok watermark. Powered by Cobalt.",
+      },
+      {
+        name: "Instagram Downloader",
+        href: "/tools/instagram-downloader",
+        icon: ImagePlayIcon,
+        available: true,
+        order: 3,
+        creationDate: "2026-06-07",
+        description:
+          "Download Instagram Reels, videos, and stories from public accounts. Save content as MP4 or audio. Paste the post URL and download instantly. Powered by Cobalt.",
+      },
+      {
+        name: "Twitter / X Downloader",
+        href: "/tools/twitter-downloader",
+        icon: DownloadIcon,
+        available: true,
+        order: 4,
+        creationDate: "2026-06-07",
+        description:
+          "Download videos from Twitter (X) tweets. Paste any public tweet URL and save the embedded video at the best available quality. No login required. Powered by Cobalt.",
+      },
+      {
+        name: "Reddit Downloader",
+        href: "/tools/reddit-downloader",
+        icon: DownloadIcon,
+        available: true,
+        order: 5,
+        creationDate: "2026-06-07",
+        description:
+          "Download Reddit videos and GIFs from public posts. Supports v.redd.it hosted videos and external links. Paste the post URL and grab the video. Powered by Cobalt.",
+      },
+      {
+        name: "SoundCloud Downloader",
+        href: "/tools/soundcloud-downloader",
+        icon: MusicIcon,
+        available: true,
+        order: 6,
+        creationDate: "2026-06-07",
+        description:
+          "Download SoundCloud tracks as MP3 audio files. Paste any public SoundCloud track URL and save the audio instantly to your device. Powered by Cobalt.",
+      },
+      {
+        name: "Universal Downloader",
+        href: "/tools/video-downloader",
+        icon: DownloadIcon,
+        available: true,
+        order: 7,
+        creationDate: "2026-06-07",
+        description:
+          "All-in-one media downloader supporting YouTube, TikTok, Instagram, Twitter, Reddit, SoundCloud, and more. Paste any supported URL to download video or audio. Powered by Cobalt.",
+      },
+      {
+        name: "HLS Stream Downloader",
+        href: "/tools/hls-downloader",
+        icon: VideoIcon,
+        available: true,
+        order: 8,
+        creationDate: "2026-06-07",
+        description:
+          "Download HLS (.m3u8) video streams and merge segments into a single MP4 file directly in your browser. No software installation required.",
+      },
+      {
+        name: "YouTube Thumbnail Grabber",
+        href: "/tools/youtube-thumbnail",
+        icon: ImageIcon,
+        available: true,
+        order: 9,
+        creationDate: "2026-06-07",
+        description:
+          "Fetch and download YouTube video thumbnails in all available sizes: maxresdefault, hqdefault, mqdefault, and sddefault. Paste a YouTube URL or video ID.",
+      },
+      {
+        name: "Video Frame Extractor",
+        href: "/tools/video-frame-extractor",
+        icon: CameraIcon,
+        available: true,
+        order: 10,
+        creationDate: "2026-06-07",
+        description:
+          "Extract individual frames from any video file. Seek to specific timestamps and save frames as PNG or JPG images, all processed locally in your browser.",
       },
     ],
   },

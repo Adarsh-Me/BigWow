@@ -4,13 +4,13 @@ export default function Content() {
       <p>
         Every week, millions of people pay for subscriptions to image editing software or upload sensitive
         photos to cloud-based tools — not because they need advanced features, but because they could not
-        find a fast, free alternative. BrowseryTools exists to change that. Every image tool in the suite
+        find a fast, free alternative. BigWow exists to change that. Every image tool in the suite
         runs entirely inside your browser using your device's own processing power. Your photos never leave
         your machine. No uploads, no watermarks, no subscriptions, and no size limits imposed by a server
         that needs to protect its bandwidth bill.
       </p>
       <p>
-        This guide covers every image tool available on BrowseryTools, explains how each one works, and
+        This guide covers every image tool available on BigWow, explains how each one works, and
         walks through the real-world use cases where they shine.
       </p>
 
@@ -53,7 +53,7 @@ export default function Content() {
       <h2>Image Compression — Shrink Files Without Sacrificing Quality</h2>
       <p>
         Large image files slow down websites, clog email attachments, and eat storage. The{" "}
-        <a href="/tools/image-compression">BrowseryTools Image Compression</a> tool reduces the file size
+        <a href="/tools/image-compression">BigWow Image Compression</a> tool reduces the file size
         of JPEG, PNG, and WebP images by applying intelligent compression algorithms directly in the browser.
       </p>
       <p>
@@ -75,7 +75,7 @@ export default function Content() {
         Different platforms and applications require different image formats. Developers working with web
         assets often need WebP for performance. Print workflows may require specific color space handling.
         Some legacy systems only accept BMP. The{" "}
-        <a href="/tools/image-converter">BrowseryTools Image Converter</a> lets you convert between PNG,
+        <a href="/tools/image-converter">BigWow Image Converter</a> lets you convert between PNG,
         JPEG, WebP, and BMP in seconds.
       </p>
       <p>
@@ -96,7 +96,7 @@ export default function Content() {
       <p>
         Whether you are preparing images for a specific social media format, resizing a product photo to fit
         a template, or reducing a large image down to web-display dimensions, the{" "}
-        <a href="/tools/image-resizer">BrowseryTools Image Resizer</a> gives you precise control over output
+        <a href="/tools/image-resizer">BigWow Image Resizer</a> gives you precise control over output
         dimensions.
       </p>
       <p>
@@ -115,7 +115,7 @@ export default function Content() {
       <h2>Color Correction — Adjust Brightness, Contrast, and Saturation</h2>
       <p>
         A photo taken in imperfect lighting conditions often needs basic color correction before it is
-        ready to use. The <a href="/tools/color-correction">BrowseryTools Color Correction</a> tool provides
+        ready to use. The <a href="/tools/color-correction">BigWow Color Correction</a> tool provides
         sliders for brightness, contrast, saturation, and hue — the four core adjustments that cover the
         majority of everyday photo correction needs.
       </p>
@@ -137,7 +137,7 @@ export default function Content() {
       <p>
         Background removal used to require either professional Photoshop skills or uploading your image to
         a service that would process it on their servers (and retain a copy). The{" "}
-        <a href="/tools/bg-removal">BrowseryTools Background Removal</a> tool uses a machine learning model
+        <a href="/tools/bg-removal">BigWow Background Removal</a> tool uses a machine learning model
         that runs directly in the browser to identify the subject of a photo and remove the background.
       </p>
       <p>
@@ -154,7 +154,7 @@ export default function Content() {
 
       <h2>A Complete Workflow Example: Preparing E-commerce Product Images</h2>
       <p>
-        Here is how a product photographer or e-commerce seller could use BrowseryTools to take a raw
+        Here is how a product photographer or e-commerce seller could use BigWow to take a raw
         product photo from camera to store-ready in minutes:
       </p>
       <ol>
@@ -176,13 +176,13 @@ export default function Content() {
       </ol>
       <p>
         That entire workflow — which would previously require Photoshop, a paid Canva plan, or multiple
-        different web uploads — can now be completed in BrowseryTools for free, with every step happening
+        different web uploads — can now be completed in BigWow for free, with every step happening
         locally on your device.
       </p>
 
       <h2>No Installs, No Accounts, No Waiting</h2>
       <p>
-        Every image tool on BrowseryTools is available immediately in your browser. There is nothing to
+        Every image tool on BigWow is available immediately in your browser. There is nothing to
         download, no account to create, no trial period, and no watermark on the output. Bookmark the tools
         you use most often and they will be ready whenever you need them.
       </p>
@@ -193,7 +193,7 @@ export default function Content() {
       </p>
       <p>
         Start with the tool that addresses your most immediate need, and explore the rest of the image suite
-        at BrowseryTools as your workflow demands.
+        at BigWow as your workflow demands.
       </p>
     </div>
   );

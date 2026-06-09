@@ -1,0 +1,25 @@
+Contact: mailto:studio365@zohomail.in
+Contact: https://github.com/aghyad97/browserytools/security/advisories/new
+Expires: 2027-12-31T23:59:59z
+Preferred-Languages: en, ar
+Canonical: https://browserytools.com/.well-known/security.txt
+
+# BrowseryTools Security Disclosure Policy
+#
+# We take the security of BrowseryTools seriously. If you discover a
+# vulnerability, please report it privately using one of the contact methods
+# above. We commit to:
+#
+#   1. Acknowledge your report within 72 hours.
+#   2. Provide a status update within 7 days.
+#   3. Credit researchers who follow responsible disclosure (with their
+#      permission) once the issue is fixed.
+#
+# Please DO NOT publicly disclose the vulnerability until we have shipped a
+# fix or 90 days have passed, whichever comes first.
+#
+# Scope: all of *.browserytools.com and the GitHub repository at
+# https://github.com/aghyad97/browserytools
+#
+# Out of scope: social-engineering attacks, denial-of-service, reports from
+# automated scanners without a working PoC.

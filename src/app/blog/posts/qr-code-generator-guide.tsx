@@ -11,7 +11,7 @@ export default function Content() {
       <p>
         Yet for most people, generating a QR code still involves finding a website, dealing with ads or
         paywalls, wondering whether the service stores the code or the URL it encodes, and often discovering
-        that customization requires a paid plan. BrowseryTools solves all of that. The{" "}
+        that customization requires a paid plan. BigWow solves all of that. The{" "}
         <a href="/tools/qr-generator">QR Code Generator</a> is free, runs in your browser, requires no
         account, and generates codes that are never sent to or stored on any server.
       </p>
@@ -40,7 +40,7 @@ export default function Content() {
       <div style={{background: "var(--muted)", borderLeft: "4px solid var(--primary)", padding: "1rem 1.25rem", borderRadius: "0.5rem", margin: "1.5rem 0"}}>
         <strong>Privacy note:</strong> Some online QR generators act as URL shorteners — the QR code points
         to their server, which then redirects to your actual URL. This means the generator can track every
-        scan. BrowseryTools generates static QR codes that encode your content directly, with no redirect
+        scan. BigWow generates static QR codes that encode your content directly, with no redirect
         and no tracking. What you encode is what scanners see.
       </div>
 
@@ -93,7 +93,7 @@ export default function Content() {
         code from a specific flyer or magazine ad by checking your web analytics.
       </p>
 
-      <h2>How to Use the BrowseryTools QR Code Generator</h2>
+      <h2>How to Use the BigWow QR Code Generator</h2>
       <p>
         Open the <a href="/tools/qr-generator">QR Code Generator</a> and you will see a clean input field.
         Enter any content you want to encode:
@@ -134,7 +134,7 @@ export default function Content() {
       <div style={{background: "var(--muted)", borderLeft: "4px solid var(--primary)", padding: "1rem 1.25rem", borderRadius: "0.5rem", margin: "1.5rem 0"}}>
         <strong>Everything stays local:</strong> The QR code is generated entirely by JavaScript running
         in your browser. The content you encode — whether it is a URL, a WiFi password, or a vCard — is
-        never transmitted to BrowseryTools servers or any third-party service. No codes are logged or
+        never transmitted to BigWow servers or any third-party service. No codes are logged or
         stored anywhere outside your device.
       </div>
 
@@ -180,11 +180,11 @@ export default function Content() {
         so without confusion.
       </p>
 
-      <h2>Scanning QR Codes: The BrowseryTools QR Scanner</h2>
+      <h2>Scanning QR Codes: The BigWow QR Scanner</h2>
       <p>
         When you receive a QR code and want to decode its content without pointing a phone at it —
         perhaps you received a QR code image via email or found one on a webpage — the{" "}
-        <a href="/tools/qr-scanner">BrowseryTools QR Scanner</a> lets you upload an image of the code
+        <a href="/tools/qr-scanner">BigWow QR Scanner</a> lets you upload an image of the code
         and decode it instantly in the browser.
       </p>
       <p>
@@ -197,7 +197,7 @@ export default function Content() {
       <p>
         QR codes are one of the most practical pieces of infrastructure connecting physical and digital
         spaces in 2026, and generating one should take under a minute. The{" "}
-        <a href="/tools/qr-generator">BrowseryTools QR Code Generator</a> makes it fast, free, private,
+        <a href="/tools/qr-generator">BigWow QR Code Generator</a> makes it fast, free, private,
         and fully customizable.
       </p>
       <p>

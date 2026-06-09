@@ -12,7 +12,7 @@ export default function Content() {
       <p>
         This guide covers everything you need to know about CSS gradients — the three types, the angle system,
         real-world use cases with copy-ready code, common mistakes, and how to use the{" "}
-        <a href="/tools/css-gradient">BrowseryTools CSS Gradient Generator</a> to build exactly what you need
+        <a href="/tools/css-gradient">BigWow CSS Gradient Generator</a> to build exactly what you need
         without writing a single line from scratch.
       </p>
 
@@ -305,7 +305,7 @@ background: repeating-linear-gradient(
         sufficient contrast across its entire span.
       </div>
 
-      <h2>Using the BrowseryTools CSS Gradient Generator</h2>
+      <h2>Using the BigWow CSS Gradient Generator</h2>
       <p>
         The <a href="/tools/css-gradient">CSS Gradient Generator</a> gives you a live visual preview as you
         configure every parameter. Here is how to use it effectively:
