@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import Logo from "./logo";
 
 export default function Footer() {
   const t = useTranslations("Tools.Footer");
@@ -17,14 +18,9 @@ export default function Footer() {
           
           {/* Column 1: Brand & Social */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                <Sparkles className="h-3.5 w-3.5" />
-              </span>
-              <span className="font-display text-base font-bold tracking-tight text-foreground">
-                BigWow
-              </span>
-            </div>
+            <Link href="/" className="flex items-center">
+              <Logo variant="full" className="h-7 w-auto" />
+            </Link>
             <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground leading-relaxed max-w-[220px]">
               100% Client-Side &bull; Private &bull; Offline-First
             </p>

@@ -95,26 +95,20 @@ export default function Header() {
 
           <Link
             href="/"
-            className="flex items-center gap-2.5 transition-transform duration-150 active:scale-98"
+            className="flex items-center gap-2 transition-transform duration-150 active:scale-98"
             aria-label="Go to homepage"
           >
             {currentTool ? (
-              <div className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                  <Logo />
-                </div>
-                <h1 className="text-sm font-semibold tracking-tight text-foreground font-display hidden sm:block">
+              <div className="flex items-center gap-2 md:gap-2.5">
+                <Logo variant="full" className="h-7 w-auto" />
+                <span className="text-muted-foreground/40 text-sm hidden md:inline">/</span>
+                <h1 className="text-sm font-semibold tracking-tight text-foreground font-display hidden md:block">
                   {tc(`tools.${currentTool.href.replace("/tools/", "")}.name` as any)}
                 </h1>
               </div>
             ) : (
-              <div className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-                  <Sparkles className="h-4 w-4" />
-                </div>
-                <span className="font-display text-md font-bold tracking-tight text-foreground hidden sm:block">
-                  {tCommon("siteName")}
-                </span>
+              <div className="flex items-center">
+                <Logo variant="full" className="h-7 w-auto" />
               </div>
             )}
           </Link>
