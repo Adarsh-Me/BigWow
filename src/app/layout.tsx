@@ -4,6 +4,8 @@ import { Providers } from "@/providers/providers";
 import type { Locale } from "@/store/language-store";
 import StructuredDataInjector from "@/components/StructuredDataInjector";
 import { absoluteUrl, languageAlternates, siteConfig } from "@/lib/site";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = {
   variable: "--font-geist-sans",
@@ -223,6 +225,8 @@ export default async function RootLayout({
         <Providers initialLocale={initialLocale}>
           {children}
           <StructuredDataInjector />
+          <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
