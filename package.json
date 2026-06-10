@@ -10,6 +10,7 @@
     "validate": "node scripts/validate-tools.js",
     "test-validation": "node scripts/test-validation.js",
     "tool-release": "node scripts/update-tool-release.js",
+    "indexnow": "node scripts/submit-indexnow.js",
     "precommit": "bun run validate && bun run lint",
     "test": "vitest run",
     "test:watch": "vitest",
