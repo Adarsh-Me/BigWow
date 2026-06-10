@@ -1,6 +1,6 @@
 /* TEAM */
-Founder & Lead Developer: BrowseryTools Studio
-Site: BrowseryTools — https://browserytools.com
+Founder & Lead Developer: BigWow Studio
+Site: BigWow — https://bigwow.space
 Contact: studio365@zohomail.in
 Location: Remote / Global
 

@@ -136,7 +136,7 @@ export default function RegexTester() {
       label: "Username (alnum_.)",
       pattern: "[a-zA-Z0-9_.]{3,16}",
       flags: "g",
-      sample: "user_01, Aghyad.T, too_long_username_over_16",
+      sample: "user_01, John.D, too_long_username_over_16",
     },
   ] as const;
 

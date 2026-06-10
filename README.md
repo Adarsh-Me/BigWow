@@ -1,6 +1,6 @@
 # BigWow 🛠️
 
-![BigWow](https://github.com/aghyad97/bigwow/blob/main/public/og-image.png?raw=true)
+![BigWow](/og-image.png)
 
 A comprehensive collection of **80+ browser-based tools** built with Next.js, TypeScript, and Tailwind CSS. Every tool runs entirely in your browser — no uploads, no servers, no accounts required.
 
@@ -174,7 +174,7 @@ A comprehensive collection of **80+ browser-based tools** built with Next.js, Ty
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/aghyad97/bigwow.git
+git clone https://github.com/your-username/bigwow.git
 cd bigwow
 ```
 
@@ -240,9 +240,7 @@ Open an issue with a clear description, steps to reproduce, and browser/OS info.
 
 ## 💖 Supporting the Project
 
-- ⭐ **Star the repository** on GitHub
-- **GitHub Sponsors**: [Sponsor us](https://github.com/sponsors/aghyad97)
-- **Ziina**: [One-time donation](https://pay.ziina.com/aghyad)
+- **GitHub**: [Star the repository](https://github.com/your-username/bigwow)
 
 ## 📄 License
 
@@ -250,8 +248,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## 📞 Contact
 
-- **GitHub Issues**: [Open an issue](https://github.com/aghyad97/bigwow/issues)
-- **Twitter**: [@aghyadev](https://twitter.com/aghyadev)
+- **GitHub Issues**: [Open an issue](https://github.com/your-username/bigwow/issues)
 
 ---
 
