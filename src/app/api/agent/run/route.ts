@@ -100,6 +100,11 @@ export async function localRoutePrompt(prompt: string): Promise<AgentRunResponse
     let score = 0;
     const nameLower = tool.name.toLowerCase();
 
+    // Direct slash command match gets very high score
+    if (tool.command && lowercasePrompt.includes(tool.command.toLowerCase())) {
+      score += 100;
+    }
+
     // Direct name match or sub-match is highly weighted
     if (lowercasePrompt.includes(nameLower)) {
       score += 15;

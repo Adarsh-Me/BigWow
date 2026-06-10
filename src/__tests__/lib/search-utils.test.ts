@@ -90,6 +90,14 @@ describe("calculateSearchScore()", () => {
     const score = calculateSearchScore(anyTool, "zzzzzzzzzz12345");
     expect(score).toBeGreaterThanOrEqual(0);
   });
+
+  it("gives a very high score for exact slash command match", () => {
+    const bgRemovalTool = allTools.find((t) => t.href === "/tools/bg-removal");
+    if (!bgRemovalTool) return;
+    const slashScore = calculateSearchScore(bgRemovalTool, "/backgroundremover");
+    const normalScore = calculateSearchScore(bgRemovalTool, "background removal");
+    expect(slashScore).toBeGreaterThan(normalScore);
+  });
 });
 
 // ── searchTools() ─────────────────────────────────────────────────────────────

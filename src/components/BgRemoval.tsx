@@ -12,7 +12,7 @@ import JSZip from "jszip";
 import { Config, removeBackground } from "@imgly/background-removal";
 
 const config: Config = {
-  device: "gpu",
+  // Allow auto-detection and fallback between GPU and CPU execution
 };
 
 export default function BgRemoval() {

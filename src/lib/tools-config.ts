@@ -73,13 +73,15 @@ import {
 } from "lucide-react";
 
 export interface Tool {
+
   name: string;
   href: string;
   icon: any;
   available: boolean;
   description: string;
   order: number;
-  creationDate: string; // ISO date string (YYYY-MM-DD)
+  creationDate: string;
+  command?: string;
 }
 
 export interface ToolCategory {
@@ -98,6 +100,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Background Removal",
         href: "/tools/bg-removal",
+        command: "/backgroundremover",
         icon: ImagesIcon,
         available: true,
         order: 1,
@@ -108,6 +111,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Phone Mockups",
         href: "/tools/phone-mockups",
+        command: "/phonemockups",
         icon: SmartphoneIcon,
         available: true,
         order: 2,
@@ -118,6 +122,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Image Compression",
         href: "/tools/image-compression",
+        command: "/imagecompressor",
         icon: FileDownIcon,
         available: true,
         order: 3,
@@ -128,6 +133,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Format Converter",
         href: "/tools/image-converter",
+        command: "/formatconverter",
         icon: HammerIcon,
         available: true,
         order: 4,
@@ -138,6 +144,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Color Correction",
         href: "/tools/color-correction",
+        command: "/colorcorrection",
         icon: PaintRollerIcon,
         available: true,
         order: 5,
@@ -148,6 +155,7 @@ export const tools: ToolCategory[] = [
       {
         name: "SVG Tools",
         href: "/tools/svg",
+        command: "/svgtools",
         icon: FileImageIcon,
         available: true,
         order: 6,
@@ -158,6 +166,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Color Converter",
         href: "/tools/color-converter",
+        command: "/colorconverter",
         icon: PaletteIcon,
         available: true,
         order: 7,
@@ -174,6 +183,7 @@ export const tools: ToolCategory[] = [
       {
         name: "PDF Tools",
         href: "/tools/pdf",
+        command: "/pdftools",
         icon: FileTextIcon,
         available: true,
         order: 1,
@@ -184,6 +194,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Zip Tools",
         href: "/tools/zip",
+        command: "/ziptools",
         icon: FileArchiveIcon,
         available: true,
         order: 2,
@@ -194,6 +205,7 @@ export const tools: ToolCategory[] = [
       {
         name: "CSV/Excel Viewer",
         href: "/tools/spreadsheet",
+        command: "/csvviewer",
         icon: Grid3X3Icon,
         available: true,
         order: 3,
@@ -204,6 +216,7 @@ export const tools: ToolCategory[] = [
       {
         name: "File Converter",
         href: "/tools/file-converter",
+        command: "/fileconverter",
         icon: FileIcon,
         available: true,
         order: 4,
@@ -222,6 +235,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Video Editor",
         href: "/tools/video",
+        command: "/videoeditor",
         icon: VideoIcon,
         available: true,
         order: 1,
@@ -232,6 +246,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Audio Editor",
         href: "/tools/audio",
+        command: "/audioeditor",
         icon: SquarePlayIcon,
         available: true,
         order: 2,
@@ -242,6 +257,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Mic & Camera Tester",
         href: "/tools/mic-camera",
+        command: "/mictester",
         icon: CameraIcon,
         available: true,
         order: 3,
@@ -252,6 +268,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Video Compressor",
         href: "/tools/compress-video",
+        command: "/videocompressor",
         icon: VideoIcon,
         available: true,
         order: 4,
@@ -269,6 +286,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Case Converter",
         href: "/tools/text-case",
+        command: "/textcaseconverter",
         icon: TypeIcon,
         available: true,
         order: 1,
@@ -279,6 +297,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Counter",
         href: "/tools/text-counter",
+        command: "/textcounter",
         icon: HashIcon,
         available: true,
         order: 2,
@@ -289,6 +308,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Code Formatter",
         href: "/tools/code-format",
+        command: "/codeformatter",
         icon: CodeIcon,
         available: true,
         order: 3,
@@ -299,6 +319,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Rich Editor",
         href: "/tools/rich-editor",
+        command: "/richeditor",
         icon: BookMinusIcon,
         available: true,
         order: 4,
@@ -309,6 +330,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Lorem Ipsum Generator",
         href: "/tools/lorem-ipsum",
+        command: "/loremipsumgenerator",
         icon: FileTextIcon,
         available: true,
         order: 5,
@@ -319,6 +341,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Typing Test",
         href: "/tools/typing-test",
+        command: "/typingtest",
         icon: TypeIcon,
         available: true,
         order: 6,
@@ -329,6 +352,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Diff Viewer",
         href: "/tools/text-diff",
+        command: "/textdiffviewer",
         icon: FileTextIcon,
         available: true,
         order: 7,
@@ -338,6 +362,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Markdown Editor",
         href: "/tools/markdown-editor",
+        command: "/markdowneditor",
         icon: FileTextIcon,
         available: true,
         order: 8,
@@ -348,6 +373,7 @@ export const tools: ToolCategory[] = [
       {
         name: "HTML Formatter",
         href: "/tools/html-formatter",
+        command: "/htmlformatter",
         icon: CodeIcon,
         available: true,
         order: 9,
@@ -358,6 +384,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Notepad",
         href: "/tools/notepad",
+        command: "/notepad",
         icon: NotebookIcon,
         available: true,
         order: 10,
@@ -368,6 +395,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Sorter",
         href: "/tools/text-sorter",
+        command: "/textsorter",
         icon: ArrowUpNarrowWideIcon,
         available: true,
         order: 11,
@@ -378,6 +406,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Morse Code Converter",
         href: "/tools/morse-code",
+        command: "/morsecodeconverter",
         icon: RadioIcon,
         available: true,
         order: 12,
@@ -388,6 +417,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Word Frequency Analyzer",
         href: "/tools/word-frequency",
+        command: "/wordfrequencyanalyzer",
         icon: BarChart3Icon,
         available: true,
         order: 13,
@@ -398,6 +428,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Markdown to HTML",
         href: "/tools/markdown-html",
+        command: "/markdowntohtml",
         icon: CodeIcon,
         available: true,
         order: 14,
@@ -408,6 +439,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Repeater",
         href: "/tools/text-repeater",
+        command: "/textrepeater",
         icon: RepeatIcon,
         available: true,
         order: 15,
@@ -418,6 +450,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Markdown Table Generator",
         href: "/tools/markdown-table",
+        command: "/markdowntablegenerator",
         icon: TableIcon,
         available: true,
         order: 15,
@@ -435,6 +468,7 @@ export const tools: ToolCategory[] = [
       {
         name: "JSON to CSV",
         href: "/tools/json-csv",
+        command: "/jsontocsv",
         icon: DatabaseIcon,
         available: true,
         order: 1,
@@ -445,6 +479,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Base64 Tools",
         href: "/tools/base64",
+        command: "/base64tools",
         icon: DatabaseIcon,
         available: true,
         order: 2,
@@ -455,6 +490,7 @@ export const tools: ToolCategory[] = [
       {
         name: "QR Code Generator",
         href: "/tools/qr-generator",
+        command: "/qrgenerator",
         icon: QrCodeIcon,
         available: true,
         order: 3,
@@ -465,6 +501,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Barcode Generator",
         href: "/tools/barcode-generator",
+        command: "/barcodegenerator",
         icon: BarcodeIcon,
         available: true,
         order: 4,
@@ -475,6 +512,7 @@ export const tools: ToolCategory[] = [
       {
         name: "QR Code Scanner",
         href: "/tools/qr-scanner",
+        command: "/qrscanner",
         icon: CameraIcon,
         available: true,
         order: 5,
@@ -485,6 +523,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Barcode Scanner",
         href: "/tools/barcode-scanner",
+        command: "/barcodescanner",
         icon: CameraIcon,
         available: true,
         order: 6,
@@ -495,6 +534,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Charts",
         href: "/tools/charts",
+        command: "/charts",
         icon: BarChart3Icon,
         available: true,
         order: 7,
@@ -505,6 +545,7 @@ export const tools: ToolCategory[] = [
       {
         name: "JSON Formatter",
         href: "/tools/json-formatter",
+        command: "/jsonformatter",
         icon: BracesIcon,
         available: true,
         order: 8,
@@ -515,6 +556,7 @@ export const tools: ToolCategory[] = [
       {
         name: "YAML ↔ JSON",
         href: "/tools/yaml-json",
+        command: "/yamltojson",
         icon: RefreshCwIcon,
         available: true,
         order: 9,
@@ -525,6 +567,7 @@ export const tools: ToolCategory[] = [
       {
         name: "URL Encoder/Decoder",
         href: "/tools/url-encoder",
+        command: "/urlencoder",
         icon: LinkIcon,
         available: true,
         order: 10,
@@ -535,6 +578,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Fake Data Generator",
         href: "/tools/fake-data",
+        command: "/fakedatagenerator",
         icon: UserIcon,
         available: true,
         order: 11,
@@ -545,6 +589,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text to Binary",
         href: "/tools/text-binary",
+        command: "/texttobinary",
         icon: BinaryIcon,
         available: true,
         order: 12,
@@ -555,6 +600,7 @@ export const tools: ToolCategory[] = [
       {
         name: "JSON → TypeScript",
         href: "/tools/json-to-ts",
+        command: "/jsontotypescript",
         icon: FileJson2Icon,
         available: true,
         order: 13,
@@ -565,6 +611,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Mermaid Diagram Viewer",
         href: "/tools/mermaid",
+        command: "/mermaidviewer",
         icon: GitBranchIcon,
         available: true,
         order: 14,
@@ -582,6 +629,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Invoice Generator",
         href: "/tools/invoice",
+        command: "/invoicegenerator",
         icon: ReceiptIcon,
         available: true,
         order: 1,
@@ -592,6 +640,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Unit Converter",
         href: "/tools/unit-converter",
+        command: "/unitconverter",
         icon: CalculatorIcon,
         available: true,
         order: 2,
@@ -603,6 +652,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Time Zone Converter",
         href: "/tools/timezone-converter",
+        command: "/timezoneconverter",
         icon: GlobeIcon,
         available: true,
         order: 3,
@@ -613,6 +663,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Calculator",
         href: "/tools/calculator",
+        command: "/calculator",
         icon: CalculatorIcon,
         available: true,
         order: 4,
@@ -623,6 +674,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Age Calculator",
         href: "/tools/age-calculator",
+        command: "/agecalculator",
         icon: CalendarIcon,
         available: true,
         order: 5,
@@ -633,6 +685,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Number Base Converter",
         href: "/tools/number-base-converter",
+        command: "/numberbaseconverter",
         icon: CalculatorIcon,
         available: true,
         order: 6,
@@ -643,6 +696,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Expense Tracker",
         href: "/tools/expense-tracker",
+        command: "/expensetracker",
         icon: DollarSignIcon,
         available: true,
         order: 7,
@@ -653,6 +707,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Currency Converter",
         href: "/tools/currency-converter",
+        command: "/currencyconverter",
         icon: CoinsIcon,
         available: true,
         order: 8,
@@ -663,6 +718,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Loan Calculator",
         href: "/tools/loan-calculator",
+        command: "/loancalculator",
         icon: CalculatorIcon,
         available: true,
         order: 9,
@@ -673,6 +729,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Percentage Calculator",
         href: "/tools/percentage-calculator",
+        command: "/percentagecalculator",
         icon: PercentIcon,
         available: true,
         order: 10,
@@ -683,6 +740,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Aspect Ratio Calculator",
         href: "/tools/aspect-ratio",
+        command: "/aspectratiocalculator",
         icon: ScaleIcon,
         available: true,
         order: 11,
@@ -693,6 +751,7 @@ export const tools: ToolCategory[] = [
       {
         name: "BMI Calculator",
         href: "/tools/bmi-calculator",
+        command: "/bmicalculator",
         icon: UserIcon,
         available: true,
         order: 12,
@@ -703,6 +762,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Tip Calculator",
         href: "/tools/tip-calculator",
+        command: "/tipcalculator",
         icon: ReceiptIcon,
         available: true,
         order: 13,
@@ -720,6 +780,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Todo List",
         href: "/tools/todo",
+        command: "/todolist",
         icon: CheckSquareIcon,
         available: true,
         order: 1,
@@ -730,6 +791,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Timer & Countdown",
         href: "/tools/timer",
+        command: "/timer",
         icon: ClockIcon,
         available: true,
         order: 2,
@@ -740,6 +802,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Pomodoro Timer",
         href: "/tools/pomodoro",
+        command: "/pomodorotimer",
         icon: TimerIcon,
         available: true,
         order: 3,
@@ -750,6 +813,7 @@ export const tools: ToolCategory[] = [
       {
         name: "World Clock",
         href: "/tools/world-clock",
+        command: "/worldclock",
         icon: SunIcon,
         available: true,
         order: 4,
@@ -760,6 +824,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Stopwatch",
         href: "/tools/stopwatch",
+        command: "/stopwatch",
         icon: TimerIcon,
         available: true,
         order: 5,
@@ -770,6 +835,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Habit Tracker",
         href: "/tools/habit-tracker",
+        command: "/habittracker",
         icon: CheckSquareIcon,
         available: true,
         order: 6,
@@ -780,6 +846,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Keep Awake",
         href: "/tools/keep-awake",
+        command: "/keepawake",
         icon: ZapIcon,
         available: true,
         order: 7,
@@ -797,6 +864,7 @@ export const tools: ToolCategory[] = [
       {
         name: "UUID Generator",
         href: "/tools/uuid-generator",
+        command: "/uuidgenerator",
         icon: KeyIcon,
         available: true,
         order: 1,
@@ -807,6 +875,7 @@ export const tools: ToolCategory[] = [
       {
         name: "JWT Decoder",
         href: "/tools/jwt-decoder",
+        command: "/jwtdecoder",
         icon: ShieldIcon,
         available: true,
         order: 2,
@@ -817,6 +886,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Password Generator",
         href: "/tools/password-generator",
+        command: "/passwordgenerator",
         icon: ShieldIcon,
         available: true,
         order: 3,
@@ -827,6 +897,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Hash Generator",
         href: "/tools/hash-generator",
+        command: "/hashgenerator",
         icon: HashIcon,
         available: true,
         order: 4,
@@ -837,6 +908,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Unix Timestamp Converter",
         href: "/tools/unix-timestamp",
+        command: "/unixtimestamp",
         icon: ClockIcon,
         available: true,
         order: 5,
@@ -846,6 +918,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Regex Tester",
         href: "/tools/regex-tester",
+        command: "/regextester",
         icon: CodeIcon,
         available: true,
         order: 6,
@@ -856,6 +929,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Cron Parser",
         href: "/tools/cron-parser",
+        command: "/cronparser",
         icon: CalendarClockIcon,
         available: true,
         order: 7,
@@ -865,6 +939,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Password Strength",
         href: "/tools/password-strength",
+        command: "/passwordstrength",
         icon: ShieldIcon,
         available: true,
         order: 8,
@@ -875,6 +950,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Encryption",
         href: "/tools/text-encryption",
+        command: "/textencryption",
         icon: LockIcon,
         available: true,
         order: 9,
@@ -885,6 +961,7 @@ export const tools: ToolCategory[] = [
       {
         name: "HTTP Status Codes",
         href: "/tools/http-status",
+        command: "/httpstatuscodes",
         icon: ServerIcon,
         available: true,
         order: 10,
@@ -895,6 +972,7 @@ export const tools: ToolCategory[] = [
       {
         name: "CSS Minifier",
         href: "/tools/css-minifier",
+        command: "/cssminifier",
         icon: ZapIcon,
         available: true,
         order: 11,
@@ -905,6 +983,7 @@ export const tools: ToolCategory[] = [
       {
         name: "SQL Formatter",
         href: "/tools/sql-formatter",
+        command: "/sqlformatter",
         icon: DatabaseIcon,
         available: true,
         order: 12,
@@ -915,6 +994,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Chmod Calculator",
         href: "/tools/chmod",
+        command: "/chmodcalculator",
         icon: LockIcon,
         available: true,
         order: 13,
@@ -925,6 +1005,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Meta Tags Generator",
         href: "/tools/meta-tags",
+        command: "/metatagsgenerator",
         icon: TagIcon,
         available: true,
         order: 14,
@@ -942,6 +1023,7 @@ export const tools: ToolCategory[] = [
       {
         name: "CSS Gradient Generator",
         href: "/tools/css-gradient",
+        command: "/cssgradientgenerator",
         icon: SwatchBookIcon,
         available: true,
         order: 1,
@@ -952,6 +1034,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Color Palette Generator",
         href: "/tools/color-palette",
+        command: "/colorpalettegenerator",
         icon: PaletteIcon,
         available: true,
         order: 2,
@@ -962,6 +1045,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Image Resizer",
         href: "/tools/image-resizer",
+        command: "/imageresizer",
         icon: ImageIcon,
         available: true,
         order: 3,
@@ -982,6 +1066,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Color Contrast Checker",
         href: "/tools/contrast-checker",
+        command: "/contrastchecker",
         icon: Columns2Icon,
         available: true,
         order: 5,
@@ -992,6 +1077,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Color Blindness Simulator",
         href: "/tools/color-blindness",
+        command: "/colorblindnesssimulator",
         icon: EyeIcon,
         available: true,
         order: 6,
@@ -1002,6 +1088,7 @@ export const tools: ToolCategory[] = [
       {
         name: "EXIF Viewer",
         href: "/tools/exif-viewer",
+        command: "/exifviewer",
         icon: InfoIcon,
         available: true,
         order: 7,
@@ -1012,6 +1099,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Emoji Picker",
         href: "/tools/emoji-picker",
+        command: "/emojipicker",
         icon: SmileIcon,
         available: true,
         order: 8,
@@ -1022,6 +1110,7 @@ export const tools: ToolCategory[] = [
       {
         name: "CSS Box Shadow Generator",
         href: "/tools/css-shadow",
+        command: "/cssshadowgenerator",
         icon: SquareIcon,
         available: true,
         order: 9,
@@ -1039,6 +1128,7 @@ export const tools: ToolCategory[] = [
       {
         name: "AI Image Upscaler",
         href: "/tools/ai-upscaler",
+        command: "/aiupscaler",
         icon: ImageIcon,
         available: true,
         order: 1,
@@ -1049,6 +1139,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Token Counter",
         href: "/tools/token-counter",
+        command: "/tokencounter",
         icon: BrainIcon,
         available: true,
         order: 2,
@@ -1059,6 +1150,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Context Window Calculator",
         href: "/tools/context-window",
+        command: "/contextwindowcalculator",
         icon: BrainIcon,
         available: true,
         order: 2,
@@ -1069,6 +1161,7 @@ export const tools: ToolCategory[] = [
       {
         name: "AI Cost Calculator",
         href: "/tools/ai-cost-calculator",
+        command: "/aicostcalculator",
         icon: BrainIcon,
         available: true,
         order: 3,
@@ -1079,6 +1172,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Model Comparison",
         href: "/tools/model-comparison",
+        command: "/modelcomparison",
         icon: BrainIcon,
         available: true,
         order: 4,
@@ -1089,6 +1183,7 @@ export const tools: ToolCategory[] = [
       {
         name: "System Prompt Builder",
         href: "/tools/system-prompt-builder",
+        command: "/systempromptbuilder",
         icon: BrainIcon,
         available: true,
         order: 5,
@@ -1099,6 +1194,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Prompt Library",
         href: "/tools/prompt-library",
+        command: "/promptlibrary",
         icon: BrainIcon,
         available: true,
         order: 6,
@@ -1109,6 +1205,7 @@ export const tools: ToolCategory[] = [
       {
         name: "CLAUDE.md Generator",
         href: "/tools/claude-md-generator",
+        command: "/claudemdgenerator",
         icon: BrainIcon,
         available: true,
         order: 7,
@@ -1119,6 +1216,7 @@ export const tools: ToolCategory[] = [
       {
         name: "AI Rules Generator",
         href: "/tools/ai-rules-generator",
+        command: "/airulesgenerator",
         icon: BrainIcon,
         available: true,
         order: 8,
@@ -1129,6 +1227,7 @@ export const tools: ToolCategory[] = [
       {
         name: "JSON Schema Builder",
         href: "/tools/json-schema-builder",
+        command: "/jsonschemabuilder",
         icon: BrainIcon,
         available: true,
         order: 9,
@@ -1139,6 +1238,7 @@ export const tools: ToolCategory[] = [
       {
         name: "MCP Config Generator",
         href: "/tools/mcp-config",
+        command: "/mcpconfiggenerator",
         icon: BrainIcon,
         available: true,
         order: 10,
@@ -1149,6 +1249,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Prompt Formatter",
         href: "/tools/prompt-formatter",
+        command: "/promptformatter",
         icon: BrainIcon,
         available: true,
         order: 11,
@@ -1159,6 +1260,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Skill / Agent Builder",
         href: "/tools/skill-builder",
+        command: "/skillbuilder",
         icon: BrainIcon,
         available: true,
         order: 12,
@@ -1169,6 +1271,7 @@ export const tools: ToolCategory[] = [
       {
         name: "AI Instruction Diff",
         href: "/tools/ai-instruction-diff",
+        command: "/aiinstructiondiff",
         icon: BrainIcon,
         available: true,
         order: 13,
@@ -1179,6 +1282,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Text Similarity",
         href: "/tools/text-similarity",
+        command: "/textsimilarity",
         icon: BrainIcon,
         available: true,
         order: 14,
@@ -1196,6 +1300,7 @@ export const tools: ToolCategory[] = [
       {
         name: "YouTube Downloader",
         href: "/tools/youtube-downloader",
+        command: "/youtubedownloader",
         icon: VideoIcon,
         available: true,
         order: 1,
@@ -1206,6 +1311,7 @@ export const tools: ToolCategory[] = [
       {
         name: "TikTok Downloader",
         href: "/tools/tiktok-downloader",
+        command: "/tiktokdownloader",
         icon: FilmIcon,
         available: true,
         order: 2,
@@ -1216,6 +1322,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Instagram Downloader",
         href: "/tools/instagram-downloader",
+        command: "/instagramdownloader",
         icon: ImagePlayIcon,
         available: true,
         order: 3,
@@ -1226,6 +1333,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Twitter / X Downloader",
         href: "/tools/twitter-downloader",
+        command: "/twitterdownloader",
         icon: DownloadIcon,
         available: true,
         order: 4,
@@ -1236,6 +1344,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Reddit Downloader",
         href: "/tools/reddit-downloader",
+        command: "/redditdownloader",
         icon: DownloadIcon,
         available: true,
         order: 5,
@@ -1246,6 +1355,7 @@ export const tools: ToolCategory[] = [
       {
         name: "SoundCloud Downloader",
         href: "/tools/soundcloud-downloader",
+        command: "/soundclouddownloader",
         icon: MusicIcon,
         available: true,
         order: 6,
@@ -1256,6 +1366,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Universal Downloader",
         href: "/tools/video-downloader",
+        command: "/universaldownloader",
         icon: DownloadIcon,
         available: true,
         order: 7,
@@ -1266,6 +1377,7 @@ export const tools: ToolCategory[] = [
       {
         name: "HLS Stream Downloader",
         href: "/tools/hls-downloader",
+        command: "/hlsdownloader",
         icon: VideoIcon,
         available: true,
         order: 8,
@@ -1276,6 +1388,7 @@ export const tools: ToolCategory[] = [
       {
         name: "YouTube Thumbnail Grabber",
         href: "/tools/youtube-thumbnail",
+        command: "/youtubethumbnailgrabber",
         icon: ImageIcon,
         available: true,
         order: 9,
@@ -1286,6 +1399,7 @@ export const tools: ToolCategory[] = [
       {
         name: "Video Frame Extractor",
         href: "/tools/video-frame-extractor",
+        command: "/videoframeextractor",
         icon: CameraIcon,
         available: true,
         order: 10,

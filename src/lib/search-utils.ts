@@ -110,6 +110,18 @@ function calculateSearchScore(tool: Tool, query: string): number {
 
   let score = 0;
 
+  // Slash command matching
+  if (tool.command) {
+    const cmdLower = tool.command.toLowerCase();
+    if (cmdLower === queryLower) {
+      score += 500;
+    } else if (cmdLower.startsWith(queryLower)) {
+      score += 150;
+    } else if (cmdLower.includes(queryLower)) {
+      score += 50;
+    }
+  }
+
   // Exact matches get highest score
   if (nameLower.includes(queryLower)) {
     score += 100;

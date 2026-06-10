@@ -454,7 +454,10 @@ export default function HomePage({ initialSearchQuery = "" }: HomePageProps) {
     const q = toolSearch.trim().toLowerCase();
     if (!q) return pool;
     return pool.filter(
-      (t) => t.name.toLowerCase().includes(q) || t.description.toLowerCase().includes(q)
+      (t) =>
+        t.name.toLowerCase().includes(q) ||
+        t.description.toLowerCase().includes(q) ||
+        (t.command && t.command.toLowerCase().includes(q))
     );
   }, [allTools, toolSearch, selectedCategory, favorites, recentTools, getFavoriteTools, getRecentTools, allCategories]);
 

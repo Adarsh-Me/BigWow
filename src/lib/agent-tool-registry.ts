@@ -5,17 +5,20 @@
  */
 
 export interface RegistryTool {
+
   href: string;
   name: string;
   category: string;
   description: string;
   keywords: string[];
+  command?: string;
 }
 
 export const agentToolRegistry: RegistryTool[] = [
   // ── Image Tools ──────────────────────────────────────────────
   {
     href: "/tools/bg-removal",
+    command: "/backgroundremover",
     name: "Background Removal",
     category: "Image Tools",
     description: "Remove background from images instantly using AI. Supports PNG, JPG.",
@@ -23,6 +26,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/phone-mockups",
+    command: "/phonemockups",
     name: "Phone Mockups",
     category: "Image Tools",
     description: "Place screenshots into iPhone/Android device frames.",
@@ -30,6 +34,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/image-compression",
+    command: "/imagecompressor",
     name: "Image Compression",
     category: "Image Tools",
     description: "Compress images to reduce file size while maintaining quality.",
@@ -37,6 +42,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/image-converter",
+    command: "/formatconverter",
     name: "Format Converter",
     category: "Image Tools",
     description: "Convert images between JPG, PNG, WebP, GIF, BMP, TIFF, SVG.",
@@ -44,6 +50,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/color-correction",
+    command: "/colorcorrection",
     name: "Color Correction",
     category: "Image Tools",
     description: "Adjust colors, brightness, contrast, saturation in images.",
@@ -51,6 +58,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/svg",
+    command: "/svgtools",
     name: "SVG Tools",
     category: "Image Tools",
     description: "Edit SVG vector graphics, scale, modify colors, optimize paths.",
@@ -58,6 +66,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/color-converter",
+    command: "/colorconverter",
     name: "Color Converter",
     category: "Image Tools",
     description: "Convert between HEX, RGB, HSL color formats with live preview.",
@@ -65,6 +74,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/image-resizer",
+    command: "/imageresizer",
     name: "Image Resizer",
     category: "Design Tools",
     description: "Resize images to exact dimensions or by percentage. Lock aspect ratio.",
@@ -74,6 +84,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── File Tools ────────────────────────────────────────────────
   {
     href: "/tools/pdf",
+    command: "/pdftools",
     name: "PDF Tools",
     category: "File Tools",
     description: "Merge, split, compress, and manipulate PDF files. Extract text, rotate pages, add watermarks.",
@@ -81,6 +92,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/zip",
+    command: "/ziptools",
     name: "Zip Tools",
     category: "File Tools",
     description: "Create, extract, and manage ZIP archives. Compress files and folders.",
@@ -88,6 +100,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/spreadsheet",
+    command: "/csvviewer",
     name: "CSV/Excel Viewer",
     category: "File Tools",
     description: "View and edit CSV and Excel files in your browser.",
@@ -95,6 +108,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/file-converter",
+    command: "/fileconverter",
     name: "File Converter",
     category: "File Tools",
     description: "Convert files between different formats: documents, images, audio, video.",
@@ -104,6 +118,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Media Tools ───────────────────────────────────────────────
   {
     href: "/tools/video",
+    command: "/videoeditor",
     name: "Video Editor",
     category: "Media Tools",
     description: "Trim, convert, and edit video files. Cut clips, merge videos, adjust quality.",
@@ -111,6 +126,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/audio",
+    command: "/audioeditor",
     name: "Audio Editor",
     category: "Media Tools",
     description: "Edit and process audio files. Trim, merge, convert formats, adjust volume.",
@@ -118,6 +134,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/mic-camera",
+    command: "/mictester",
     name: "Mic & Camera Tester",
     category: "Media Tools",
     description: "Check your camera preview and test microphone input levels.",
@@ -134,6 +151,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Text & Language Tools ─────────────────────────────────────
   {
     href: "/tools/text-case",
+    command: "/textcaseconverter",
     name: "Text Case Converter",
     category: "Text & Language Tools",
     description: "Convert text to uppercase, lowercase, title case, camelCase, snake_case.",
@@ -141,6 +159,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-counter",
+    command: "/textcounter",
     name: "Text Counter",
     category: "Text & Language Tools",
     description: "Count words, characters, lines in text. Analyze readability.",
@@ -148,6 +167,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/code-format",
+    command: "/codeformatter",
     name: "Code Formatter",
     category: "Text & Language Tools",
     description: "Format and beautify code with proper indentation. Supports JS, Python, HTML, CSS, JSON.",
@@ -155,6 +175,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/lorem-ipsum",
+    command: "/loremipsumgenerator",
     name: "Lorem Ipsum Generator",
     category: "Text & Language Tools",
     description: "Generate placeholder text for designs and mockups.",
@@ -162,6 +183,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/typing-test",
+    command: "/typingtest",
     name: "Typing Test",
     category: "Text & Language Tools",
     description: "Measure typing speed (WPM) and accuracy.",
@@ -169,6 +191,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-diff",
+    command: "/textdiffviewer",
     name: "Text Diff Viewer",
     category: "Text & Language Tools",
     description: "Compare two texts and see differences highlighted.",
@@ -176,6 +199,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/markdown-editor",
+    command: "/markdowneditor",
     name: "Markdown Editor",
     category: "Text & Language Tools",
     description: "Write Markdown with live split-pane preview. Export as HTML.",
@@ -183,6 +207,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/html-formatter",
+    command: "/htmlformatter",
     name: "HTML Formatter",
     category: "Text & Language Tools",
     description: "Format, prettify, or minify HTML code.",
@@ -190,6 +215,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/notepad",
+    command: "/notepad",
     name: "Notepad",
     category: "Text & Language Tools",
     description: "Distraction-free scratch pad that saves notes automatically.",
@@ -197,6 +223,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-sorter",
+    command: "/textsorter",
     name: "Text Sorter",
     category: "Text & Language Tools",
     description: "Sort lines alphabetically, by length, or numerically. Remove duplicates.",
@@ -204,6 +231,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/morse-code",
+    command: "/morsecodeconverter",
     name: "Morse Code Converter",
     category: "Text & Language Tools",
     description: "Convert text to Morse code and decode Morse code back to text.",
@@ -211,6 +239,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/word-frequency",
+    command: "/wordfrequencyanalyzer",
     name: "Word Frequency Analyzer",
     category: "Text & Language Tools",
     description: "Analyze word frequency in text. Find most common words.",
@@ -218,6 +247,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/markdown-html",
+    command: "/markdowntohtml",
     name: "Markdown to HTML",
     category: "Text & Language Tools",
     description: "Convert Markdown to clean HTML.",
@@ -225,6 +255,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-repeater",
+    command: "/textrepeater",
     name: "Text Repeater",
     category: "Text & Language Tools",
     description: "Repeat any text or character N times with a custom separator.",
@@ -232,6 +263,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/markdown-table",
+    command: "/markdowntablegenerator",
     name: "Markdown Table Generator",
     category: "Text & Language Tools",
     description: "Build tables in a visual grid editor and export as Markdown.",
@@ -239,6 +271,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/rich-editor",
+    command: "/richeditor",
     name: "Rich Editor",
     category: "Text & Language Tools",
     description: "Edit rich text with bold, italic, lists, links. Export to HTML or Markdown.",
@@ -248,6 +281,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Data Tools ────────────────────────────────────────────────
   {
     href: "/tools/json-csv",
+    command: "/jsontocsv",
     name: "JSON to CSV",
     category: "Data Tools",
     description: "Convert JSON data to CSV format for spreadsheet applications.",
@@ -255,6 +289,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/base64",
+    command: "/base64tools",
     name: "Base64 Tools",
     category: "Data Tools",
     description: "Encode or decode Base64 strings and files.",
@@ -262,6 +297,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/qr-generator",
+    command: "/qrgenerator",
     name: "QR Code Generator",
     category: "Data Tools",
     description: "Generate QR codes from text, URLs, contact information.",
@@ -269,6 +305,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/barcode-generator",
+    command: "/barcodegenerator",
     name: "Barcode Generator",
     category: "Data Tools",
     description: "Generate barcodes including CODE128, EAN-13, UPC-A.",
@@ -276,6 +313,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/qr-scanner",
+    command: "/qrscanner",
     name: "QR Code Scanner",
     category: "Data Tools",
     description: "Scan QR codes using camera or upload image.",
@@ -283,6 +321,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/barcode-scanner",
+    command: "/barcodescanner",
     name: "Barcode Scanner",
     category: "Data Tools",
     description: "Scan barcodes using camera or upload image.",
@@ -290,6 +329,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/charts",
+    command: "/charts",
     name: "Charts",
     category: "Data Tools",
     description: "Create beautiful charts: area, bar, line, pie, radar. Multiple export options.",
@@ -297,6 +337,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/json-formatter",
+    command: "/jsonformatter",
     name: "JSON Formatter",
     category: "Data Tools",
     description: "Format, validate, and minify JSON. Pretty-print with syntax highlighting.",
@@ -304,6 +345,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/yaml-json",
+    command: "/yamltojson",
     name: "YAML ↔ JSON",
     category: "Data Tools",
     description: "Convert between YAML and JSON formats.",
@@ -311,6 +353,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/url-encoder",
+    command: "/urlencoder",
     name: "URL Encoder/Decoder",
     category: "Data Tools",
     description: "Encode or decode URLs and query strings.",
@@ -318,6 +361,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/fake-data",
+    command: "/fakedatagenerator",
     name: "Fake Data Generator",
     category: "Data Tools",
     description: "Generate realistic fake data: names, emails, addresses, credit cards.",
@@ -325,6 +369,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-binary",
+    command: "/texttobinary",
     name: "Text to Binary",
     category: "Data Tools",
     description: "Convert text to binary, hexadecimal, octal representations.",
@@ -332,6 +377,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/json-to-ts",
+    command: "/jsontotypescript",
     name: "JSON → TypeScript",
     category: "Data Tools",
     description: "Paste JSON and get TypeScript interfaces instantly.",
@@ -339,6 +385,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/mermaid",
+    command: "/mermaidviewer",
     name: "Mermaid Diagram Viewer",
     category: "Data Tools",
     description: "Write Mermaid markdown and see diagrams rendered live.",
@@ -348,6 +395,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Math & Finance Tools ──────────────────────────────────────
   {
     href: "/tools/invoice",
+    command: "/invoicegenerator",
     name: "Invoice Generator",
     category: "Math & Finance Tools",
     description: "Create professional invoices with PDF export. Tax calculations included.",
@@ -355,6 +403,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/unit-converter",
+    command: "/unitconverter",
     name: "Unit Converter",
     category: "Math & Finance Tools",
     description: "Convert between units: length, weight, temperature, area, volume.",
@@ -362,6 +411,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/timezone-converter",
+    command: "/timezoneconverter",
     name: "Time Zone Converter",
     category: "Math & Finance Tools",
     description: "Convert times between different time zones worldwide.",
@@ -369,6 +419,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/calculator",
+    command: "/calculator",
     name: "Calculator",
     category: "Math & Finance Tools",
     description: "Advanced calculator with basic and scientific modes.",
@@ -376,6 +427,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/age-calculator",
+    command: "/agecalculator",
     name: "Age Calculator",
     category: "Math & Finance Tools",
     description: "Calculate exact age in years, months, and days.",
@@ -383,6 +435,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/number-base-converter",
+    command: "/numberbaseconverter",
     name: "Number Base Converter",
     category: "Math & Finance Tools",
     description: "Convert between binary, octal, decimal, and hexadecimal.",
@@ -390,6 +443,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/expense-tracker",
+    command: "/expensetracker",
     name: "Expense Tracker",
     category: "Math & Finance Tools",
     description: "Track expenses with categories, budgets, and charts.",
@@ -397,6 +451,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/currency-converter",
+    command: "/currencyconverter",
     name: "Currency Converter",
     category: "Math & Finance Tools",
     description: "Convert between all major currencies using daily rates.",
@@ -404,6 +459,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/loan-calculator",
+    command: "/loancalculator",
     name: "Loan Calculator",
     category: "Math & Finance Tools",
     description: "Calculate monthly payments, total interest, amortization schedules.",
@@ -411,6 +467,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/percentage-calculator",
+    command: "/percentagecalculator",
     name: "Percentage Calculator",
     category: "Math & Finance Tools",
     description: "Calculate percentages, percentage change, reverse percentages.",
@@ -418,6 +475,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/aspect-ratio",
+    command: "/aspectratiocalculator",
     name: "Aspect Ratio Calculator",
     category: "Math & Finance Tools",
     description: "Calculate and lock aspect ratios for images and videos.",
@@ -425,6 +483,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/bmi-calculator",
+    command: "/bmicalculator",
     name: "BMI Calculator",
     category: "Math & Finance Tools",
     description: "Calculate Body Mass Index (BMI) in metric or imperial units.",
@@ -432,6 +491,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/tip-calculator",
+    command: "/tipcalculator",
     name: "Tip Calculator",
     category: "Math & Finance Tools",
     description: "Calculate tips and split bills between multiple people.",
@@ -441,6 +501,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Productivity Tools ────────────────────────────────────────
   {
     href: "/tools/todo",
+    command: "/todolist",
     name: "Todo List",
     category: "Productivity Tools",
     description: "Organize tasks and stay productive with priority levels.",
@@ -448,6 +509,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/timer",
+    command: "/timer",
     name: "Timer & Countdown",
     category: "Productivity Tools",
     description: "Simple timer and countdown with fullscreen mode.",
@@ -455,6 +517,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/pomodoro",
+    command: "/pomodorotimer",
     name: "Pomodoro Timer",
     category: "Productivity Tools",
     description: "Boost focus with Pomodoro Technique. 25-min work sessions.",
@@ -462,6 +525,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/world-clock",
+    command: "/worldclock",
     name: "World Clock",
     category: "Productivity Tools",
     description: "View current time in multiple cities and time zones.",
@@ -469,6 +533,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/stopwatch",
+    command: "/stopwatch",
     name: "Stopwatch",
     category: "Productivity Tools",
     description: "Precise stopwatch with lap times and split tracking.",
@@ -476,6 +541,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/habit-tracker",
+    command: "/habittracker",
     name: "Habit Tracker",
     category: "Productivity Tools",
     description: "Track daily habits and build streaks.",
@@ -483,6 +549,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/keep-awake",
+    command: "/keepawake",
     name: "Keep Awake",
     category: "Productivity Tools",
     description: "Prevent laptop or phone from sleeping.",
@@ -492,6 +559,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Security & Development Tools ──────────────────────────────
   {
     href: "/tools/uuid-generator",
+    command: "/uuidgenerator",
     name: "UUID Generator",
     category: "Security & Development Tools",
     description: "Generate UUIDs in different versions and formats.",
@@ -499,6 +567,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/jwt-decoder",
+    command: "/jwtdecoder",
     name: "JWT Decoder",
     category: "Security & Development Tools",
     description: "Decode and validate JSON Web Tokens.",
@@ -506,6 +575,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/password-generator",
+    command: "/passwordgenerator",
     name: "Password Generator",
     category: "Security & Development Tools",
     description: "Generate secure passwords with custom options.",
@@ -513,6 +583,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/hash-generator",
+    command: "/hashgenerator",
     name: "Hash Generator",
     category: "Security & Development Tools",
     description: "Generate MD5, SHA-1, SHA-256, SHA-512 hashes from text.",
@@ -520,6 +591,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/unix-timestamp",
+    command: "/unixtimestamp",
     name: "Unix Timestamp Converter",
     category: "Security & Development Tools",
     description: "Convert epoch seconds/milliseconds to human date.",
@@ -527,6 +599,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/regex-tester",
+    command: "/regextester",
     name: "Regex Tester",
     category: "Security & Development Tools",
     description: "Test JavaScript regular expressions with live highlighting.",
@@ -534,6 +607,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/cron-parser",
+    command: "/cronparser",
     name: "Cron Parser",
     category: "Security & Development Tools",
     description: "Explain cron expressions and list next runs.",
@@ -541,6 +615,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/password-strength",
+    command: "/passwordstrength",
     name: "Password Strength",
     category: "Security & Development Tools",
     description: "Analyze password strength in real time.",
@@ -548,6 +623,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-encryption",
+    command: "/textencryption",
     name: "Text Encryption",
     category: "Security & Development Tools",
     description: "Encrypt and decrypt text using AES-256-GCM in browser.",
@@ -555,6 +631,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/http-status",
+    command: "/httpstatuscodes",
     name: "HTTP Status Codes",
     category: "Security & Development Tools",
     description: "Quick reference for all HTTP status codes.",
@@ -562,6 +639,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/css-minifier",
+    command: "/cssminifier",
     name: "CSS Minifier",
     category: "Security & Development Tools",
     description: "Minify or beautify CSS code.",
@@ -569,6 +647,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/sql-formatter",
+    command: "/sqlformatter",
     name: "SQL Formatter",
     category: "Security & Development Tools",
     description: "Format and beautify SQL queries.",
@@ -576,6 +655,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/chmod",
+    command: "/chmodcalculator",
     name: "Chmod Calculator",
     category: "Security & Development Tools",
     description: "Calculate Unix file permissions visually.",
@@ -583,6 +663,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/meta-tags",
+    command: "/metatagsgenerator",
     name: "Meta Tags Generator",
     category: "Security & Development Tools",
     description: "Generate HTML meta tags, Open Graph tags, Twitter Cards.",
@@ -592,6 +673,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── Design Tools ─────────────────────────────────────────────
   {
     href: "/tools/css-gradient",
+    command: "/cssgradientgenerator",
     name: "CSS Gradient Generator",
     category: "Design Tools",
     description: "Create CSS gradients visually. Linear, radial, conic.",
@@ -599,6 +681,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/color-palette",
+    command: "/colorpalettegenerator",
     name: "Color Palette Generator",
     category: "Design Tools",
     description: "Generate harmonious color palettes from a base color.",
@@ -606,6 +689,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/contrast-checker",
+    command: "/contrastchecker",
     name: "Color Contrast Checker",
     category: "Design Tools",
     description: "Check color contrast ratios for WCAG accessibility.",
@@ -613,6 +697,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/color-blindness",
+    command: "/colorblindnesssimulator",
     name: "Color Blindness Simulator",
     category: "Design Tools",
     description: "Simulate how images look to people with color blindness.",
@@ -620,6 +705,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/exif-viewer",
+    command: "/exifviewer",
     name: "EXIF Viewer",
     category: "Design Tools",
     description: "View EXIF metadata from photos: camera, GPS, aperture.",
@@ -627,6 +713,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/emoji-picker",
+    command: "/emojipicker",
     name: "Emoji Picker",
     category: "Design Tools",
     description: "Browse and search all Unicode emojis. Click to copy.",
@@ -634,6 +721,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/css-shadow",
+    command: "/cssshadowgenerator",
     name: "CSS Box Shadow Generator",
     category: "Design Tools",
     description: "Build CSS box shadows visually with sliders.",
@@ -641,6 +729,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/svg-png",
+    command: "/svgtopng",
     name: "SVG to PNG Converter",
     category: "Design Tools",
     description: "Convert SVG vector files to PNG raster images.",
@@ -650,6 +739,7 @@ export const agentToolRegistry: RegistryTool[] = [
   // ── AI Tools ──────────────────────────────────────────────────
   {
     href: "/tools/token-counter",
+    command: "/tokencounter",
     name: "Token Counter",
     category: "AI Tools",
     description: "Count tokens for any text across AI models: GPT-4o, Claude, Llama.",
@@ -657,6 +747,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/context-window",
+    command: "/contextwindowcalculator",
     name: "Context Window Calculator",
     category: "AI Tools",
     description: "Calculate how much of a model's context window your text uses.",
@@ -664,6 +755,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/ai-cost-calculator",
+    command: "/aicostcalculator",
     name: "AI Cost Calculator",
     category: "AI Tools",
     description: "Estimate AI API costs by token counts and model.",
@@ -671,6 +763,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/model-comparison",
+    command: "/modelcomparison",
     name: "Model Comparison",
     category: "AI Tools",
     description: "Compare AI language models: context size, pricing, capabilities.",
@@ -678,6 +771,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/system-prompt-builder",
+    command: "/systempromptbuilder",
     name: "System Prompt Builder",
     category: "AI Tools",
     description: "Build structured system prompts for AI models.",
@@ -685,6 +779,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/prompt-library",
+    command: "/promptlibrary",
     name: "Prompt Library",
     category: "AI Tools",
     description: "Save and organize AI prompts locally.",
@@ -692,6 +787,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/claude-md-generator",
+    command: "/claudemdgenerator",
     name: "CLAUDE.md Generator",
     category: "AI Tools",
     description: "Generate CLAUDE.md files for projects.",
@@ -699,6 +795,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/ai-rules-generator",
+    command: "/airulesgenerator",
     name: "AI Rules Generator",
     category: "AI Tools",
     description: "Generate .cursorrules, .windsurfrules, Copilot instruction files.",
@@ -706,6 +803,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/json-schema-builder",
+    command: "/jsonschemabuilder",
     name: "JSON Schema Builder",
     category: "AI Tools",
     description: "Build JSON schemas for LLM tool calls and function calling.",
@@ -713,6 +811,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/mcp-config",
+    command: "/mcpconfiggenerator",
     name: "MCP Config Generator",
     category: "AI Tools",
     description: "Generate Model Context Protocol config files for Claude Desktop.",
@@ -720,6 +819,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/prompt-formatter",
+    command: "/promptformatter",
     name: "Prompt Formatter",
     category: "AI Tools",
     description: "Convert prompts between ChatML, Llama 3, Claude XML, plain text.",
@@ -727,6 +827,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/skill-builder",
+    command: "/skillbuilder",
     name: "Skill / Agent Builder",
     category: "AI Tools",
     description: "Scaffold AI agent skill files with guided form.",
@@ -734,6 +835,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/ai-instruction-diff",
+    command: "/aiinstructiondiff",
     name: "AI Instruction Diff",
     category: "AI Tools",
     description: "Compare two system prompts or AI instruction sets side by side.",
@@ -741,6 +843,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/text-similarity",
+    command: "/textsimilarity",
     name: "Text Similarity",
     category: "AI Tools",
     description: "Measure semantic similarity between texts using TF-IDF cosine similarity.",
@@ -748,6 +851,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/compress-video",
+    command: "/videocompressor",
     name: "Video Compressor",
     category: "Media Tools",
     description: "Compress video files to reduce size while maintaining quality.",
@@ -755,6 +859,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/youtube-downloader",
+    command: "/youtubedownloader",
     name: "YouTube Downloader",
     category: "Media & Downloader Tools",
     description: "Download YouTube videos and audio tracks for free.",
@@ -762,6 +867,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/tiktok-downloader",
+    command: "/tiktokdownloader",
     name: "TikTok Downloader",
     category: "Media & Downloader Tools",
     description: "Download TikTok videos without watermark in high quality.",
@@ -769,6 +875,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/instagram-downloader",
+    command: "/instagramdownloader",
     name: "Instagram Downloader",
     category: "Media & Downloader Tools",
     description: "Download Instagram Reels, videos, and stories from public accounts.",
@@ -776,6 +883,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/twitter-downloader",
+    command: "/twitterdownloader",
     name: "Twitter / X Downloader",
     category: "Media & Downloader Tools",
     description: "Download videos from Twitter (X) tweets.",
@@ -783,6 +891,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/reddit-downloader",
+    command: "/redditdownloader",
     name: "Reddit Downloader",
     category: "Media & Downloader Tools",
     description: "Download Reddit videos and GIFs from public posts.",
@@ -790,6 +899,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/soundcloud-downloader",
+    command: "/soundclouddownloader",
     name: "SoundCloud Downloader",
     category: "Media & Downloader Tools",
     description: "Download SoundCloud tracks as MP3 audio files.",
@@ -797,6 +907,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/video-downloader",
+    command: "/universaldownloader",
     name: "Universal Downloader",
     category: "Media & Downloader Tools",
     description: "All-in-one media downloader supporting YouTube, TikTok, Instagram, Twitter, Reddit, SoundCloud.",
@@ -804,6 +915,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/hls-downloader",
+    command: "/hlsdownloader",
     name: "HLS Stream Downloader",
     category: "Media & Downloader Tools",
     description: "Download HLS (.m3u8) video streams and merge segments into a single MP4 file.",
@@ -811,6 +923,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/youtube-thumbnail",
+    command: "/youtubethumbnailgrabber",
     name: "YouTube Thumbnail Grabber",
     category: "Media & Downloader Tools",
     description: "Fetch and download YouTube video thumbnails in all available sizes.",
@@ -818,6 +931,7 @@ export const agentToolRegistry: RegistryTool[] = [
   },
   {
     href: "/tools/video-frame-extractor",
+    command: "/videoframeextractor",
     name: "Video Frame Extractor",
     category: "Media & Downloader Tools",
     description: "Extract individual frames from any video file and save them as images locally.",
@@ -830,11 +944,12 @@ export const agentToolRegistry: RegistryTool[] = [
  * Omits keywords to save tokens — the AI reads name + description.
  */
 export function getToolRegistryForPrompt(): string {
-  const compact = agentToolRegistry.map(({ href, name, category, description }) => ({
+  const compact = agentToolRegistry.map(({ href, name, category, description, command }) => ({
     href,
     name,
     category,
     description,
+    command,
   }));
   return JSON.stringify(compact);
 }
