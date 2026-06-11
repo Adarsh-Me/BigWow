@@ -11,7 +11,7 @@ export default function Logo({ variant = "icon", className }: LogoProps) {
       <div className={className}>
         {/* Light theme logo (for white/light background) */}
         <Image
-          src="/logo-light.png"
+          src="/logo-light.png?v=2"
           alt="BigWow"
           width={96}
           height={32}
@@ -20,7 +20,7 @@ export default function Logo({ variant = "icon", className }: LogoProps) {
         />
         {/* Dark theme logo (for black/dark background) */}
         <Image
-          src="/logo-dark.png"
+          src="/logo-dark.png?v=2"
           alt="BigWow"
           width={96}
           height={32}
@@ -34,10 +34,11 @@ export default function Logo({ variant = "icon", className }: LogoProps) {
   return (
     <Image
       className="dark:invert"
-      src="/icon.svg"
+      src="/icon.svg?v=2"
       alt="BigWow"
       width={24}
       height={24}
     />
   );
 }
+

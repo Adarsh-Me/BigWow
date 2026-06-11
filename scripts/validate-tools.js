@@ -113,6 +113,12 @@ function loadReadmeTools() {
     let currentCategory = "";
 
     for (const line of lines) {
+      // Reset category when hitting main headings
+      if (line.startsWith("# ") || line.startsWith("## ")) {
+        currentCategory = "";
+        continue;
+      }
+
       // Match category headers (e.g., "### 🖼️ Image Tools")
       const categoryMatch = line.match(/^###\s+[^\s]+\s+(.+)$/);
       if (categoryMatch) {
