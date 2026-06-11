@@ -5,5 +5,10 @@ import { Metadata } from "next";
 export const metadata = generateToolMetadata("/tools/expense-tracker");
 
 export default function ExpenseTrackerPage() {
-  return <ExpenseTracker />;
+  return (
+    <>
+      <h1 className="sr-only">Expense Tracker</h1>
+      <ExpenseTracker />
+    </>
+  );
 }

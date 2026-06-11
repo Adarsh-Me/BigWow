@@ -1,6 +1,7 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   date: string;
   author: string;
@@ -16,6 +17,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "keep-laptop-awake-browser",
     title: "How to Keep Your Laptop Awake Without Installing Anything (Mac, Windows, Linux)",
+    seoTitle: "Keep Laptop Awake Without Installing",
     description: "Stop your laptop or phone from sleeping with a single browser tab — no apps, no accounts, no ads. Uses the Screen Wake Lock API. Works on Mac, Windows, Linux, iOS, and Android.",
     date: "2026-04-14",
     author: "BrowseryTools Team",
@@ -29,6 +31,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "ibqa-aljihaz-mustayqizan-ar",
     title: "كيف تبقي جهازك مستيقظاً بدون تثبيت أي شيء (ماك وويندوز ولينكس)",
+    seoTitle: "إبقاء اللابتوب مستيقظاً بدون برامج",
     description: "امنع لابتوبك أو جوالك من الدخول في وضع السكون بتبويب واحد في المتصفح — بدون تطبيقات، بدون حسابات، بدون إعلانات. تعتمد على واجهة Wake Lock API وتعمل على ماك وويندوز ولينكس وiOS وأندرويد.",
     date: "2026-04-14",
     author: "BrowseryTools Team",
@@ -42,6 +45,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "why-browser-tools-keep-your-data-private",
     title: "Why Browser-Based Tools Are the Safest Way to Handle Your Data",
+    seoTitle: "Why Browser Tools Keep Your Data Private",
     description: "Learn how browser-based tools like BrowseryTools process everything locally on your device — your files, passwords, and sensitive data never leave your computer.",
     date: "2026-02-20",
     author: "BrowseryTools Team",
@@ -55,6 +59,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "best-free-developer-tools-browser",
     title: "The Ultimate Guide to Free Developer Tools in Your Browser",
+    seoTitle: "Ultimate Guide to Free Browser Developer Tools",
     description: "JSON formatter, Base64 encoder, JWT decoder, regex tester, UUID generator and more — all free, all in your browser. No installs, no ads, no sign-up.",
     date: "2026-02-18",
     author: "BrowseryTools Team",
@@ -94,6 +99,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "boost-productivity-pomodoro-todo",
     title: "10 Ways to Boost Your Productivity with Free Browser Tools",
+    seoTitle: "10 Ways to Boost Productivity with Browser Tools",
     description: "From the Pomodoro timer to todo lists, world clock to expense tracker — discover the productivity tools that work entirely in your browser with zero data collection.",
     date: "2026-02-10",
     author: "BrowseryTools Team",
@@ -133,6 +139,7 @@ const rawBlogPosts: BlogPost[] = [
   {
     slug: "text-tools-for-writers-developers",
     title: "The Best Free Text Tools for Writers, Developers and Content Creators",
+    seoTitle: "Best Free Text Tools for Writers & Developers",
     description: "Text case converter, Lorem ipsum generator, character counter, text diff tool, Markdown editor and more. Everything a writer or developer needs — free and private.",
     date: "2026-02-03",
     author: "BrowseryTools Team",

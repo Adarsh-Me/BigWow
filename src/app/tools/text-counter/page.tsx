@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/text-counter");
 
 export default function TextCounterPage() {
-  return <TextCounter />;
+  return (
+    <>
+      <h1 className="sr-only">Text Counter</h1>
+      <TextCounter />
+    </>
+  );
 }

@@ -20,19 +20,48 @@ export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
+function getBlogSeoTitle(post: { title: string; seoTitle?: string }): string {
+  if (post.seoTitle) return post.seoTitle;
+
+  let cleanTitle = post.title;
+
+  // Split by common separators to get a punchy prefix
+  if (cleanTitle.includes(":")) {
+    cleanTitle = cleanTitle.split(":")[0].trim();
+  } else if (cleanTitle.includes("—")) {
+    cleanTitle = cleanTitle.split("—")[0].trim();
+  } else if (cleanTitle.includes(" - ")) {
+    cleanTitle = cleanTitle.split(" - ")[0].trim();
+  }
+
+  // Remove parentheses details to keep it concise
+  if (cleanTitle.includes("(")) {
+    cleanTitle = cleanTitle.split("(")[0].trim();
+  }
+
+  // Fallback check: if it is still too long (> 50 chars), truncate it nicely
+  if (cleanTitle.length > 50) {
+    cleanTitle = cleanTitle.slice(0, 47) + "...";
+  }
+
+  return cleanTitle;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
 
   const baseUrl = siteConfig.baseUrl;
+  const seoTitle = `${getBlogSeoTitle(post)} | BigWow Blog`;
+
   return {
-    title: `${post.title} | BigWow Blog`,
+    title: seoTitle,
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],
     openGraph: {
-      title: post.title,
+      title: seoTitle,
       description: post.description,
       type: "article",
       publishedTime: post.date,
@@ -43,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: seoTitle,
       description: post.description,
     },
     alternates: {

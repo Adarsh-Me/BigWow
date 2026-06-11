@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/video");
 
 export default function Page() {
-  return <VideoEditor />;
+  return (
+    <>
+      <h1 className="sr-only">Video Editor</h1>
+      <VideoEditor />
+    </>
+  );
 }

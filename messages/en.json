@@ -45,7 +45,7 @@
     "removeFromFavorites": "Remove from favorites",
     "siteName": "BigWow",
     "siteTagline": "Essential Browser-Based Productivity Tools",
-    "siteDescription": "Essential browser-based tools for productivity. No servers. Full privacy."
+    "siteDescription": "100% free, client-side browser tools for productivity. Over 101+ tools with no servers, no signups, full privacy."
   },
   "Header": {
     "requestTool": "Request a tool",
@@ -68,7 +68,7 @@
   "Home": {
     "hero": "Essential Browser-Based Productivity Tools",
     "subtitle": "No servers. Full privacy. Everything runs in your browser.",
-    "searchPlaceholder": "Search 80+ tools...",
+    "searchPlaceholder": "Search 101+ tools...",
     "newBadge": "New",
     "viewAll": "View all tools",
     "starProject": "Star Project on GitHub",

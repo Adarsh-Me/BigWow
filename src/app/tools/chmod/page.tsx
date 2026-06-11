@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/chmod");
 
 export default function Page() {
-  return <ChmodCalculator />;
+  return (
+    <>
+      <h1 className="sr-only">Chmod Calculator</h1>
+      <ChmodCalculator />
+    </>
+  );
 }

@@ -6,6 +6,7 @@ export const metadata = generateToolMetadata("/tools/rich-editor");
 export default function Page() {
   return (
     <div className="mx-auto p-4 max-w-6xl">
+      <h1 className="sr-only">Rich Text Editor</h1>
       <RichEditor />
     </div>
   );

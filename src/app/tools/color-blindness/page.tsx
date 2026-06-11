@@ -1,4 +1,9 @@
 import ColorBlindnessSimulator from "@/components/ColorBlindnessSimulator";
 import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/color-blindness");
-export default function Page() { return <ColorBlindnessSimulator />; }
+export default function Page() { return (
+    <>
+      <h1 className="sr-only">Color Blindness Simulator</h1>
+      <ColorBlindnessSimulator />
+    </>
+  ); }

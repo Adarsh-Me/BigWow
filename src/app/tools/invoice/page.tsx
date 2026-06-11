@@ -7,6 +7,7 @@ export const metadata = generateToolMetadata("/tools/invoice");
 export default function InvoicePage() {
   return (
     <>
+      <h1 className="sr-only">Invoice Generator</h1>
       <InvoiceGenerator />
       <RelatedPrivacyGuides toolPath="/tools/invoice" />
     </>

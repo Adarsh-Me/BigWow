@@ -4,5 +4,10 @@ import ColorConverter from "@/components/ColorConverter";
 export const metadata = generateToolMetadata("/tools/color-converter");
 
 export default function Page() {
-  return <ColorConverter />;
+  return (
+    <>
+      <h1 className="sr-only">Color Converter</h1>
+      <ColorConverter />
+    </>
+  );
 }

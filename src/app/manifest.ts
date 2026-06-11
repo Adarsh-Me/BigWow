@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Browser Tools - Free Online Tools for Productivity",
-    short_name: "Browser Tools",
+    name: "BigWow: Free Browser Tools for Productivity",
+    short_name: "BigWow Tools",
     description:
-      "Discover 30+ free browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more.",
+      "Discover 101+ free browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

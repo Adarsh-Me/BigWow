@@ -7,6 +7,7 @@ export const metadata = generateToolMetadata("/tools/spreadsheet");
 export default function Page() {
   return (
     <>
+      <h1 className="sr-only">CSV/Excel Viewer</h1>
       <SpreadsheetViewer />
       <RelatedPrivacyGuides toolPath="/tools/spreadsheet" />
     </>

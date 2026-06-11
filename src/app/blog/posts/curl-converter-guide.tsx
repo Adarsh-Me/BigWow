@@ -12,7 +12,7 @@ export default function Content() {
         That translation is tedious and error-prone. Headers, authentication schemes, request
         bodies, and URL encoding all have to be mapped to the right method calls in the right
         language. The{" "}
-        <a href="/tools/curl-converter">BigWow cURL Converter</a> does this automatically —
+        The BigWow cURL Converter (coming soon) does this automatically —
         paste a cURL command and get equivalent code in JavaScript fetch, Python requests, Node.js
         axios, and more. Free, no sign-up, everything stays in your browser.
       </p>
@@ -171,7 +171,7 @@ const data = response.data;`}
         This is invaluable for debugging: if the browser request works but your code's request
         fails, paste both into a diff and find the header or body difference. You can also paste
         the copied cURL directly into the{" "}
-        <a href="/tools/curl-converter">BigWow cURL Converter</a> to get equivalent
+        the cURL Converter to get equivalent
         code in your preferred language — the converter handles all the escaping, quoting, and
         flag translation automatically.
       </p>
@@ -183,7 +183,7 @@ const data = response.data;`}
         fluently — and to translate it accurately to whatever language you are working in — is a
         practical skill that pays dividends every time you integrate a new API. Skip the tedious
         manual translation and use the{" "}
-        <a href="/tools/curl-converter">BigWow cURL Converter</a> to get clean, runnable
+        the cURL Converter to get clean, runnable
         code in seconds.
       </p>
     </div>

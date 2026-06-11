@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/claude-md-generator");
 
 export default function Page() {
-  return <ClaudeMdGenerator />;
+  return (
+    <>
+      <h1 className="sr-only">CLAUDE.md Generator</h1>
+      <ClaudeMdGenerator />
+    </>
+  );
 }

@@ -1,7 +1,7 @@
 {
   "name": "BigWow",
   "short_name": "BigWow",
-  "description": "Essential browser-based tools for productivity. No servers. Full privacy.",
+  "description": "100% free, client-side browser tools for productivity. Over 101+ tools with no servers, no signups, full privacy.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

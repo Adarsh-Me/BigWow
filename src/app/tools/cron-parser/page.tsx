@@ -4,5 +4,10 @@ import CronParser from "@/components/CronParser";
 export const metadata = generateToolMetadata("/tools/cron-parser");
 
 export default function Page() {
-  return <CronParser />;
+  return (
+    <>
+      <h1 className="sr-only">Cron Parser</h1>
+      <CronParser />
+    </>
+  );
 }

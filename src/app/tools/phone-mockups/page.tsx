@@ -162,5 +162,10 @@ async function loadGroups(): Promise<MockupGroup[]> {
 
 export default async function PhoneMockupsPage() {
   const groups = await loadGroups();
-  return <PhoneMockups groups={groups} />;
+  return (
+    <>
+      <h1 className="sr-only">Phone Mockups</h1>
+      <PhoneMockups groups={groups} />
+    </>
+  );
 }

@@ -31,5 +31,10 @@ export const metadata: Metadata = {
 };
 
 export default function CalculatorPage() {
-  return <Calculator />;
+  return (
+    <>
+      <h1 className="sr-only">Calculator</h1>
+      <Calculator />
+    </>
+  );
 }

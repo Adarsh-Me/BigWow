@@ -7,6 +7,7 @@ export const metadata = generateToolMetadata("/tools/base64");
 export default function Page() {
   return (
     <>
+      <h1 className="sr-only">Base64 Tools</h1>
       <Base64Converter />
       <RelatedPrivacyGuides toolPath="/tools/base64" />
     </>

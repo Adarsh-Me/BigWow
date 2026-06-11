@@ -8,6 +8,7 @@ import RelatedPrivacyGuides from "@/components/RelatedPrivacyGuides";
 export default function Page() {
   return (
     <div>
+      <h1 className="sr-only">Video Compressor</h1>
       {/* <NoSSRWrapper><CompressVideo /></NoSSRWrapper> */}
       <RelatedPrivacyGuides toolPath="/tools/compress-video" />
     </div>

@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/prompt-library");
 
 export default function Page() {
-  return <PromptLibrary />;
+  return (
+    <>
+      <h1 className="sr-only">Prompt Library</h1>
+      <PromptLibrary />
+    </>
+  );
 }

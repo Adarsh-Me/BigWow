@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | BigWow",
   },
   description:
-    "Essential browser-based tools for productivity. No servers. Full privacy. Convert files, compress images, generate passwords, format code, and more — all in your browser.",
+    "100% free, privacy-first, client-side browser tools for productivity. No servers, no signups, no tracking. Over 101+ offline-capable tools to compress images, convert files, download videos, edit PDFs, format code, and more — all running locally on your device.",
   keywords: [
     "browser tools",
     "productivity tools",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: siteConfig.baseUrl,
     title: "BigWow | Free Browser-Based Productivity Tools",
     description:
-      "Essential browser-based tools for productivity. No servers. Full privacy.",
+      "100% free, client-side browser tools for productivity. No servers, no signups, no tracking. Over 101+ offline-capable tools running entirely in your browser with full privacy.",
     siteName: "BigWow",
     images: [
       {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BigWow | Free Browser-Based Productivity Tools",
     description:
-      "Essential browser-based tools for productivity. No servers. Full privacy.",
+      "100% free, client-side browser tools for productivity. No servers, no signups, no tracking. Over 101+ offline-capable tools running entirely in your browser with full privacy.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -90,6 +90,7 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   icons: {
     icon: [
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
       { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
@@ -144,7 +145,7 @@ export default async function RootLayout({
       "width": 512,
       "height": 512
     },
-    "description": "100% free, privacy-first, client-side productivity tools. No servers. No tracking. No data collection.",
+    "description": "100% free, privacy-first, client-side browser tools for productivity. Over 101+ offline-capable tools with no servers, no signups, and zero data collection.",
     "foundingDate": "2024",
     "founder": {
       "@type": "Organization",
@@ -167,7 +168,7 @@ export default async function RootLayout({
     "@id": `${siteConfig.baseUrl}/#website`,
     "url": siteConfig.baseUrl,
     "name": "BigWow",
-    "description": "Essential browser-based tools for productivity. No servers. Full privacy.",
+    "description": "100% free, client-side browser tools for productivity. Over 101+ offline-capable tools running entirely in your browser with full privacy.",
     "publisher": { "@id": `${siteConfig.baseUrl}/#organization` },
     "inLanguage": ["en"],
     "potentialAction": {

@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import { findToolByHref } from "./tools-config";
 import { absoluteUrl, languageAlternates, siteConfig } from "./site";
 import { toolCapabilities } from "./tool-capabilities";
+import { SUB_TOOLS } from "./sub-tools-config";
 
-export function generateToolMetadata(href: string): Metadata {
+export function generateToolMetadata(href: string, subToolId?: string): Metadata {
   const tool = findToolByHref(href);
 
   if (!tool) {
@@ -13,19 +14,31 @@ export function generateToolMetadata(href: string): Metadata {
     };
   }
 
-  const toolUrl = absoluteUrl(href);
+  // Detect subtool if provided
+  let displayName = tool.name;
+  let displayDescription = tool.description;
+
+  if (subToolId && SUB_TOOLS[href]) {
+    const sub = SUB_TOOLS[href].find((s) => s.id === subToolId);
+    if (sub) {
+      displayName = sub.name;
+      displayDescription = sub.desc;
+    }
+  }
+
+  const toolUrl = subToolId ? absoluteUrl(`${href}?subTool=${subToolId}`) : absoluteUrl(href);
 
   // Detect whether this tool runs locally (no server uploads)
   const capability = toolCapabilities.find((c) => c.href === href);
   const isLocalTool = capability ? capability.privacyMode === "local" : true; // default: assume local
 
   // Privacy-first title & description — BigWow's core moat
-  const privacyPrefix = isLocalTool ? "Private " : "";
-  const privacySuffix = isLocalTool ? " — No Upload, 100% Local" : "";
-  const seoTitle = `${privacyPrefix}${tool.name}${privacySuffix} | Free ${tool.category} Tool | BigWow`;
+  const seoTitle = isLocalTool
+    ? `${displayName} (100% Private) | BigWow`
+    : `${displayName} (Free & Secure) | BigWow`;
   const seoDescription = isLocalTool
-    ? `${tool.description} Zero uploads — all processing runs locally in your browser. No signup, no ads, no limits. Free forever.`
-    : `${tool.description} Completely free forever — no hidden fees, no ads, no registration required. Runs entirely in your browser with full privacy.`;
+    ? `${displayDescription} Zero uploads — all processing runs locally in your browser. No signup, no ads, no limits. Free forever.`
+    : `${displayDescription} Completely free forever — no hidden fees, no ads, no registration required. Runs entirely in your browser with full privacy.`;
 
   return {
     title: seoTitle,
@@ -235,10 +248,9 @@ export function generatePageMetadata(
 ): Metadata {
   const pageUrl = absoluteUrl(path);
 
-  // Privacy-first page metadata
   const seoPageTitle = title.includes("BigWow")
     ? title
-    : `${title} | Private Browser Tools — No Upload, No Signup | BigWow`;
+    : `${title} | BigWow`;
   const seoPageDescription = description.includes("locally")
     ? description
     : `${description} All tools run locally in your browser — zero uploads, zero server processing. Completely free, no signup required.`;

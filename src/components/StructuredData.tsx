@@ -58,12 +58,12 @@ export default function StructuredData({
     dateModified: new Date().toISOString().split("T")[0],
     author: {
       "@type": "Organization",
-      name: "Browser Tools",
+      name: siteConfig.name,
       url: baseUrl,
     },
     publisher: {
       "@type": "Organization",
-      name: "Browser Tools",
+      name: siteConfig.name,
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
@@ -81,8 +81,8 @@ export default function StructuredData({
   const getOrganizationStructuredData = () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Browser Tools",
-    description: "Free online browser-based tools for productivity",
+    name: siteConfig.name,
+    description: "100% free, privacy-first, client-side browser tools for productivity. Over 101+ offline-capable tools with no servers, no signups, and zero data collection.",
     url: baseUrl,
     logo: {
       "@type": "ImageObject",

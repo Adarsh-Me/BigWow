@@ -2,7 +2,7 @@ import NavigationTracker from "@/components/NavigationTracker";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import ToolRouteSeoHeading from "@/components/ToolRouteSeoHeading";
+
 
 export default function ToolsLayout({
   children,
@@ -40,7 +40,7 @@ export default function ToolsLayout({
       {/* Main workspace — full width, no sidebar */}
       <main className="flex-1 overflow-auto py-6 px-4 md:px-8 bg-background/50 backdrop-blur-sm transition-all duration-150 animate-in fade-in duration-200">
         <div className="mx-auto max-w-[1400px] h-full flex flex-col">
-          <ToolRouteSeoHeading />
+
           {children}
         </div>
       </main>

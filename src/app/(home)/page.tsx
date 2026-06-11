@@ -6,9 +6,9 @@ import { findFirstTool } from "@/lib/search-utils";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Browser Tools - Free Online Tools for Productivity",
+  title: "BigWow: Free Browser Tools for Productivity & Developer Utilities",
   description:
-    "Discover 30+ free browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more. All tools work directly in your browser.",
+    "Discover 101+ free browser-based tools for productivity. 100% private with no server uploads. Image compressors, PDF editors, file converters, media downloaders, and developer utilities — all running locally in your browser.",
   keywords: [
     "browser tools",
     "online tools",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.baseUrl,
-    title: "Browser Tools - Free Online Tools for Productivity",
+    title: "BigWow: Free Browser Tools for Productivity & Developer Utilities",
     description:
-      "Discover 30+ free browser-based tools for productivity. No servers, full privacy. Image tools, file converters, text utilities, and more.",
+      "Discover 101+ free browser-based tools for productivity. 100% private with no server uploads. Image compressors, PDF editors, file converters, media downloaders, and developer utilities — all running locally in your browser.",
     siteName: "Browser Tools",
     images: [
       {
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Browser Tools - Free Online Tools for Productivity",
+    title: "BigWow: Free Browser Tools for Productivity & Developer Utilities",
     description:
-      "Discover 30+ free browser-based tools for productivity. No servers, full privacy.",
+      "Discover 101+ free browser-based tools for productivity. 100% private with no server uploads.",
     images: ["/og-image.png"],
   },
   alternates: {

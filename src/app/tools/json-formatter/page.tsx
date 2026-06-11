@@ -7,6 +7,7 @@ export const metadata = generateToolMetadata("/tools/json-formatter");
 export default function Page() {
   return (
     <>
+      <h1 className="sr-only">JSON Formatter</h1>
       <JsonFormatter />
       <RelatedPrivacyGuides toolPath="/tools/json-formatter" />
     </>

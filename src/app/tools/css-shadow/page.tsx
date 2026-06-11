@@ -4,5 +4,10 @@ import { generateToolMetadata } from "@/lib/metadata";
 export const metadata = generateToolMetadata("/tools/css-shadow");
 
 export default function Page() {
-  return <CssShadow />;
+  return (
+    <>
+      <h1 className="sr-only">CSS Box Shadow Generator</h1>
+      <CssShadow />
+    </>
+  );
 }
