@@ -44,16 +44,19 @@ export default function StructuredDataInjector() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "name": toolName,
     "description": toolDescription,
     "url": toolUrl,
-    "applicationCategory": tool.category || "Utility",
-    "operatingSystem": "Web Browser",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": tool.category || "Utility",
+    "operatingSystem": "Any — runs in web browser",
     "browserRequirements": "Requires JavaScript. Requires HTML5.",
     "softwareVersion": "1.0",
     "datePublished": "2024-01-01",
     "dateModified": new Date().toISOString().split("T")[0],
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
     "author": {
       "@type": "Organization",
       "name": "BigWow",
@@ -73,29 +76,66 @@ export default function StructuredDataInjector() {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "description": "Completely free forever - no hidden fees, no ads, no registration required"
+      "description": "Completely free forever — no hidden fees, no ads, no registration required"
     },
     "featureList": [
       "100% Free Forever",
       "No Ads or Watermarks",
       "No Registration Required",
-      "Complete Privacy Protection",
-      "Runs in Browser Only",
-      "No Server Processing",
-      "Open Source",
-      "Updated Weekly",
+      "Files Never Leave Your Device",
+      "100% Client-Side Processing",
+      "Works Offline",
       "No File Size Limits",
       "No Data Collection",
-      "Client-Side Local Processing"
+      "No Tracking"
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `Is the ${toolName} free?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes, the ${toolName} on BigWow is completely free with no account, no ads, no watermarks, and no file size limits. Free forever.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Does ${toolName} upload my files to a server?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `No. The ${toolName} processes everything 100% in your browser. Your files never leave your device and are never sent to any server.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Does ${toolName} work offline?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes. Once loaded, the ${toolName} works without an internet connection. All processing runs locally using your browser's built-in capabilities.`
+        }
+      }
     ]
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema, null, 2),
-      }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema, null, 2),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema, null, 2),
+        }}
+      />
+    </>
   );
 }

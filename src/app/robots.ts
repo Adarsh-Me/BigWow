@@ -215,9 +215,21 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/", "/admin/", "/private/"],
       },
 
+      // ── SEO audit tools — allow so we can monitor our own site ──
+      {
+        userAgent: "AhrefsBot",
+        allow: "/",
+        disallow: ["/api/", "/_next/", "/admin/", "/private/"],
+      },
+      {
+        userAgent: "SemrushBot",
+        allow: "/",
+        disallow: ["/api/", "/_next/", "/admin/", "/private/"],
+      },
+
       // ── Block known abusive/scraper bots ──
       {
-        userAgent: ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "BLEXBot", "SeekportBot"],
+        userAgent: ["MJ12bot", "DotBot", "BLEXBot", "SeekportBot"],
         disallow: "/",
       },
     ],

@@ -6,7 +6,7 @@ export const metadata = generateToolMetadata("/tools/text-counter");
 export default function TextCounterPage() {
   return (
     <>
-      <h1 className="sr-only">Text Counter</h1>
+      <h1 className="sr-only">Free Word Counter Online — Character, Sentence & Paragraph Count</h1>
       <TextCounter />
     </>
   );

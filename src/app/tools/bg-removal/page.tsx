@@ -7,7 +7,7 @@ export const metadata = generateToolMetadata("/tools/bg-removal");
 export default function Page() {
   return (
     <>
-      <h1 className="sr-only">Background Removal</h1>
+      <h1 className="sr-only">Free AI Background Remover — No Upload, No Account</h1>
       <BgRemovalWrapper />
       <RelatedPrivacyGuides toolPath="/tools/bg-removal" />
     </>

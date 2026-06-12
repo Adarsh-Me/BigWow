@@ -7,7 +7,7 @@ export const metadata = generateToolMetadata("/tools/regex-tester");
 export default function Page() {
   return (
     <>
-      <h1 className="sr-only">Regex Tester</h1>
+      <h1 className="sr-only">Free Regex Tester Online — Test Regular Expressions Privately</h1>
       <RegexTester />
       <RelatedPrivacyGuides toolPath="/tools/regex-tester" />
     </>

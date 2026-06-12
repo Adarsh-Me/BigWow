@@ -6,7 +6,7 @@ export const metadata = generateToolMetadata("/tools/text-case");
 export default function TextCasePage() {
   return (
     <>
-      <h1 className="sr-only">Text Case Converter</h1>
+      <h1 className="sr-only">Free Case Converter Online — Uppercase, Lowercase, Title Case & More</h1>
       <TextCaseConverter />
     </>
   );

@@ -15,7 +15,7 @@ export async function generateMetadata({ searchParams }: Props) {
 export default async function Page({ searchParams }: Props) {
   const { subTool } = await searchParams;
 
-  let heading = "PDF Tools";
+  let heading = "Free PDF Tools — Merge, Split, Compress PDF Without Uploading";
   if (subTool && SUB_TOOLS["/tools/pdf"]) {
     const sub = SUB_TOOLS["/tools/pdf"].find((s) => s.id === subTool);
     if (sub) {

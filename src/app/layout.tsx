@@ -18,24 +18,42 @@ const geistMono = {
 
 export const metadata: Metadata = {
   title: {
-    default: "BigWow | Free Browser-Based Productivity Tools",
+    default: "BigWow — Free Browser Tools: No Upload, No Signup, 100% Private",
     template: "%s | BigWow",
   },
   description:
-    "100% free, privacy-first, client-side browser tools for productivity. No servers, no signups, no tracking. Over 101+ offline-capable tools to compress images, convert files, download videos, edit PDFs, format code, and more — all running locally on your device.",
+    "113 free browser tools for image compression, PDF editing, background removal, QR codes, JSON formatting, password generation, and more. 100% client-side — your files never leave your device. No signup, no ads, forever free.",
   keywords: [
-    "browser tools",
-    "productivity tools",
-    "file converter",
-    "image compression",
-    "password generator",
-    "code formatter",
-    "base64 converter",
-    "QR code generator",
-    "privacy-focused",
+    // Top 20 from keyword research — low competition, high intent
+    "compress image online free",
+    "image compressor online",
+    "background remover online free",
+    "free background remover no watermark",
+    "word counter online free",
+    "json formatter online",
+    "password generator online",
+    "qr code generator free",
+    "compress pdf online",
+    "split pdf online free",
+    "merge pdf files online",
+    "reduce pdf file size",
+    "png to jpg converter",
+    "heic to jpg converter",
+    "webp to jpg converter",
+    "image resizer online",
+    "lorem ipsum generator",
+    "case converter online",
+    "regex tester online",
+    "free ocr online",
+    // Core brand keywords
+    "free online tools no upload",
+    "browser tools privacy",
     "client-side tools",
-    "no server required",
-    "free online tools",
+    "free tools no signup",
+    "offline browser tools",
+    "100% private tools",
+    "no server upload tools",
+    "privacy first free tools",
   ],
   authors: [{ name: "BigWow" }],
   creator: "BigWow",
@@ -181,6 +199,61 @@ export default async function RootLayout({
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is BigWow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BigWow is a collection of 113 free browser-based tools for PDF editing, image compression, background removal, QR code generation, developer utilities, AI tools, and more. Every tool runs 100% in your browser — your files never leave your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does BigWow upload my files to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All processing runs locally in your browser using JavaScript and WebAssembly. Your files never leave your device and are never sent to any server. You can verify this by opening your browser's Network tab in Developer Tools while using any tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BigWow really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all 113 tools are completely free with no account required, no ads, no file size limits, no watermarks, and no premium tier. Free forever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does BigWow work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Once the page has loaded, most tools work without an internet connection. AI-powered tools like the background remover download their model once and then run offline from your browser cache."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tools does BigWow offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BigWow offers 113 tools across categories: Image Tools (compress, resize, convert, remove background), PDF Tools (merge, split, compress, rotate), Developer Tools (JSON formatter, JWT decoder, regex tester, UUID generator), AI Tools (token counter, model comparison, prompt library), Text Tools (word counter, case converter, markdown editor), and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is BigWow different from TinyWow or Smallpdf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unlike TinyWow and Smallpdf, BigWow processes everything 100% in your browser — your files are never uploaded to any server. TinyWow and Smallpdf upload your files to their servers for processing. BigWow is also completely free with no file size limits, no watermarks, and no account required."
+        }
+      }
+    ]
+  };
+
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
@@ -221,6 +294,10 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

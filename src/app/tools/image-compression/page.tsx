@@ -7,7 +7,7 @@ export const metadata = generateToolMetadata("/tools/image-compression");
 export default function Page() {
   return (
     <>
-      <h1 className="sr-only">Image Compression</h1>
+      <h1 className="sr-only">Free Image Compressor Online — Compress Images Without Uploading</h1>
       <ImageCompression />
       <RelatedPrivacyGuides toolPath="/tools/image-compression" />
     </>
