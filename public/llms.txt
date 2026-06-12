@@ -2,7 +2,7 @@
 
 > 100% free, privacy-first, client-side productivity tools. No servers. No tracking. No data collection. Every file stays on your device.
 
-BigWow is a curated collection of 100+ browser-based utilities covering image editing, file conversion, PDF tools, code formatting, password generation, AI tooling, productivity, design, and developer workflows. All tools run entirely in the user's browser using Web APIs — nothing is ever uploaded to a server.
+BigWow is a curated collection of 113 browser-based utilities covering image editing, file conversion, PDF tools, code formatting, password generation, AI tooling, productivity, design, and developer workflows. All tools run entirely in the user's browser using Web APIs — nothing is ever uploaded to a server.
 
 ## Quick facts
 

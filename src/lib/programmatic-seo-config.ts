@@ -1061,6 +1061,122 @@ export const programmaticPages: ProgrammaticPageConfig[] = [
     ],
     relatedSlugs: ["offline-pdf-tools-free", "image-compressor-offline-no-signup", "tinypng-alternative-offline"],
   },
+
+  // ─── NEW COMPETITOR PAGES (from SEO audit) ────────────────────────────────
+  {
+    slug: "tinywow-alternative-private",
+    toolPath: "/tools/bg-removal",
+    type: "competitor" as ProgrammaticPageType,
+    competitorName: "TinyWow",
+    title: "Private TinyWow Alternative — No Upload, No Ads | BigWow",
+    h1: "TinyWow Alternative: 113 Free Browser Tools That Never Upload Your Files",
+    description: "BigWow is the privacy-first TinyWow alternative. All 113 tools run 100% in your browser — your files are never uploaded to any server. No ads, no account, no limits.",
+    keywords: ["tinywow alternative private", "tinywow no upload alternative", "free tools without uploading", "tinywow privacy", "browser tools no server"],
+    intro: "TinyWow offers 250+ free tools and is one of the most popular online tool sites — but every file you process is uploaded to their servers. BigWow is the local-first alternative: 113 tools covering PDF, image, AI, developer, and productivity tasks, all running 100% in your browser.",
+    citations: [
+      "TinyWow Privacy Policy confirming files are uploaded to their servers.",
+      "WebAssembly W3C specification enabling client-side file processing at native speed.",
+    ],
+    stats: [
+      "0 bytes uploaded vs TinyWow's mandatory server-side processing.",
+      "No ads — TinyWow's free tier includes ads and CAPTCHAs.",
+      "No 100MB file size limit — BigWow processes files limited only by device RAM.",
+    ],
+    faqs: [
+      {
+        question: "Does TinyWow upload my files?",
+        answer: "Yes. TinyWow uploads all files to their servers for processing and automatically deletes them after 1 hour. BigWow processes everything locally — your files never leave your device.",
+      },
+      {
+        question: "Does BigWow have ads like TinyWow?",
+        answer: "No. BigWow is completely ad-free. TinyWow's free tier includes ads and CAPTCHAs between tasks.",
+      },
+    ],
+    comparisonTable: [
+      { feature: "Uploads files to server", bigwow: "Never", competitor: "Always", bigwowPass: true, competitorPass: false },
+      { feature: "Ad-free", bigwow: "Yes", competitor: "No (free tier)", bigwowPass: true, competitorPass: false },
+      { feature: "Works offline", bigwow: "Yes", competitor: "No", bigwowPass: true, competitorPass: false },
+      { feature: "Account required", bigwow: "No", competitor: "No", bigwowPass: true, competitorPass: true },
+      { feature: "File size limit", bigwow: "None (RAM only)", competitor: "100MB", bigwowPass: true, competitorPass: false },
+    ],
+    relatedSlugs: ["smallpdf-alternative-private", "removebg-alternative-private", "tinypng-alternative-offline"],
+  },
+  {
+    slug: "canva-alternative-no-account",
+    toolPath: "/tools/image-compression",
+    type: "competitor" as ProgrammaticPageType,
+    competitorName: "Canva",
+    title: "Free Canva Alternative — No Account, No Upload | BigWow",
+    h1: "Canva Alternative: Free Image & Design Tools Without an Account",
+    description: "BigWow's image tools — background remover, image compressor, color tools, CSS generators — work 100% in your browser. No Canva account, no upload, no subscription.",
+    keywords: ["canva alternative no account", "canva background remover alternative", "free design tools no signup", "canva free alternative browser", "remove background without canva"],
+    intro: "Canva is a powerful design platform, but its background remover is locked behind a Pro subscription ($12.99/month), and every asset you work with is uploaded to Canva's cloud. BigWow's background remover and image tools are completely free and run entirely in your browser.",
+    citations: [
+      "Canva pricing page confirming background removal requires Canva Pro subscription.",
+      "W3C WebGL specification enabling on-device AI model inference for background removal.",
+    ],
+    stats: [
+      "0 images uploaded vs Canva's mandatory cloud storage.",
+      "Background removal free forever — Canva charges $12.99/month.",
+      "No account required — Canva requires email signup.",
+    ],
+    faqs: [
+      {
+        question: "Does Canva require an account to remove image backgrounds?",
+        answer: "Yes. Canva's background removal is a Canva Pro feature requiring a subscription. BigWow's background remover is free, requires no account, and runs entirely in your browser.",
+      },
+      {
+        question: "Is BigWow a full Canva replacement?",
+        answer: "BigWow replaces specific Canva features: background removal, image compression, format conversion, and color tools. For full graphic design with templates and text, Canva remains the better choice.",
+      },
+    ],
+    comparisonTable: [
+      { feature: "Background removal cost", bigwow: "Free forever", competitor: "$12.99/month", bigwowPass: true, competitorPass: false },
+      { feature: "Account required", bigwow: "No", competitor: "Yes", bigwowPass: true, competitorPass: false },
+      { feature: "Uploads your images", bigwow: "Never", competitor: "Always", bigwowPass: true, competitorPass: false },
+      { feature: "Works offline", bigwow: "Yes", competitor: "No", bigwowPass: true, competitorPass: false },
+      { feature: "Template library", bigwow: "No", competitor: "Yes", bigwowPass: false, competitorPass: true },
+    ],
+    relatedSlugs: ["removebg-alternative-private", "private-background-remover", "tinypng-alternative-offline"],
+  },
+  {
+    slug: "adobe-acrobat-alternative-free",
+    toolPath: "/tools/pdf",
+    type: "competitor" as ProgrammaticPageType,
+    competitorName: "Adobe Acrobat",
+    title: "Free Adobe Acrobat Alternative — No Subscription | BigWow",
+    h1: "Free Adobe Acrobat Alternative — Merge, Split & Compress PDFs Without Subscribing",
+    description: "BigWow's PDF tools merge, split, compress, and rotate PDFs entirely in your browser. No Adobe subscription, no upload, no account. Free forever.",
+    keywords: ["adobe acrobat alternative free", "pdf tools without adobe", "adobe acrobat no subscription", "free pdf editor alternative", "acrobat replacement browser"],
+    intro: "Adobe Acrobat charges $14.99–$23.99/month for PDF editing. For the most common tasks — merging, splitting, compressing, and rotating PDFs — BigWow does the same job for free, entirely in your browser, with no upload and no account.",
+    citations: [
+      "Adobe Acrobat pricing page confirming subscription costs.",
+      "pdf-lib open source library specification for client-side PDF manipulation.",
+    ],
+    stats: [
+      "$0 vs Adobe Acrobat's $14.99–$23.99/month subscription.",
+      "0 bytes uploaded — Adobe Acrobat Online uploads to Adobe's cloud.",
+      "No account required — Adobe requires an Adobe ID.",
+    ],
+    faqs: [
+      {
+        question: "Can BigWow replace Adobe Acrobat for basic PDF tasks?",
+        answer: "Yes, for the most common tasks: merging, splitting, compressing, rotating, converting to images, and extracting text. For advanced editing like form creation or digital signatures, Adobe Acrobat remains more capable.",
+      },
+      {
+        question: "Does BigWow's PDF tool upload my documents like Adobe Acrobat Online?",
+        answer: "No. BigWow's PDF tools use pdf-lib running in your browser — your documents never leave your device. Adobe Acrobat Online uploads files to Adobe's cloud.",
+      },
+    ],
+    comparisonTable: [
+      { feature: "Monthly cost", bigwow: "Free forever", competitor: "$14.99–$23.99/month", bigwowPass: true, competitorPass: false },
+      { feature: "Uploads to cloud", bigwow: "Never", competitor: "Adobe Online: Yes", bigwowPass: true, competitorPass: false },
+      { feature: "Account required", bigwow: "No", competitor: "Yes (Adobe ID)", bigwowPass: true, competitorPass: false },
+      { feature: "Advanced form editing", bigwow: "No", competitor: "Yes", bigwowPass: false, competitorPass: true },
+      { feature: "Works offline", bigwow: "Yes", competitor: "Desktop only", bigwowPass: true, competitorPass: false },
+    ],
+    relatedSlugs: ["smallpdf-alternative-private", "ilovepdf-alternative-offline", "pdf-merger-no-upload"],
+  },
 ];
 
 // ─── Phase 7.1 — Upgrade 4: Page Keyword Metadata ────────────────────────────
@@ -1210,5 +1326,26 @@ export const pageKeywordMetadata: Record<string, PageKeywordMetadata> = {
     intent: "comparison",
     modifier: null,
     competitor: "Convertio",
+  },
+  "tinywow-alternative-private": {
+    primaryKeyword: "tinywow alternative no upload",
+    secondaryKeywords: ["tinywow privacy alternative", "free tools without ads", "tinywow without server", "browser tools tinywow replacement"],
+    intent: "comparison",
+    modifier: null,
+    competitor: "TinyWow",
+  },
+  "canva-alternative-no-account": {
+    primaryKeyword: "canva background remover alternative free",
+    secondaryKeywords: ["canva alternative no account", "free background removal without canva", "canva pro alternative", "design tools no signup"],
+    intent: "comparison",
+    modifier: null,
+    competitor: "Canva",
+  },
+  "adobe-acrobat-alternative-free": {
+    primaryKeyword: "adobe acrobat alternative free no subscription",
+    secondaryKeywords: ["pdf tools without adobe", "free acrobat alternative", "merge pdf without adobe", "acrobat online alternative no upload"],
+    intent: "comparison",
+    modifier: null,
+    competitor: "Adobe Acrobat",
   },
 };

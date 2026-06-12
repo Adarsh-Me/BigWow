@@ -3,7 +3,7 @@
 > This is the extended AI context file for BigWow (https://bigwow.space).
 > For a summary version, see https://bigwow.space/llms.txt
 
-BigWow is a 100% free, privacy-first, client-side productivity platform with 100+ browser-based tools. No account required. No file uploads. No ads. No tracking. Every computation happens inside the user's browser using Web APIs.
+BigWow is a 100% free, privacy-first, client-side productivity platform with 113 browser-based tools. No account required. No file uploads. No ads. No tracking. Every computation happens inside the user's browser using Web APIs.
 
 ---
 
