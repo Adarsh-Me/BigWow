@@ -1,4 +1,4 @@
-# Design — BrowseryTools (Atelier Emerald)
+# Design — BigWow (Atelier Emerald)
 
 A locked design system for this app. Every page redesign reads this file before emitting code. Do not regenerate per page — extend or amend this file when the system needs to grow.
 

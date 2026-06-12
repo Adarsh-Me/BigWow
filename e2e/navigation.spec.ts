@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("Navigation", () => {
   test("homepage loads successfully", async ({ page }) => {
     await page.goto("/");
-    await expect(page).toHaveTitle(/browsery|tools/i);
+    await expect(page).toHaveTitle(/BigWow|browser tools/i);
   });
 
   test("homepage displays tool cards", async ({ page }) => {
